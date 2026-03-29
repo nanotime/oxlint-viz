@@ -1,0 +1,296 @@
+{
+  "diagnostics": [
+    {
+      "message": "Unexpected block statement surrounding arrow body.",
+      "code": "eslint(arrow-body-style)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/arrow-body-style.html",
+      "help": "Move the returned value to be immediately after the `=>`.",
+      "filename": "src/theme/light/create-blurs.js",
+      "labels": [
+        {
+          "span": { "offset": 33, "length": 27, "line": 1, "column": 34 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Object keys should be sorted",
+      "code": "eslint(sort-keys)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
+      "help": "Replace `selectAll: false...` with `committedAt: false...`.",
+      "filename": "src/mocks/userColumnPreferences.ts",
+      "labels": [
+        {
+          "span": { "offset": 24, "length": 3117, "line": 1, "column": 25 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Filename should be in kebab-case",
+      "code": "eslint-plugin-unicorn(filename-case)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/filename-case.html",
+      "help": "Rename the file to 'user-column-preferences.ts'",
+      "filename": "src/mocks/userColumnPreferences.ts",
+      "labels": [
+        {
+          "span": { "offset": 0, "length": 0, "line": 1, "column": 1 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'act' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.test.tsx",
+      "labels": [
+        {
+          "label": "'act' is imported here",
+          "span": { "offset": 9, "length": 3, "line": 1, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'userEvent' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.test.tsx",
+      "labels": [
+        {
+          "label": "'userEvent' is imported here",
+          "span": { "offset": 61, "length": 9, "line": 2, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Imports should be sorted alphabetically.",
+      "code": "eslint(sort-imports)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-imports.html",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.test.tsx",
+      "labels": [
+        {
+          "span": { "offset": 107, "length": 42, "line": 3, "column": 1 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Filename should be in kebab-case",
+      "code": "eslint-plugin-unicorn(filename-case)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/filename-case.html",
+      "help": "Rename the file to 'export-dialog.test.tsx'",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.test.tsx",
+      "labels": [
+        {
+          "span": { "offset": 0, "length": 0, "line": 1, "column": 1 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Imports should be sorted alphabetically.",
+      "code": "eslint(sort-imports)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-imports.html",
+      "filename": "src/components/scheduleReports/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 40, "length": 49, "line": 2, "column": 1 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Object keys should be sorted",
+      "code": "eslint(sort-keys)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
+      "filename": "src/components/scheduleReports/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 142, "length": 224, "line": 4, "column": 52 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Object keys should be sorted",
+      "code": "eslint(sort-keys)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
+      "filename": "src/components/scheduleReports/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 420, "length": 249, "line": 17, "column": 51 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 324, "length": 17, "line": 14, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 344, "length": 18, "line": 15, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 365, "length": 23, "line": 16, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 391, "length": 24, "line": 17, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 418, "length": 28, "line": 18, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 449, "length": 19, "line": 19, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 944, "length": 28, "line": 39, "column": 5 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 977, "length": 28, "line": 40, "column": 5 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 1010, "length": 29, "line": 41, "column": 5 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [
+        {
+          "span": { "offset": 1044, "length": 23, "line": 42, "column": 5 }
+        }
+      ],
+      "related": []
+    }
+  ],
+  "number_of_files": 156,
+  "number_of_rules": 311,
+  "threads_count": 8,
+  "start_time": 0.074235209
+}
