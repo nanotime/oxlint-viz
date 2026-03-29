@@ -1,5 +1,5 @@
 import { OxlintRawReport } from "../model/input";
-import { NormalizedReport } from "../model/output";
+import { FileMetrics, NormalizedReport, RuleMetric } from "../model/output";
 
 export const RULE_NAMESPACE_MAP: Record<string, string> = {
   eslint: "correctness",
@@ -71,8 +71,48 @@ export const normalizer = (rawReport: OxlintRawReport): NormalizedReport => {
         { correctness: 0, style: 0, pedantic: 0, suspicious: 0, perf: 0 },
       ),
     },
-    rules: [], // Aquí se implementaría la lógica para calcular las métricas de las reglas
-    hotspots: [], // Aquí se implementaría la lógica para calcular las métricas de los archivos
+    rules: rawReport.diagnostics.reduce<Record<string, RuleMetric>>(
+      (acc, diag) => {
+        const ruleName = diag.code;
+        if (!acc[ruleName]) {
+          acc[ruleName] = {
+            name: ruleName,
+            count: 0,
+            category: inferCategory(ruleName),
+          };
+        }
+        acc[ruleName].count += 1;
+        return acc;
+      },
+      {},
+    ),
+    hotspots: rawReport.diagnostics.reduce<Record<string, FileMetrics>>(
+      (acc, diag) => {
+        const filename = diag.filename;
+        if (!acc[filename]) {
+          acc[filename] = {
+            filename,
+            issueCount: 0,
+            errorCount: 0,
+            warningCount: 0,
+            toxicityScore: 0,
+            mainSmell: "",
+          };
+        }
+        const category = inferCategory(diag.code);
+        const severity = diag.severity;
+        acc[filename].toxicityScore =
+          (WEIGHTS[category] || 1) * (SEVERITY_MULT[severity] || 0.1);
+        acc[filename].issueCount = diag.labels.length;
+        if (diag.severity === "error") {
+          acc[filename].errorCount += 1;
+        } else if (diag.severity === "warning") {
+          acc[filename].warningCount += 1;
+        }
+        return acc;
+      },
+      {},
+    ),
   };
   return normalized;
 };
