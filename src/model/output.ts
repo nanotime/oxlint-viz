@@ -1,3 +1,5 @@
+export type HealthStatus = "healthy" | "warning" | "toxic" | "critical";
+
 export interface FileMetrics {
   filename: string;
   issueCount: number;
@@ -5,6 +7,7 @@ export interface FileMetrics {
   warningCount: number;
   toxicityScore: number; // El cálculo del Refacto-o-meter
   mainSmell: string; // La regla que más se repite en este archivo
+  status: HealthStatus;
 }
 
 export interface RuleMetric {
@@ -18,8 +21,6 @@ export interface NormalizedReport {
     totalIssues: number;
     totalFiles: number;
     filesWithIssues: number;
-    scanTime: number;
-    efficiency: number;
   };
   distribution: {
     severity: { error: number; warning: number; advice: number };
