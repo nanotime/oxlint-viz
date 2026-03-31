@@ -5,7 +5,7 @@ import devtools from "solid-devtools/vite";
 
 export default defineConfig({
   staged: {
-    "*": "vp check --fix",
+    "*.{js,ts,tsx}": "vp check",
   },
   lint: { options: { typeAware: true, typeCheck: true } },
   plugins: [devtools(), solidPlugin(), tailwindcss()],
