@@ -54,6 +54,11 @@ function calculateHealthStatus(score: number): "healthy" | "warning" | "toxic" |
   return "critical";
 }
 
+const calculateGeneralToxicity = (cappedScore: number, lines: number): number => {
+  if (lines > 0) return cappedScore / lines;
+  return 0;
+};
+
 export function normalizer(rawReport: OxlintRawReport): NormalizedReport {
   const normalized: NormalizedReport = {
     summary: {
@@ -68,6 +73,7 @@ export function normalizer(rawReport: OxlintRawReport): NormalizedReport {
         advice: 0,
       },
       categories: {},
+      generalToxicity: 0,
     },
     rules: {},
     hotspots: {},
@@ -129,15 +135,21 @@ export function normalizer(rawReport: OxlintRawReport): NormalizedReport {
     }
   }
 
-  // Finalize hotspots status
+  // Finalize hotspots status and calculate total toxicity
+  let sumCappedScore = 0;
   for (const filename in hotspotsBase) {
     const h = hotspotsBase[filename];
     h.status = calculateHealthStatus(h.toxicityScore);
+    sumCappedScore += Math.min(h.toxicityScore, 100);
   }
 
   normalized.summary.filesWithIssues = filesWithIssues.size;
   normalized.distribution.severity = severityBase;
   normalized.distribution.categories = categoriesBase;
+  normalized.distribution.generalToxicity = calculateGeneralToxicity(
+    sumCappedScore,
+    rawReport.number_of_files,
+  );
   normalized.rules = rulesBase;
   normalized.hotspots = hotspotsBase;
 

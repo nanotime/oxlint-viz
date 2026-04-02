@@ -65,9 +65,18 @@ describe("Normalizer", () => {
     it("should count category distribution correctly", () => {
       const report = data as OxlintRawReport;
       const normalized = normalizer(report);
-      // capitalized-comments and sort-keys are style (2 diagnostics in excerpt)
+      // correctness: arrow-body-style (1) + no-unused-vars (2) = 3
+      // style: sort-keys (3) + filename-case (2) + sort-imports (2) + capitalized-comments (10) = 17
       expect(normalized.distribution.categories.correctness).toBe(3);
       expect(normalized.distribution.categories.style).toBe(17);
+    });
+
+    it("should calculate generalToxicity correctly", () => {
+      const report = data as OxlintRawReport;
+      const normalized = normalizer(report);
+      // sum(cappedScore) = 10 (create-blurs) + 2 (userColumnPreferences) + 22 (ExportDialog.test) + 3 (scheduleReports/styles) + 10 (paymentHistory/styles) = 47
+      // 47 / 156 = 0.30128205128205127
+      expect(normalized.distribution.generalToxicity).toBeCloseTo(0.30128, 5);
     });
   });
 

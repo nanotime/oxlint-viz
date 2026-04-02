@@ -5,8 +5,8 @@ export interface FileMetrics {
   issueCount: number;
   errorCount: number;
   warningCount: number;
-  toxicityScore: number; // El cálculo del Refacto-o-meter
-  mainSmell: string; // La regla que más se repite en este archivo
+  toxicityScore: number;
+  mainSmell: string;
   status: HealthStatus;
 }
 
@@ -24,8 +24,9 @@ export interface NormalizedReport {
   };
   distribution: {
     severity: { error: number; warning: number; advice: number };
-    categories: Record<string, number>; // Ej: { correctness: 10, perf: 5 }
+    categories: Record<string, number>;
+    generalToxicity: number;
   };
-  rules: Record<string, RuleMetric>; // Ordenado por count descendente para el Treemap
-  hotspots: Record<string, FileMetrics>; // Ordenado por toxicityScore para el Refacto-o-meter
+  rules: Record<string, RuleMetric>;
+  hotspots: Record<string, FileMetrics>;
 }
