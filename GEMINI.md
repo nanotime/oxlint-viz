@@ -90,7 +90,34 @@ Vite+ automatically detects and wraps the underlying package manager such as pnp
   - `src/logic`: to define logical units (pure functions)
   - `src/components`: to define UI components
 
-## 4. Coding Conventions & Style Guide
+## 4. User Flow & Layout
+
+The application operates in two distinct states, maximizing screen real estate for data visualization:
+
+### 4.1 Landing / Input State
+
+- **Layout:** Centered, minimalist container.
+- **Component:** Large `textarea` (DaisyUI) for pasting Oxlint JSON.
+- **Action:** "Analyze" button triggers the normalizer and transitions the UI.
+
+### 4.2 Dashboard State
+
+- **Layout:** Full-width (85% width) centered dashboard.
+- **Header:** Title + "New Analysis" button (to reset state).
+- **Structure (Top to Bottom):**
+  1. **Stats Bar:** Key metrics (Total Issues, Files Affected) and Severity breakdown (using DaisyUI `stats`).
+  2. **Distribution Row:**
+     - 40%: Donut Chart (Severity).
+     - 60%: Horizontal Bar Chart (Categories).
+  3. **Specifics Row:**
+     - 70%: Horizontal Bar Chart (Top 15 Rules).
+     - 30%: Radial Bar / Gauge (General Toxicity %).
+  4. **Granular Row:**
+     - Full Width: Treemap (Archivos by Toxicity Score).
+  5. **Deep Dive Row:**
+     - Full Width: Heatmap (Top 20 Files vs Categories).
+
+## 5. Coding Conventions & Style Guide
 
 - **Formatting:** Uses oxlint and oxfmt base.
 - **Naming Conventions:**

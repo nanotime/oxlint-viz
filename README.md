@@ -63,13 +63,29 @@ $$Score = \sum (Weight_{category} \times Multiplier_{severity})$$
 - **Weights:** `correctness` (10), `suspicious` (7), `perf` (5), `pedantic` (3), `style` (1).
 - **Multipliers:** `error` (1.0), `warning` (0.5), `advice` (0.1).
 
+To represent the **General Project Toxicity**, we use a normalized gauge (0-100%):
+
+1.  **Capped File Score:** For global averaging, each file's score is capped at 100.
+2.  **Global Average:** $GeneralToxicity = \frac{\sum \min(FileScore, 100)}{TotalFiles}$
+
 ### Health Status
 
 Based on the Toxicity Score, files are classified into:
 
 - 🟢 **Healthy (< 10):** Low impact issues or clean.
-- 🟡 **Warning (< 50):** Requires review; accumulation of minor issues.
-- 🟠 **Toxic (< 150):** Significant technical debt; high risk of bugs.
+- 🟡 **Warning (10 - 49):** Requires review; accumulation of minor issues.
+- 🟠 **Toxic (50 - 149):** Significant technical debt; high risk of bugs.
 - 🔴 **Critical (>= 150):** "Radioactive" files that should be refactored immediately.
+
+### Visualization Strategy
+
+Our dashboard uses a hierarchical approach to data visualization:
+
+- **Donut Chart (Severity):** Displays the distribution of error/warning/advice. The center shows the total issue count for immediate context.
+- **Horizontal Bar Chart (Categories):** Shows which domains (Correctness, Style, etc.) are most affected. Horizontal layout ensures long category names remain readable.
+- **Top 15 Rules (Horizontal Bar):** Pinpoints the specific linter rules being triggered most often across the project.
+- **General Toxicity Gauge:** A normalized 0-100% "Health Check" of the entire codebase.
+- **Treemap (Files by Toxicity):** Visualizes the "weight" of each file based on its toxicity score. Larger blocks indicate higher priority for refactoring.
+- **Heatmap (Top 20 Files vs Categories):** A deep-dive matrix crossing the most toxic files with Oxlint categories to reveal _why_ a file is problematic (e.g., is it a performance issue or a style violation?).
 
 Our goal is to represent the **density of risk** rather than just a flat count of errors, allowing teams to focus on the files that truly hinder maintainability.

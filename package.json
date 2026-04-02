@@ -12,6 +12,9 @@
     "prepare": "vp config"
   },
   "dependencies": {
+    "@types/node": "^25.5.0",
+    "daisyui": "^5.5.19",
+    "es-toolkit": "^1.45.1",
     "solid-js": "^1.9.9"
   },
   "devDependencies": {
