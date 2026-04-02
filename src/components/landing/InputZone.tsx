@@ -28,7 +28,11 @@ const placeholder = `
 
 export const InputZone: Component = () => {
   return (
-    <section class="flex flex-col flex-1 items-center justify-center" id="input-zone">
+    <section
+      class="flex flex-col flex-1 items-center justify-center"
+      id="input-zone"
+      data-testid="input-zone"
+    >
       <div class="card card-border shadow-sm">
         <div class="card-body">
           <div class="card-title">

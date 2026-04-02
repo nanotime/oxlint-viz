@@ -1,8 +1,8 @@
 import type { Component } from "solid-js";
 import { ErrorBoundary, Show, Suspense } from "solid-js";
 import { AppProvider, view } from "@/store/AppContext";
-import { InputZone } from "./components/InputZone";
-import { Dashboard } from "./components/Dashboard";
+import { InputZone } from "./components/landing/InputZone";
+import { Dashboard } from "./components/dashboard/Dashboard";
 
 const ErrorCard: Component<{ error: any; reset: () => void }> = (props) => {
   return (
@@ -24,7 +24,7 @@ const ErrorCard: Component<{ error: any; reset: () => void }> = (props) => {
 const App: Component = () => {
   return (
     <AppProvider>
-      <div class="min-h-screen flex flex-col w-full">
+      <div class="min-h-screen flex flex-col w-full" id="app" data-testid="app">
         <div class="w-[85%] flex flex-col flex-1 max-w-7xl h-full mx-auto">
           <Show when={view() === "input"}>
             <ErrorBoundary fallback={(error, reset) => <ErrorCard error={error} reset={reset} />}>
