@@ -1,5 +1,9 @@
 import { Component } from "solid-js";
 import { setView } from "@/store/AppContext";
+import { parser } from "@/logic/parser";
+import { normalizer } from "@/logic/normalizer";
+import { useAppContext } from "@/store/AppContext";
+import data from "@/mocks/oxlint-excerpt.json";
 
 const placeholder = `
 {
@@ -27,6 +31,19 @@ const placeholder = `
 }`;
 
 export const InputZone: Component = () => {
+  const context = useAppContext();
+
+  const analyze = () => {
+    const parsed = parser(JSON.stringify(data));
+    const normalized = normalizer(parsed);
+    context.setData(normalized);
+  };
+
+  const handleClick = () => {
+    setView("dashboard");
+    analyze();
+  };
+
   return (
     <section
       class="flex flex-col flex-1 items-center justify-center"
@@ -47,7 +64,7 @@ export const InputZone: Component = () => {
               id="oxlint-input"
               placeholder={placeholder}
             />
-            <button class="btn btn-primary" onClick={() => setView("dashboard")}>
+            <button class="btn btn-primary" onClick={handleClick}>
               Analyze
             </button>
           </div>
