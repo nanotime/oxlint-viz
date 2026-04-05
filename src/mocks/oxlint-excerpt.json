@@ -8,11 +8,7 @@
       "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/arrow-body-style.html",
       "help": "Move the returned value to be immediately after the `=>`.",
       "filename": "src/theme/light/create-blurs.js",
-      "labels": [
-        {
-          "span": { "offset": 33, "length": 27, "line": 1, "column": 34 }
-        }
-      ],
+      "labels": [{ "span": { "offset": 33, "length": 27, "line": 1, "column": 34 } }],
       "related": []
     },
     {
@@ -23,11 +19,7 @@
       "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
       "help": "Replace `selectAll: false...` with `committedAt: false...`.",
       "filename": "src/mocks/userColumnPreferences.ts",
-      "labels": [
-        {
-          "span": { "offset": 24, "length": 3117, "line": 1, "column": 25 }
-        }
-      ],
+      "labels": [{ "span": { "offset": 24, "length": 3117, "line": 1, "column": 25 } }],
       "related": []
     },
     {
@@ -38,11 +30,7 @@
       "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/filename-case.html",
       "help": "Rename the file to 'user-column-preferences.ts'",
       "filename": "src/mocks/userColumnPreferences.ts",
-      "labels": [
-        {
-          "span": { "offset": 0, "length": 0, "line": 1, "column": 1 }
-        }
-      ],
+      "labels": [{ "span": { "offset": 0, "length": 0, "line": 1, "column": 1 } }],
       "related": []
     },
     {
@@ -84,11 +72,7 @@
       "causes": [],
       "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-imports.html",
       "filename": "src/components/paymentHistory/dialogs/ExportDialog.test.tsx",
-      "labels": [
-        {
-          "span": { "offset": 107, "length": 42, "line": 3, "column": 1 }
-        }
-      ],
+      "labels": [{ "span": { "offset": 107, "length": 42, "line": 3, "column": 1 } }],
       "related": []
     },
     {
@@ -99,11 +83,7 @@
       "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/filename-case.html",
       "help": "Rename the file to 'export-dialog.test.tsx'",
       "filename": "src/components/paymentHistory/dialogs/ExportDialog.test.tsx",
-      "labels": [
-        {
-          "span": { "offset": 0, "length": 0, "line": 1, "column": 1 }
-        }
-      ],
+      "labels": [{ "span": { "offset": 0, "length": 0, "line": 1, "column": 1 } }],
       "related": []
     },
     {
@@ -113,11 +93,7 @@
       "causes": [],
       "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-imports.html",
       "filename": "src/components/scheduleReports/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 40, "length": 49, "line": 2, "column": 1 }
-        }
-      ],
+      "labels": [{ "span": { "offset": 40, "length": 49, "line": 2, "column": 1 } }],
       "related": []
     },
     {
@@ -126,12 +102,31 @@
       "severity": "error",
       "causes": [],
       "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
+      "help": "Replace `borderRadius: '27px', backgroundColor: '#26E1CF'...` with `'&:hover': { backgroundColor: '#26E1CF' }...`.",
       "filename": "src/components/scheduleReports/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 142, "length": 224, "line": 4, "column": 52 }
-        }
-      ],
+      "labels": [{ "span": { "offset": 142, "length": 224, "line": 4, "column": 52 } }],
+      "related": []
+    },
+    {
+      "message": "Comments should not begin with a lowercase letter",
+      "code": "eslint(capitalized-comments)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
+      "help": "Change the first letter of the comment to uppercase",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [{ "span": { "offset": 324, "length": 17, "line": 14, "column": 3 } }],
+      "related": []
+    },
+    {
+      "message": "Member 'alpha' of the import declaration should be sorted alphabetically.",
+      "code": "eslint(sort-imports)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-imports.html",
+      "help": "Replace `styled, alpha, Checkbox` with `Checkbox, alpha, styled`.",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [{ "span": { "offset": 17, "length": 5, "line": 1, "column": 18 } }],
       "related": []
     },
     {
@@ -140,152 +135,405 @@
       "severity": "error",
       "causes": [],
       "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
-      "filename": "src/components/scheduleReports/styles.ts",
+      "help": "Replace `color: '#0A0337', fontFamily: 'Noto Sans'...` with `color: '#0A0337', fontFamily: 'Noto Sans'...`.",
+      "filename": "src/components/paymentHistory/styles.ts",
+      "labels": [{ "span": { "offset": 143, "length": 131, "line": 4, "column": 43 } }],
+      "related": []
+    },
+    {
+      "message": "Unexpected block statement surrounding arrow body.",
+      "code": "eslint(arrow-body-style)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/arrow-body-style.html",
+      "help": "Move the returned value to be immediately after the `=>`.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 1123, "length": 1133, "line": 34, "column": 74 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier name is too short (< 2).",
+      "code": "eslint(id-length)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/id-length.html",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 2297, "length": 1, "line": 66, "column": 39 } }],
+      "related": []
+    },
+    {
+      "message": "No magic number: 0",
+      "code": "eslint(no-magic-numbers)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-magic-numbers.html",
+      "help": "Use a named constant instead of a magic number.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 1508, "length": 1, "line": 41, "column": 40 } }],
+      "related": []
+    },
+    {
+      "message": "Unexpected negated condition.",
+      "code": "eslint(no-negated-condition)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-negated-condition.html",
+      "help": "Remove the negation operator and switch branches.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 1338, "length": 21, "line": 37, "column": 9 } }],
+      "related": []
+    },
+    {
+      "message": "Unexpected use of ternary expression",
+      "code": "eslint(no-ternary)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-ternary.html",
+      "help": "Do not use the ternary expression.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 1482, "length": 27, "line": 41, "column": 14 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
       "labels": [
         {
-          "span": { "offset": 420, "length": 249, "line": 17, "column": 51 }
+          "label": "'useContext' is imported here",
+          "span": { "offset": 16, "length": 10, "line": 1, "column": 17 }
         }
       ],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "Array type using 'Array<T>' is forbidden. Use 'T[]' instead.",
+      "code": "typescript-eslint(array-type)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/typescript/array-type.html",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 610, "length": 157, "line": 17, "column": 28 } }],
+      "related": []
+    },
+    {
+      "message": "Filename should be in kebab-case",
+      "code": "eslint-plugin-unicorn(filename-case)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/filename-case.html",
+      "help": "Rename the file to 'currency-summary-table.tsx'",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 0, "length": 0, "line": 1, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "Prefer using a logical operator over a ternary.",
+      "code": "eslint-plugin-unicorn(prefer-logical-operator-over-ternary)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/prefer-logical-operator-over-ternary.html",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 1482, "length": 27, "line": 41, "column": 14 } }],
+      "related": []
+    },
+    {
+      "message": "Prefer ternary expressions over simple `if-else` statements.",
+      "code": "eslint-plugin-unicorn(prefer-ternary)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/prefer-ternary.html",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [{ "span": { "offset": 1334, "length": 894, "line": 37, "column": 5 } }],
+      "related": []
+    },
+    {
+      "message": "Array type using 'Array<Entitlement>' is forbidden. Use 'Entitlement[]' instead.",
+      "code": "typescript-eslint(array-type)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/typescript/array-type.html",
+      "filename": "src/types/user.ts",
+      "labels": [{ "span": { "offset": 493, "length": 18, "line": 20, "column": 16 } }],
+      "related": []
+    },
+    {
+      "message": "All imports in the declaration are only used as types. Use `import type`.",
+      "code": "typescript-eslint(consistent-type-imports)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/typescript/consistent-type-imports.html",
+      "filename": "src/types/user.ts",
+      "labels": [{ "span": { "offset": 0, "length": 60, "line": 1, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "Imports should be sorted alphabetically.",
+      "code": "eslint(sort-imports)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-imports.html",
+      "filename": "src/theme/light/create-options.js",
+      "labels": [{ "span": { "offset": 156, "length": 45, "line": 4, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "Object keys should be sorted",
+      "code": "eslint(sort-keys)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
+      "filename": "src/theme/light/create-options.js",
+      "labels": [{ "span": { "offset": 403, "length": 58, "line": 12, "column": 10 } }],
+      "related": []
+    },
+    {
+      "message": "Filename should be in kebab-case",
+      "code": "eslint-plugin-unicorn(filename-case)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/filename-case.html",
+      "filename": "src/constants/TableHeadCell.ts",
+      "labels": [{ "span": { "offset": 0, "length": 0, "line": 1, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "Expected a function expression.",
+      "code": "eslint(func-style)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/func-style.html",
+      "filename": "src/components/reviewOrderCancellation/ReviewOrderPaymentSummaryTable/index.tsx",
+      "labels": [{ "span": { "offset": 1119, "length": 1758, "line": 31, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "The function `ReviewOrderPaymentSummaryTable` has too many lines (51). Maximum allowed is 50.",
+      "code": "eslint(max-lines-per-function)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/max-lines-per-function.html",
+      "filename": "src/components/reviewOrderCancellation/ReviewOrderPaymentSummaryTable/index.tsx",
+      "labels": [{ "span": { "offset": 1119, "length": 1758, "line": 31, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "filename": "src/components/reviewOrderCancellation/ReviewOrderPaymentSummaryTable/index.tsx",
       "labels": [
         {
-          "span": { "offset": 324, "length": 17, "line": 14, "column": 3 }
+          "label": "'useContext' is imported here",
+          "span": { "offset": 16, "length": 10, "line": 1, "column": 17 }
         }
       ],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "All imports in the declaration are only used as types. Use `import type`.",
+      "code": "typescript-eslint(consistent-type-imports)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 344, "length": 18, "line": 15, "column": 3 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/typescript/consistent-type-imports.html",
+      "filename": "src/components/reviewOrderCancellation/ReviewOrderPaymentSummaryTable/index.tsx",
+      "labels": [{ "span": { "offset": 446, "length": 65, "line": 10, "column": 1 } }],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "Expected a function expression.",
+      "code": "eslint(func-style)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 365, "length": 23, "line": 16, "column": 3 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/func-style.html",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.tsx",
+      "labels": [{ "span": { "offset": 1151, "length": 510, "line": 60, "column": 1 } }],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "Identifier name is too short (< 2).",
+      "code": "eslint(id-length)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 391, "length": 24, "line": 17, "column": 3 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/id-length.html",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.tsx",
+      "labels": [{ "span": { "offset": 1292, "length": 1, "line": 64, "column": 24 } }],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "The function `ExportDialog` has too many lines (93). Maximum allowed is 50.",
+      "code": "eslint(max-lines-per-function)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 418, "length": 28, "line": 18, "column": 3 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/max-lines-per-function.html",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.tsx",
+      "labels": [{ "span": { "offset": 1678, "length": 3773, "line": 84, "column": 16 } }],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "Unexpected negated condition.",
+      "code": "eslint(no-negated-condition)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 449, "length": 19, "line": 19, "column": 3 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-negated-condition.html",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.tsx",
+      "labels": [{ "span": { "offset": 2453, "length": 13, "line": 108, "column": 10 } }],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "Unexpected use of ternary expression",
+      "code": "eslint(no-ternary)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 944, "length": 28, "line": 39, "column": 5 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-ternary.html",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.tsx",
+      "labels": [{ "span": { "offset": 1342, "length": 292, "line": 66, "column": 8 } }],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "Do not use `null` literals",
+      "code": "eslint-plugin-unicorn(no-null)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 977, "length": 28, "line": 40, "column": 5 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/no-null.html",
+      "filename": "src/components/paymentHistory/dialogs/ExportDialog.tsx",
+      "labels": [{ "span": { "offset": 1630, "length": 4, "line": 79, "column": 11 } }],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "Unexpected block statement surrounding arrow body.",
+      "code": "eslint(arrow-body-style)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 1010, "length": 29, "line": 41, "column": 5 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/arrow-body-style.html",
+      "filename": "src/components/loaders/TableLoader.tsx",
+      "labels": [{ "span": { "offset": 1384, "length": 1378, "line": 32, "column": 40 } }],
       "related": []
     },
     {
-      "message": "Comments should not begin with a lowercase letter",
-      "code": "eslint(capitalized-comments)",
+      "message": "Expected a function expression.",
+      "code": "eslint(func-style)",
       "severity": "error",
       "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/capitalized-comments.html",
-      "filename": "src/components/paymentHistory/styles.ts",
-      "labels": [
-        {
-          "span": { "offset": 1044, "length": 23, "line": 42, "column": 5 }
-        }
-      ],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/func-style.html",
+      "filename": "src/components/loaders/TableLoader.tsx",
+      "labels": [{ "span": { "offset": 135, "length": 3534, "line": 5, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "The function `TableLoader` has too many lines (78). Maximum allowed is 50.",
+      "code": "eslint(max-lines-per-function)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/max-lines-per-function.html",
+      "filename": "src/components/loaders/TableLoader.tsx",
+      "labels": [{ "span": { "offset": 135, "length": 3534, "line": 5, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "Use `new Array()` instead of `Array()`",
+      "code": "eslint-plugin-unicorn(new-for-builtins)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/new-for-builtins.html",
+      "filename": "src/components/loaders/TableLoader.tsx",
+      "labels": [{ "span": { "offset": 1363, "length": 9, "line": 32, "column": 19 } }],
+      "related": []
+    },
+    {
+      "message": "Use `interface` instead of `type`.",
+      "code": "typescript-eslint(consistent-type-definitions)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/typescript/consistent-type-definitions.html",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [{ "span": { "offset": 987, "length": 4, "line": 33, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "Use \"@ts-expect-error\" instead of @ts-ignore.",
+      "code": "typescript-eslint(ban-ts-comment)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/typescript/ban-ts-comment.html",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [{ "span": { "offset": 1738, "length": 11, "line": 64, "column": 5 } }],
+      "related": []
+    },
+    {
+      "message": "Enforce using `@ts-expect-error` over `@ts-ignore`",
+      "code": "typescript-eslint(prefer-ts-expect-error)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/typescript/prefer-ts-expect-error.html",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [{ "span": { "offset": 1736, "length": 13, "line": 64, "column": 3 } }],
+      "related": []
+    },
+    {
+      "message": "Unexpected nested ternary expression without parentheses.",
+      "code": "eslint-plugin-unicorn(no-nested-ternary)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/no-nested-ternary.html",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [{ "span": { "offset": 3669, "length": 209, "line": 109, "column": 21 } }],
+      "related": []
+    },
+    {
+      "message": "The function has too many lines (52). Maximum allowed is 50.",
+      "code": "eslint(max-lines-per-function)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/max-lines-per-function.html",
+      "filename": "src/theme/light/create-palette.js",
+      "labels": [{ "span": { "offset": 243, "length": 1472, "line": 7, "column": 30 } }],
+      "related": []
+    },
+    {
+      "message": "No magic number: 500",
+      "code": "eslint(no-magic-numbers)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-magic-numbers.html",
+      "filename": "src/theme/light/create-palette.js",
+      "labels": [{ "span": { "offset": 298, "length": 3, "line": 10, "column": 23 } }],
+      "related": []
+    },
+    {
+      "message": "File has too many lines (1531).",
+      "code": "eslint(max-lines)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/max-lines.html",
+      "filename": "src/mocks/api/payments.ts",
+      "labels": [{ "span": { "offset": 61844, "length": 0, "line": 1531, "column": 25 } }],
+      "related": []
+    },
+    {
+      "message": "Object keys should be sorted",
+      "code": "eslint(sort-keys)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
+      "filename": "src/mocks/api/payments.ts",
+      "labels": [{ "span": { "offset": 51, "length": 6209, "line": 4, "column": 7 } }],
+      "related": []
+    },
+    {
+      "message": "Object keys should be sorted",
+      "code": "eslint(sort-keys)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/sort-keys.html",
+      "filename": "src/mocks/api/payments.ts",
+      "labels": [{ "span": { "offset": 1134, "length": 1973, "line": 34, "column": 23 } }],
       "related": []
     }
   ],

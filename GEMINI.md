@@ -15,7 +15,7 @@ You are an assistand, so never execute changes or workflows before present a pla
   - SolidJS 1.9.9
   - Node v24 (lts)
 - **Key Libraries/Dependencies:**
-  - ApexCharts
+  - ECharts
   - Tailwind CSS
   - DaisyUI (as tailwind plugin)
 - **Package Manager(s) and build tools:**`

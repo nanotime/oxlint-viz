@@ -34,7 +34,7 @@ vp build
 - **Framework:** [SolidJS](https://solidjs.com/) (v1.9.9) for fine-grained reactivity and performance.
 - **Toolchain:** [Vite+](https://github.com/voidzero-dev/vite-plus) for a seamless dev/build experience.
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/) for a modern, accessible UI.
-- **Visualization:** [ApexCharts](https://apexcharts.com/) for interactive data representation.
+- **Visualization:** [Apache ECharts](https://echarts.apache.org/) for highly interactive data representation.
 - **Language:** TypeScript for end-to-end type safety.
 
 ## 🗺 Roadmap
