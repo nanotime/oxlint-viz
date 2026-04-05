@@ -28,7 +28,14 @@ export const AppContext = createContext<{
   setData: SetStoreFunction<NormalizedReport>;
 }>();
 
+const WorkerInstance = () => {
+  const worker = new Worker(new URL("../logic/worker", import.meta.url), { type: "module" });
+  return worker;
+};
+
+export const worker = WorkerInstance();
 export const [view, setView] = createSignal<ViewState>("input");
+export const [workerDone, setWorkerDone] = createSignal(false);
 
 export const AppProvider: ParentComponent = (props) => {
   const [data, setData] = createStore(baseStore);
