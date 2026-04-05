@@ -1,10 +1,10 @@
-import { describe, expect, it, vi } from "vite-plus/test";
+import { describe, expect, it } from "vite-plus/test";
 import { render, waitFor } from "@solidjs/testing-library";
 import App from "../App";
-import * as AppContext from "@/store/AppContext";
+import { AppProvider } from "@/store/AppContext";
 import userEvent from "@testing-library/user-event";
 
-const wrapper = (props: any) => <AppContext.AppProvider value={AppContext.baseStore} {...props} />;
+const wrapper = (props: any) => <AppProvider {...props} />;
 const user = userEvent.setup();
 
 describe("App", () => {
@@ -17,16 +17,17 @@ describe("App", () => {
   });
 
   it("Should render dashboard on click", async () => {
-    const setViewSpy = vi.spyOn(AppContext, "setView");
     const r = render(() => <App />, { wrapper });
 
+    const textarea = r.getByRole("textbox");
     const analyzeBtn = r.getByRole("button", { name: /analyze/i });
 
     expect(r.queryByTestId("dashboard")).not.toBeInTheDocument();
 
-    await user.click(analyzeBtn);
+    await user.click(textarea);
+    await user.paste("test data");
 
-    expect(setViewSpy).toHaveBeenCalledWith("dashboard");
+    await user.click(analyzeBtn);
 
     await waitFor(() => {
       expect(r.queryByTestId("dashboard")).toBeInTheDocument();
