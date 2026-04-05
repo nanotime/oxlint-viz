@@ -4,6 +4,7 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "target": "ESNext",
+    "lib": ["ESNext", "WebWorker"],
 
     // Modules
     "allowSyntheticDefaultImports": true,

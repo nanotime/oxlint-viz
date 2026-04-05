@@ -26,7 +26,7 @@ import {
   VisualMapComponentOption,
 } from "echarts/components";
 
-import { CanvasRenderer } from "echarts/renderers";
+import { SVGRenderer } from "echarts/renderers";
 import type { ComposeOption } from "echarts/core";
 
 echarts.use([
@@ -41,7 +41,7 @@ echarts.use([
   DatasetComponent,
   LegendComponent,
   VisualMapComponent,
-  CanvasRenderer,
+  SVGRenderer,
 ]);
 
 export type ChartOption = ComposeOption<
