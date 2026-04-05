@@ -1,5 +1,6 @@
 import { Card } from "@/components/shared/Card";
 import { Section } from "./SectionFactory";
+import { FilesHeatmap } from "../charts/FilesHeatmap";
 
 export const DeepDiveSection = () => {
   return (
@@ -12,6 +13,10 @@ export const DeepDiveSection = () => {
                 Heatmap Deep Dive
               </h3>
             </Card.Header>
+
+            <div class="h-full w-full">
+              <FilesHeatmap />
+            </div>
           </Card.Body>
         </Card>
       </Section.Left>

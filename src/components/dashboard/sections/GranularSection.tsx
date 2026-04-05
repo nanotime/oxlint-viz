@@ -1,5 +1,6 @@
 import { Card } from "@/components/shared/Card";
 import { Section } from "./SectionFactory";
+import { TreeByToxicity } from "../charts/TreeByToxicity";
 
 export const GranularSection = () => {
   return (
@@ -12,6 +13,9 @@ export const GranularSection = () => {
                 Files by Toxicity Score
               </h3>
             </Card.Header>
+            <div class="w-full h-full">
+              <TreeByToxicity />
+            </div>
           </Card.Body>
         </Card>
       </Section.Left>

@@ -1,5 +1,7 @@
 import { Card } from "@/components/shared/Card";
 import { Section } from "./SectionFactory";
+import { GeneralToxicityGauge } from "../charts/GeneralToxicityGauge";
+import { TopRulesBar } from "../charts/TopRulesBar";
 
 const leftClass = "col-span-12 lg:col-span-8 p-2 rounded-xl min-h-[400px]";
 const rightClass = "col-span-12 lg:col-span-4 p-2 rounded-xl min-h-[400px]";
@@ -15,6 +17,9 @@ export const SpecificsSection = () => {
                 Top 15 Rules
               </h3>
             </Card.Header>
+            <div class="h-full w-full">
+              <TopRulesBar />
+            </div>
           </Card.Body>
         </Card>
       </Section.Left>
@@ -27,6 +32,9 @@ export const SpecificsSection = () => {
                 General Toxicity
               </h3>
             </Card.Header>
+            <div class="h-full w-full">
+              <GeneralToxicityGauge />
+            </div>
           </Card.Body>
         </Card>
       </Section.Right>
