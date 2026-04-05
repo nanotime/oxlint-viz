@@ -54,19 +54,74 @@ The `normalizer` is a pure function that takes a `OxlintRawReport` and produces 
 2. **Aggregated Metrics:** Calculates total issues, affected files, and severity distribution.
 3. **Hotspot Analysis:** Identifies which files require immediate attention.
 
+### Category Inference
+
+The normalizer determines what _kind_ of issue each lint error represents:
+
+```
+"eslint(no-unused-vars)"
+        ↓
+    Extract: "no-unused-vars"
+        ↓
+    Look up in Categories: { category: "correctness" }
+        ↓
+    Result: "correctness"
+```
+
+**Priority order:**
+
+1. **RULE_OVERRIDES** — User-defined exceptions take highest priority
+2. **Categories lookup** — The oxlint source-of-truth mapping (flat `Record<string, Category>`)
+3. **Fallback** — Defaults to `"correctness"` if rule not found
+
+This enables O(1) lookup for rule categorization, critical for processing large codebases efficiently.
+
 ### Metrics & Calculation
 
-We use a property **Toxicity Score** to represent the "health" of a file:
+#### Aggregation
 
-$$Score = \sum (Weight_{category} \times Multiplier_{severity})$$
+| Metric                    | How it's calculated                                           |
+| ------------------------- | ------------------------------------------------------------- |
+| **Total Issues**          | Count all diagnostics                                         |
+| **Files Affected**        | Unique filenames with issues                                  |
+| **Severity Breakdown**    | Count `{ error, warning, advice }`                            |
+| **Category Distribution** | Count by `{ correctness, style, pedantic, suspicious, perf }` |
 
-- **Weights:** `correctness` (10), `suspicious` (7), `perf` (5), `pedantic` (3), `style` (1).
-- **Multipliers:** `error` (1.0), `warning` (0.5), `advice` (0.1).
+#### Toxicity Score (Per-File)
 
-To represent the **General Project Toxicity**, we use a normalized gauge (0-100%):
+Each file receives a **toxicity score** — a weighted sum of its issues:
 
-1.  **Capped File Score:** For global averaging, each file's score is capped at 100.
-2.  **Global Average:** $GeneralToxicity = \frac{\sum \min(FileScore, 100)}{TotalFiles}$
+$$Toxicity = \sum (CategoryWeight \times SeverityMultiplier)$$
+
+| Category    | Weight | Rationale                           |
+| ----------- | ------ | ----------------------------------- |
+| correctness | 10     | Bugs, type errors — fix immediately |
+| suspicious  | 7      | Code smells — risky patterns        |
+| perf        | 5      | Performance issues                  |
+| pedantic    | 3      | Style preferences                   |
+| style       | 1      | Cosmetic, non-critical              |
+
+| Severity | Multiplier |
+| -------- | ---------- |
+| error    | 1.0        |
+| warning  | 0.5        |
+| advice   | 0.1        |
+
+**Example:**
+
+```
+File: src/api/payments.ts
+Issues:
+  - 20 correctness errors × 10 × 1.0 = 200
+  - 5 style warnings × 1 × 0.5 = 2.5
+Toxicity Score = 202.5 → capped at 100
+```
+
+#### General Toxicity (Project-Wide)
+
+$$GeneralToxicity = \frac{\sum \min(FileScore, 100)}{TotalFiles}$$
+
+Each file's score is capped at 100, then averaged across all files. This prevents one terrible file from skewing the entire project's score.
 
 ### Health Status
 
