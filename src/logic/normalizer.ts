@@ -1,15 +1,6 @@
 import { OxlintRawReport } from "../model/input";
 import { FileMetrics, NormalizedReport, RuleMetric } from "../model/output";
-
-export const RULE_NAMESPACE_MAP: Record<string, string> = {
-  eslint: "correctness",
-  "typescript-eslint": "correctness",
-  "eslint-plugin-unicorn": "style",
-  "eslint-plugin-import": "pedantic",
-  "eslint-plugin-jsx-a11y": "suspicious",
-  oxc: "perf",
-  "eslint-plugin-react": "correctness",
-};
+import { Categories } from "../model/categories";
 
 export const RULE_OVERRIDES: Record<string, string> = {
   "eslint(no-var)": "pedantic",
@@ -36,15 +27,12 @@ const WEIGHTS: Record<string, number> = {
 const SEVERITY_MULT = { error: 1, warning: 0.5, advice: 0.1 };
 
 export function inferCategory(code: string): string {
-  // Overrides takes priority
   if (RULE_OVERRIDES[code]) return RULE_OVERRIDES[code];
 
-  // everything before the first (
-  const match = code.match(/^([^(]+)/);
+  const match = code.match(/\(([^)]+)\)/);
+  if (!match) return "correctness";
 
-  if (!match) return "correctness"; // Default de seguridad
-  const namespace = match[1];
-  return RULE_NAMESPACE_MAP[namespace] || "correctness";
+  return Categories[match[1]]?.category ?? "correctness";
 }
 
 function calculateHealthStatus(score: number): "healthy" | "warning" | "toxic" | "critical" {

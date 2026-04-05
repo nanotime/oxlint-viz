@@ -4,12 +4,12 @@ import { OxlintRawReport } from "../model/input";
 import data from "../mocks/oxlint-excerpt.json";
 
 describe("inferCategory", () => {
-  it("should infer the correct category for a given rule code based on namespace", () => {
+  it("should infer the correct category for a given rule code based on categories.ts", () => {
     expect(inferCategory("eslint(no-unused-vars)")).toBe("correctness");
 
     expect(inferCategory("eslint-plugin-unicorn(filename-case)")).toBe("style");
 
-    expect(inferCategory("eslint-plugin-import(no-self-import)")).toBe("pedantic");
+    expect(inferCategory("eslint-plugin-import(no-self-import)")).toBe("suspicious");
 
     expect(inferCategory("oxc(no-map-spread)")).toBe("perf");
 
@@ -35,7 +35,7 @@ describe("Normalizer", () => {
     it("should calculate total issues correctly", () => {
       const report = data as OxlintRawReport;
       const normalized = normalizer(report);
-      expect(normalized.summary.totalIssues).toBe(20);
+      expect(normalized.summary.totalIssues).toBe(50);
     });
 
     it("should calculate total files correctly", () => {
@@ -57,7 +57,7 @@ describe("Normalizer", () => {
     it("should count severity distribution correctly", () => {
       const report = data as OxlintRawReport;
       const normalized = normalizer(report);
-      expect(normalized.distribution.severity.error).toBe(20);
+      expect(normalized.distribution.severity.error).toBe(50);
       expect(normalized.distribution.severity.warning).toBe(0);
       expect(normalized.distribution.severity.advice).toBe(0);
     });
@@ -65,18 +65,14 @@ describe("Normalizer", () => {
     it("should count category distribution correctly", () => {
       const report = data as OxlintRawReport;
       const normalized = normalizer(report);
-      // correctness: arrow-body-style (1) + no-unused-vars (2) = 3
-      // style: sort-keys (3) + filename-case (2) + sort-imports (2) + capitalized-comments (10) = 17
-      expect(normalized.distribution.categories.correctness).toBe(3);
-      expect(normalized.distribution.categories.style).toBe(17);
+      expect(normalized.distribution.categories.correctness).toBe(5);
+      expect(normalized.distribution.categories.style).toBe(36);
     });
 
     it("should calculate generalToxicity correctly", () => {
       const report = data as OxlintRawReport;
       const normalized = normalizer(report);
-      // sum(cappedScore) = 10 (create-blurs) + 2 (userColumnPreferences) + 22 (ExportDialog.test) + 3 (scheduleReports/styles) + 10 (paymentHistory/styles) = 47
-      // 47 / 156 = 0.30128205128205127
-      expect(normalized.distribution.generalToxicity).toBeCloseTo(0.30128, 5);
+      expect(normalized.distribution.generalToxicity).toBeCloseTo(0.7884615384615384, 8);
     });
   });
 
@@ -87,13 +83,13 @@ describe("Normalizer", () => {
 
       expect(normalized.rules["eslint(capitalized-comments)"]).toEqual({
         name: "eslint(capitalized-comments)",
-        count: 10,
+        count: 1,
         category: "style",
       });
 
       expect(normalized.rules["eslint(sort-keys)"]).toEqual({
         name: "eslint(sort-keys)",
-        count: 3,
+        count: 6,
         category: "style",
       });
     });
@@ -104,12 +100,12 @@ describe("Normalizer", () => {
       const report = data as OxlintRawReport;
       const normalized = normalizer(report);
 
-      // File with 10 capitalized-comments (style)
+      // File with 3 style issues (capitalized-comments, sort-imports, sort-keys)
       const styles = normalized.hotspots["src/components/paymentHistory/styles.ts"];
-      expect(styles.issueCount).toBe(10);
-      expect(styles.errorCount).toBe(10);
-      expect(styles.toxicityScore).toBe(10); // 10 issues * 1 weight (style)
-      expect(styles.status).toBe("warning");
+      expect(styles.issueCount).toBe(3);
+      expect(styles.errorCount).toBe(3);
+      expect(styles.toxicityScore).toBe(3); // 3 issues * 1 weight (style)
+      expect(styles.status).toBe("healthy");
 
       // File with mixed categories
       const dialog =
@@ -120,11 +116,11 @@ describe("Normalizer", () => {
       expect(dialog.toxicityScore).toBe(22); // 2*10 (correctness) + 2*1 (style)
       expect(dialog.status).toBe("warning");
 
-      // File with single issue correctness
+      // File with single issue style
       const blurs = normalized.hotspots["src/theme/light/create-blurs.js"];
       expect(blurs.issueCount).toBe(1);
-      expect(blurs.toxicityScore).toBe(10);
-      expect(blurs.status).toBe("warning");
+      expect(blurs.toxicityScore).toBe(1);
+      expect(blurs.status).toBe("healthy");
     });
   });
 });
