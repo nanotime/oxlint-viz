@@ -1,0 +1,42 @@
+{
+  "correctness": [
+    { "ruleName": "alt-text", "source": "jsx-a11y", "category": "correctness" },
+    { "ruleName": "anchor-has-content", "source": "jsx-a11y", "category": "correctness" },
+    { "ruleName": "anchor-is-valid", "source": "jsx-a11y", "category": "correctness" },
+    {
+      "ruleName": "aria-activedescendant-has-tabindex",
+      "source": "jsx-a11y",
+      "category": "correctness"
+    }
+  ],
+  "pedantic": [
+    { "ruleName": "accessor-pairs", "source": "eslint", "category": "pedantic" },
+    { "ruleName": "array-callback-return", "source": "eslint", "category": "pedantic" },
+    { "ruleName": "ban-ts-comment", "source": "typescript", "category": "pedantic" },
+    { "ruleName": "ban-types", "source": "typescript", "category": "pedantic" }
+  ],
+  "perf": [
+    { "ruleName": "jsx-no-constructed-context-values", "source": "react", "category": "perf" },
+    { "ruleName": "jsx-no-jsx-as-prop", "source": "react-perf", "category": "perf" },
+    { "ruleName": "jsx-no-new-array-as-prop", "source": "react-perf", "category": "perf" },
+    { "ruleName": "jsx-no-new-function-as-prop", "source": "react-perf", "category": "perf" }
+  ],
+  "restriction": [
+    { "ruleName": "anchor-ambiguous-text", "source": "jsx-a11y", "category": "restriction" },
+    { "ruleName": "bad-bitwise-operator", "source": "oxc", "category": "restriction" },
+    { "ruleName": "button-has-type", "source": "react", "category": "restriction" },
+    { "ruleName": "catch-or-return", "source": "promise", "category": "restriction" }
+  ],
+  "style": [
+    { "ruleName": "adjacent-overload-signatures", "source": "typescript", "category": "style" },
+    { "ruleName": "array-type", "source": "typescript", "category": "style" },
+    { "ruleName": "arrow-body-style", "source": "eslint", "category": "style" },
+    { "ruleName": "avoid-new", "source": "promise", "category": "style" }
+  ],
+  "suspicious": [
+    { "ruleName": "always-return", "source": "promise", "category": "suspicious" },
+    { "ruleName": "approx-constant", "source": "oxc", "category": "suspicious" },
+    { "ruleName": "block-scoped-var", "source": "eslint", "category": "suspicious" },
+    { "ruleName": "consistent-function-scoping", "source": "unicorn", "category": "suspicious" }
+  ]
+}

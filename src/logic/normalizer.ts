@@ -118,14 +118,21 @@ export function normalizer(rawReport: OxlintRawReport): NormalizedReport {
         errorCount: 0,
         warningCount: 0,
         toxicityScore: 0,
-        mainSmell: "",
         status: "healthy",
+        categories: {
+          correctness: 0,
+          pedantic: 0,
+          perf: 0,
+          style: 0,
+          suspicious: 0,
+        },
       };
     }
 
     hotspotsBase[filename].toxicityScore +=
       (WEIGHTS[category] || 1) * (SEVERITY_MULT[severity] || 0.1);
 
+    hotspotsBase[filename].categories[category] += 1;
     hotspotsBase[filename].issueCount += 1;
 
     if (diag.severity === "error") {

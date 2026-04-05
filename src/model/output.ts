@@ -6,7 +6,7 @@ export interface FileMetrics {
   errorCount: number;
   warningCount: number;
   toxicityScore: number;
-  mainSmell: string;
+  categories: Record<string, number>;
   status: HealthStatus;
 }
 
