@@ -1,47 +1,17 @@
-import { Component } from "solid-js";
-import { setView } from "@/store/AppContext";
-import { parser } from "@/logic/parser";
-import { normalizer } from "@/logic/normalizer";
-import { useAppContext } from "@/store/AppContext";
-import data from "@/mocks/oxlint-excerpt.json";
-
-const placeholder = `
-{
-  diagnosis: [
-    {
-      "message": "Unexpected block statement surrounding arrow body.",
-      "code": "eslint(arrow-body-style)",
-      "severity": "error",
-      "causes": [],
-      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/arrow-body-style.html",
-      "help": "Move the returned value to be immediately after the =>.",
-      "filename": "src/theme/light/create-blurs.js",
-      "labels": [
-        {
-          "span": { "offset": 33, "length": 27, "line": 1, "column": 34 }
-        }
-      ],
-      "related": []
-    },
-  ],
-  "number_of_files": 156,
-  "number_of_rules": 311,
-  "threads_count": 8,
-  "start_time": 0.074235209
-}`;
+import { Component, createSignal, JSX } from "solid-js";
+import { setView, worker } from "@/store/AppContext";
+import { placeholder } from "./constants";
 
 export const InputZone: Component = () => {
-  const context = useAppContext();
-
-  const analyze = () => {
-    const parsed = parser(JSON.stringify(data));
-    const normalized = normalizer(parsed);
-    context.setData(normalized);
-  };
+  const [text, setText] = createSignal("");
 
   const handleClick = () => {
+    worker.postMessage(text());
     setView("dashboard");
-    analyze();
+  };
+
+  const handleChange: JSX.EventHandler<HTMLTextAreaElement, InputEvent> = (ev) => {
+    setText(ev.currentTarget.value);
   };
 
   return (
@@ -63,8 +33,9 @@ export const InputZone: Component = () => {
               name="oxLintJson"
               id="oxlint-input"
               placeholder={placeholder}
+              onInput={handleChange}
             />
-            <button class="btn btn-primary" onClick={handleClick}>
+            <button class="btn btn-primary" onClick={handleClick} disabled={text() === ""}>
               Analyze
             </button>
           </div>
