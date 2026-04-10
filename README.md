@@ -29,6 +29,43 @@ vp test
 vp build
 ```
 
+### 🔧 Generating Oxlint Reports
+
+To analyze your project with Oxlint Visualizer, generate a JSON report. Oxlint is extremely fast, so running a full scan takes only milliseconds.
+
+#### Quick Commands
+
+````bash
+# Recommended: Standard audit (Best balance of noise/value)
+oxlint -f json . > oxlint-report.json
+
+# Comprehensive audit (All categories except nursery/experimental)
+oxlint -f json -D correctness -D perf -D suspicious -D pedantic -D style . > oxlint-report.json
+
+# Maximum coverage for Modern React Apps
+oxlint -f json -D all \
+  --react-plugin \
+  --jsx-a11y-plugin \
+  --import-plugin \
+  --vitest-plugin \
+  . > oxlint-report.json
+
+# Backend/Node.js Optimized
+oxlint -f json -D all \
+  --promise-plugin \
+  --node-plugin \
+  . > oxlint-report.json
+
+### Quick Test
+
+Clone and test on a real project:
+
+```bash
+git clone https://github.com/solidjs/solid-site --depth 1
+cd solid-site
+oxlint -f json -D all --react-plugin . > oxlint-report.json
+````
+
 ## 🛠 Tech Stack
 
 - **Framework:** [SolidJS](https://solidjs.com/) (v1.9.9) for fine-grained reactivity and performance.
@@ -40,26 +77,26 @@ vp build
 ## 🗺 Roadmap
 
 - [x] **4.1 Logic - Normalizer:** Core engine to process raw JSON reports into structured metrics.
-- [ ] **4.2 Scripts, hooks and quality enforcing:** Git hooks via `.vite-hooks` and automated CI quality checks.
-- [ ] **4.3 UI Config:** Theming, layout definition, and chart configuration.
-- [ ] **4.4 UI Development:** Implementation of the main dashboard, TreeMap, and Refacto-o-meter components.
+- [x] **4.2 Scripts, hooks and quality enforcing:** Git hooks via `.vite-hooks` and automated CI quality checks.
+- [x] **4.3 UI Config:** Theming, layout definition, and chart configuration.
+- [x] **4.4 UI Development:** Implementation of the main dashboard, TreeMap, and Refacto-o-meter components.
 
 ## 📋 Implementation TODO
 
 ### Phase 1: Error Handling & Robustness
 
-- [ ] **1.1 Worker Error Handling** (`src/logic/worker.ts`)
+- [x] **1.1 Worker Error Handling** (`src/logic/worker.ts`)
   - Wrap parser/normalizer in try/catch
   - Send structured response: `{ success: boolean, data?: NormalizedReport, error?: { message: string, details: string } }`
   - Dashboard handles both success and error responses
 
-- [ ] **1.2 Dashboard Error Handling** (`src/components/dashboard/Dashboard.tsx`)
+- [x] **1.2 Dashboard Error Handling** (`src/components/dashboard/Dashboard.tsx`)
   - Update `worker.onmessage` to handle structured response
   - On error: `throw new Error(response.error.message)` to trigger ErrorBoundary
 
 ### Phase 2: Dashboard UX Improvements
 
-- [ ] **2.1 Top 15 Rules - Grayscale Rank Coloring** (`src/components/dashboard/charts/TopRulesBar.tsx`)
+- [x] **2.1 Top 15 Rules - Grayscale Rank Coloring** (`src/components/dashboard/charts/TopRulesBar.tsx`)
   - Update title: "Most Violated Rules (Top 15)"
   - Implement grayscale grouping using `palette.grayscale`:
     - Ranks 1-3 → `palette.grayscale.dark`
@@ -67,7 +104,7 @@ vp build
     - Ranks 7-9 → `palette.grayscale.light`
     - Ranks 10-15 → `palette.base[300]`
 
-- [ ] **2.2 Categories Rose Chart** (`src/components/dashboard/charts/CategoriesRoseChart.tsx`)
+- [x] **2.2 Categories Rose Chart** (`src/components/dashboard/charts/CategoriesRoseChart.tsx`)
   - Convert horizontal bar to pie with `roseType: 'radius'`
   - Size represents issue count (human measures shapes)
   - Rename `CategorieBarChart.tsx` → `CategoriesRoseChart.tsx`
@@ -102,6 +139,7 @@ vp build
     - `focus` - Dominant category recommendation
 
 - [ ] **3.3 Insight Messages**
+
   ```
   Health Assessment:
   - toxicity <= 0.33 → "Codebase is healthy"
@@ -131,12 +169,46 @@ vp build
   - Usage: Add info icon next to chart titles
 
 - [ ] **4.2 Popover Content**
-  | Chart | Popover Content |
-  |-------|----------------|
-  | Top 15 Rules | "Most frequently violated rules. Darker color = higher priority (top 3)." |
-  | Categories Rose | "Issue distribution by domain. Larger slice = more issues." |
-  | Toxicity Gauge | "Overall health score (0-100%). Lower is better." |
-  | TreeMap | "File hotspots. Size = toxicity, Color = health status." |
+      | Chart | Popover Content |
+      |-------|----------------|
+      | Top 15 Rules | "Most frequently violated rules. Darker color = higher priority (top 3)." |
+      | Categories Rose | "Issue distribution by domain. Larger slice = more issues." |
+      | Toxicity Gauge | "Overall health score (0-100%). Lower is better." |
+      | TreeMap | "File hotspots. Size = toxicity, Color = health status." |
+
+### Phase 5: Category Severity Overrides
+
+- [ ] **5.1 Severity Configuration Model** (`src/model/severityConfig.ts`)
+  - Define `SeverityLevel` type: `error | warning | advice | ignore`
+  - Define `CategorySeverityOverride` type: `Record<CategoryType, SeverityLevel>`
+  - Define `SeverityConfig` interface with `overrides` and `preset` fields
+  - Create `SEVERITY_PRESETS` constant with opinionated defaults:
+    - `balanced`: style→advice, pedantic→ignore, restriction→warning
+    - `strict`: no overrides
+    - `performance`: style/pedantic/restriction/suspicious→ignore
+    - `reactOptimized`: style/pedantic→ignore
+
+- [ ] **5.2 Override Logic** (`src/logic/applySeverityOverrides.ts`)
+  - Create pure function to transform diagnostics based on config
+  - Filter out diagnostics with "ignore" severity
+  - Remap severity based on category overrides
+  - Update toxicity calculation to use new severities
+
+- [ ] **5.3 Update Normalizer** (`src/logic/normalizer.ts`)
+  - Accept optional `SeverityConfig` parameter
+  - Apply overrides before normalization
+  - Update type signatures
+
+- [ ] **5.4 Landing Page UI** (`src/components/landing/Landing.tsx`)
+  - Add preset selector dropdown
+  - Add category override toggle buttons (error/warning/advice/ignore)
+  - Show impact preview (issues count before/after)
+  - Integrate with analysis workflow
+
+- [ ] **5.5 LocalStorage Persistence**
+  - Save custom overrides to localStorage
+  - Load saved overrides on page load
+  - Clear/reset functionality
 
 ## 🔬 Technical Explanations
 
