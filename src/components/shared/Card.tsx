@@ -1,11 +1,11 @@
-import { ParentComponent } from "solid-js";
+import { ParentComponent, Show } from "solid-js";
 
 type CardProps = {
   class?: string;
 };
 
 interface CardComposition {
-  Header: ParentComponent<CardProps>;
+  Header: ParentComponent<CardProps & { tooltip?: string }>;
   Body: ParentComponent<CardProps>;
   Actions: ParentComponent<CardProps>;
 }
@@ -20,7 +20,16 @@ export const Card: ComposedParent = (props) => {
   );
 };
 
-Card.Header = (props) => <h2 class={`card-title ${props.class ?? ""}`}>{props.children}</h2>;
+Card.Header = (props) => (
+  <div class={`card-title justify-between ${props.class ?? ""}`}>
+    <h2>{props.children}</h2>
+    <Show when={props.tooltip}>
+      <div class="tooltip" data-tip={props.tooltip}>
+        <span class="btn btn-ghost btn-xs">?</span>
+      </div>
+    </Show>
+  </div>
+);
 
 Card.Body = (props) => <div class={`card-body ${props.class ?? ""}`}>{props.children}</div>;
 
