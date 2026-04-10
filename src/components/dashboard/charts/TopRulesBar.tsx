@@ -11,12 +11,21 @@ export const TopRulesBar: Component = () => {
     const rules = context.data.rules;
 
     // Convert to array of entries, sort by count descending, take top 15, then reverse
-    // (Reversing is necessary for horizontal bars in ECharts to show largest on top)
-    const top15 = Object.entries(rules)
+    const top15Data = Object.entries(rules)
       .map(([name, data]) => ({ name, count: data.count }))
       .sort((a, b) => b.count - a.count)
-      .slice(0, 15)
-      .reverse();
+      .slice(0, 15);
+
+    const top15 = top15Data.map((r) => r.count);
+    const yAxisCategories = top15Data.map((r) => r.name);
+
+    const barsPalette = top15.map((_, idx) => {
+      if (idx < 2) return palette.grayscale.dark;
+      if (idx < 5) return palette.grayscale.mid;
+      if (idx < 8) return palette.grayscale.light;
+
+      return palette.base[300];
+    });
 
     return {
       tooltip: {
@@ -36,7 +45,8 @@ export const TopRulesBar: Component = () => {
       },
       yAxis: {
         type: "category",
-        data: top15.map((r) => r.name),
+        inverse: true,
+        data: yAxisCategories,
         axisLabel: {
           show: false,
         },
@@ -47,9 +57,9 @@ export const TopRulesBar: Component = () => {
         {
           name: "Occurrences",
           type: "bar",
-          color: palette.grayscale.dark,
-          data: top15.map((r) => r.count),
+          data: top15,
           itemStyle: {
+            color: ({ dataIndex }) => barsPalette[dataIndex],
             borderRadius: [0, 4, 4, 0],
           },
         },

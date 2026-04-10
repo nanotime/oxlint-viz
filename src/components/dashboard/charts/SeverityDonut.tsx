@@ -15,12 +15,12 @@ export const SeverityDonut: Component = () => {
         formatter: "{a} <br/>{b}: {c} ({d}%)",
       },
       legend: {
-        top: "0%",
-        left: "center",
+        orient: "vertical",
+        right: "right",
       },
       title: {
         text: total.toString(),
-        subtext: "Total Issues",
+        subtext: "Issues",
         top: "center",
         left: "center",
         textStyle: {
