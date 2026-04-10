@@ -20,7 +20,7 @@ export const palette = {
     success: "#059669", // Verde Esmeralda (Success)
     info: "#4f46e5", // Índigo (Blue/Purple Info)
     warning: "#d97706", // Ámbar Intenso (Warning)
-    error: "#e11d48", // Rosa/Rojo Intenso (Error)
+    error: "#be123c", // Rosa/Rojo Intenso (Error)
   },
 } as const;
 
