@@ -9,7 +9,7 @@ const ErrorCard: Component<{ error: any; reset: () => void }> = (props) => {
     <div class="card card-border shadow">
       <div class="card-body">
         <div role="alert" class="alert alert-error">
-          <span>Error! {props.error.message ?? "Somethhing happened"}</span>
+          <span>Error! {props.error.message ?? "Something happened"}</span>
         </div>
       </div>
       <div class="card-actions">
@@ -26,17 +26,17 @@ const App: Component = () => {
     <AppProvider>
       <div class="min-h-screen flex flex-col w-full" id="app" data-testid="app">
         <div class="w-[85%] flex flex-col flex-1 max-w-7xl h-full mx-auto">
-          <Show when={view() === "input"}>
-            <ErrorBoundary fallback={(error, reset) => <ErrorCard error={error} reset={reset} />}>
+          <ErrorBoundary fallback={(error, reset) => <ErrorCard error={error} reset={reset} />}>
+            <Show when={view() === "input"}>
               <InputZone />
-            </ErrorBoundary>
-          </Show>
+            </Show>
 
-          <Show when={view() === "dashboard"}>
-            <Suspense fallback="Loading...">
-              <Dashboard />
-            </Suspense>
-          </Show>
+            <Show when={view() === "dashboard"}>
+              <Suspense fallback="Loading...">
+                <Dashboard />
+              </Suspense>
+            </Show>
+          </ErrorBoundary>
         </div>
       </div>
     </AppProvider>
