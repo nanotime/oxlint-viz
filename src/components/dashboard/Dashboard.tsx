@@ -5,13 +5,17 @@ import { StatsSection } from "./sections/StatsSection";
 import { SpecificsSection } from "./sections/Specifics";
 import { GranularSection } from "./sections/GranularSection";
 import { DeepDiveSection } from "./sections/DeepDiveSection";
-import { NormalizedReport } from "@/model/output";
+import { WorkerMessage } from "@/logic/worker";
 
 export const Dashboard: Component = () => {
   const context = useAppContext();
 
-  worker.onmessage = (e: MessageEvent<NormalizedReport>) => {
-    context.setData(e.data);
+  worker.onmessage = (e: MessageEvent<WorkerMessage>) => {
+    if (!e.data.success) {
+      throw e.data.error;
+    }
+
+    context.setData(e.data.data);
     setWorkerDone(true);
   };
 
