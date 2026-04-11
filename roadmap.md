@@ -31,14 +31,11 @@
   - Horizontal legend showing: [Healthy] ---- [Warning] ---- [Toxic] ---- [Critical]
   - Using grayscale colors from palette
 
-- [ ] **2.4 Stats Icons** (`src/components/dashboard/charts/Stats.tsx`)
+- [x] **2.4 Stats Icons** (`src/components/dashboard/charts/Stats.tsx`)
   - Add Lucide icons for each stat type:
-    - Total Issues → `AlertCircle`
-    - Total Files → `FileText`
-    - Files With Issues → `FileWarning`
-    - Error → `AlertTriangle`
-    - Warning → `AlertCircle`
-    - Advice → `InfoCircle`
+    - Error → `OctagonX`
+    - Warning → `TriangleAlert`
+    - Advice → `Info`
 
 ### Phase 3: Insights Section
 
