@@ -39,11 +39,11 @@
 
 ### Phase 3: Insights Section
 
-- [ ] **3.1 Insights Component** (`src/components/dashboard/sections/InsightsSection.tsx`)
+- [x] **3.1 Insights Component** (`src/components/dashboard/sections/InsightsSection.tsx`)
   - New section below StatsSection
   - Grid of insight cards (max 4-6)
 
-- [ ] **3.2 Insights Logic** (`src/logic/analyzeInsights.ts`)
+- [x] **3.2 Insights Logic** (`src/logic/analyzeInsights.ts`)
   - Create `analyzeInsights(report: NormalizedReport): Insight[]`
   - Insight types:
     - `health` - General toxicity assessment
@@ -52,7 +52,7 @@
     - `concentration` - Files with issues ratio
     - `focus` - Dominant category recommendation
 
-- [ ] **3.3 Insight Messages**
+- [x] **3.3 Insight Messages**
 
   ```
   Health Assessment:
@@ -82,7 +82,7 @@
   - Props: `title`, `content`
   - Usage: Add info icon next to chart titles
 
-- [ ] **4.2 Popover Content**
+- [x] **4.2 Popover Content**
       | Chart | Popover Content |
       |-------|----------------|
       | Top 15 Rules | "Most frequently violated rules. Darker color = higher priority (top 3)." |
@@ -97,10 +97,10 @@
   - Define `CategorySeverityOverride` type: `Record<CategoryType, SeverityLevel>`
   - Define `SeverityConfig` interface with `overrides` and `preset` fields
   - Create `SEVERITY_PRESETS` constant with opinionated defaults:
-    - `balanced`: style→advice, pedantic→ignore, restriction→warning
+    - `balanced`: style → advice, pedantic → ignore, restriction → warning
     - `strict`: no overrides
     - `performance`: style/pedantic/restriction/suspicious→ignore
-    - `reactOptimized`: style/pedantic→ignore
+    - `reactOptimized`: style/pedantic → ignore
 
 - [ ] **5.2 Override Logic** (`src/logic/applySeverityOverrides.ts`)
   - Create pure function to transform diagnostics based on config
