@@ -5,6 +5,7 @@ import { StatsSection } from "./sections/StatsSection";
 import { SpecificsSection } from "./sections/Specifics";
 import { GranularSection } from "./sections/GranularSection";
 import { DeepDiveSection } from "./sections/DeepDiveSection";
+import { InsightsSection } from "./sections/InsightsSection";
 import { WorkerMessage } from "@/logic/worker";
 
 export const Dashboard: Component = () => {
@@ -23,6 +24,8 @@ export const Dashboard: Component = () => {
     <div class="flex flex-col gap-6 py-8" data-testid="dashboard">
       <Show when={workerDone()} fallback={<>loading...</>}>
         <StatsSection />
+
+        <InsightsSection />
 
         <DistributionSection />
 
