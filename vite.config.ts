@@ -3,7 +3,9 @@ import { defineConfig } from "vite-plus";
 import solidPlugin from "vite-plugin-solid";
 import devtools from "solid-devtools/vite";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isTest = !!process.env.VITEST;
 
 export default defineConfig({
@@ -20,7 +22,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: ["./src/__test__/setup.ts"],
+    setupFiles: [path.resolve(__dirname, "./src/__test__/setup.ts")],
     coverage: {
       provider: "v8",
     },
@@ -30,7 +32,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve("./src"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 });
