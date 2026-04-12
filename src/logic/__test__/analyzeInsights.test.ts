@@ -1,5 +1,5 @@
 import { it, describe, expect } from "vite-plus/test";
-import { analyzeInsights } from "./analyzeInsights";
+import { analyzeInsights } from "../analyzeInsights";
 import { NormalizedReport } from "@/model/output";
 
 const createMockReport = (overrides: Partial<NormalizedReport> = {}): NormalizedReport => ({

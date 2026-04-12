@@ -1,7 +1,8 @@
 import { it, describe, expect } from "vite-plus/test";
-import { inferCategory, normalizer } from "./normalizer";
-import { OxlintRawReport } from "../model/input";
-import data from "../mocks/oxlint-excerpt.json";
+import { normalizer } from "../normalizer";
+import { OxlintRawReport } from "@/model/input";
+import data from "@/mocks/oxlint-excerpt.json";
+import { inferCategory } from "../inferCategory";
 
 describe("inferCategory", () => {
   it("should infer the correct category for a given rule code based on categories.ts", () => {
