@@ -3,6 +3,18 @@ import { OxlintRawReport } from "../model/input";
 import { FileMetrics, NormalizedReport, RuleMetric } from "../model/output";
 import { inferCategory } from "./inferCategory";
 
+const MAX_FILE_TOXICITY = 100;
+
+const ALL_CATEGORIES = {
+  correctness: 0,
+  pedantic: 0,
+  perf: 0,
+  style: 0,
+  suspicious: 0,
+  restriction: 0,
+  nursery: 0,
+};
+
 const WEIGHTS: Record<string, number> = {
   correctness: 10,
   restriction: 8,
@@ -19,16 +31,6 @@ const SCORES = {
   toxic: 150,
 };
 
-const ALL_CATEGORIES = {
-  correctness: 0,
-  pedantic: 0,
-  perf: 0,
-  style: 0,
-  suspicious: 0,
-  restriction: 0,
-  nursery: 0,
-};
-
 const SEVERITY_MULT: Record<SeverityLevel, number> = {
   error: 1,
   warning: 0.5,
@@ -36,66 +38,81 @@ const SEVERITY_MULT: Record<SeverityLevel, number> = {
   ignore: 0,
 };
 
-const InitializeValues = () => {
-  const filesWithIssues = new Set<string>();
-  const severityBase = { error: 0, warning: 0, advice: 0 };
-  const categoriesBase: Record<string, number> = { ...ALL_CATEGORIES };
-  const rulesBase: Record<string, RuleMetric> = {};
-  const hotspotsBase: Record<string, FileMetrics> = {};
-
-  return {
-    filesWithIssues,
-    severityBase,
-    categoriesBase,
-    rulesBase,
-    hotspotsBase,
-  };
-};
-
 /**
- * Normalizes oxlint raw report into structured analysis.
- * Aggregates by severity, category, rules, and files.
+ * Transforms oxlint raw report into structured analysis.
  * @param rawReport - Raw oxlint JSON output
  * @returns Normalized report with summary, distribution, rules, hotspots
  */
 export function normalizer(rawReport: OxlintRawReport): NormalizedReport {
-  // Initialize the normalized report structure
-  const normalized: NormalizedReport = {
-    summary: {
-      totalIssues: rawReport.diagnostics.length,
-      totalFiles: rawReport.number_of_files,
-      filesWithIssues: 0,
-    },
-    distribution: {
-      severity: {
-        error: 0,
-        warning: 0,
-        advice: 0,
-      },
-      categories: {},
-      generalToxicity: 0,
-    },
-    rules: {},
-    hotspots: {},
-  };
+  const { severityBase, categoriesBase, rulesBase, hotspotsBase } = accumulateMetrics(
+    rawReport.diagnostics,
+  );
 
-  // Initialize accumulators for aggregation
-  const { filesWithIssues, severityBase, categoriesBase, rulesBase, hotspotsBase } =
-    InitializeValues();
+  const hotspotsWithStatus = addHealthStatus(hotspotsBase);
 
-  // Iterate diagnostics, aggregating by severity, category, rules, and files
-  for (const diag of rawReport.diagnostics) {
+  return buildNormalizedReport({
+    totalIssues: rawReport.diagnostics.length,
+    totalFiles: rawReport.number_of_files,
+    severityBase,
+    categoriesBase,
+    rulesBase,
+    hotspotsWithStatus,
+  });
+}
+
+/**
+ * Derives health status from toxicity score.
+ * @param score - Toxicity score value
+ * @returns Health status: healthy | warning | toxic | critical
+ */
+function calculateHealthStatus(score: number): "healthy" | "warning" | "toxic" | "critical" {
+  if (score < SCORES.healthy) return "healthy";
+  if (score < SCORES.warning) return "warning";
+  if (score < SCORES.toxic) return "toxic";
+  return "critical";
+}
+
+/**
+ * Calculates overall codebase toxicity.
+ * @param cappedScore - Sum of capped file scores
+ * @param totalFiles - Total number of files analyzed
+ * @returns Toxicity metric (0-100 scale approximation)
+ */
+function calculateGeneralToxicity(cappedScore: number, totalFiles: number): number {
+  if (totalFiles > 0) return cappedScore / totalFiles;
+  return 0;
+}
+
+/**
+ * Computes weighted toxicity for a diagnostic.
+ * @param weight - Category weight (default 1)
+ * @param multiplier - Severity multiplier (default 0.1)
+ * @returns Weighted toxicity score
+ */
+function calculateToxicityScore(weight = 1, multiplier = 0.1) {
+  return weight * multiplier;
+}
+
+/**
+ * Aggregates diagnostics into severity, category, rule, and file metrics.
+ * @param diagnostics - Array of oxlint diagnostics
+ * @returns Object with accumulated metrics
+ */
+function accumulateMetrics(diagnostics: OxlintRawReport["diagnostics"]) {
+  const severityBase = { error: 0, warning: 0, advice: 0 };
+  const categoriesBase = { ...ALL_CATEGORIES };
+  const rulesBase: Record<string, RuleMetric> = {};
+  const hotspotsBase: Record<string, FileMetrics> = {};
+
+  for (const diag of diagnostics) {
     const ruleName = diag.code;
     const category = inferCategory(diag.code);
     const severity = diag.severity;
     const filename = diag.filename;
 
-    filesWithIssues.add(filename);
-
     severityBase[severity] += 1;
-    categoriesBase[category] = (categoriesBase[category] || 0) + 1;
+    categoriesBase[category] += 1;
 
-    // If there's no rulename on the object, initialize it
     if (!rulesBase[ruleName]) {
       rulesBase[ruleName] = {
         name: ruleName,
@@ -105,7 +122,6 @@ export function normalizer(rawReport: OxlintRawReport): NormalizedReport {
     }
     rulesBase[ruleName].count += 1;
 
-    // If there's no filename in te hotspot, initialize it
     if (!hotspotsBase[filename]) {
       hotspotsBase[filename] = {
         filename,
@@ -122,60 +138,69 @@ export function normalizer(rawReport: OxlintRawReport): NormalizedReport {
       WEIGHTS[category],
       SEVERITY_MULT[severity],
     );
-
     hotspotsBase[filename].categories[category] += 1;
     hotspotsBase[filename].issueCount += 1;
 
-    // Accumulate errors and warnings on the severity hotspot
-    if (diag.severity === "error") {
+    if (severity === "error") {
       hotspotsBase[filename].errorCount += 1;
-    } else if (diag.severity === "warning") {
+    } else if (severity === "warning") {
       hotspotsBase[filename].warningCount += 1;
     }
   }
 
-  // Finalize hotspots status and calculate total toxicity
-  let sumCappedScore = 0;
-  const hotspotsMetrics = Object.values(hotspotsBase);
-  for (const metric of hotspotsMetrics) {
-    const filename = metric.filename;
-    const spot = hotspotsBase[filename];
-    spot.status = calculateHealthStatus(spot.toxicityScore);
-    sumCappedScore += Math.min(spot.toxicityScore, 100);
-  }
-
-  normalized.summary.filesWithIssues = filesWithIssues.size;
-  normalized.distribution.severity = severityBase;
-  normalized.distribution.categories = categoriesBase;
-
-  normalized.distribution.generalToxicity = calculateGeneralToxicity(
-    sumCappedScore,
-    rawReport.number_of_files,
-  );
-
-  normalized.rules = rulesBase;
-  normalized.hotspots = hotspotsBase;
-
-  return normalized;
+  return { severityBase, categoriesBase, rulesBase, hotspotsBase };
 }
 
 /**
- * Calculates health status from toxicity score.
- * @param score - Toxicity score value
- * @returns "healthy" | "warning" | "toxic" | "critical"
+ * Adds health status to each hotspot based on toxicity score.
+ * @param hotspots - Map of filename to FileMetrics
+ * @returns New map with status field populated
  */
-function calculateHealthStatus(score: number): "healthy" | "warning" | "toxic" | "critical" {
-  if (score < SCORES.healthy) return "healthy";
-  if (score < SCORES.warning) return "warning";
-  if (score < SCORES.toxic) return "toxic";
-  return "critical";
+function addHealthStatus(hotspots: Record<string, FileMetrics>): Record<string, FileMetrics> {
+  return Object.values(hotspots).reduce(
+    (acc, spot) => {
+      acc[spot.filename] = {
+        ...spot,
+        status: calculateHealthStatus(spot.toxicityScore),
+      };
+      return acc;
+    },
+    {} as Record<string, FileMetrics>,
+  );
 }
 
-function calculateGeneralToxicity(cappedScore: number, lines: number): number {
-  if (lines > 0) return cappedScore / lines;
-  return 0;
+interface BuildNormalizedReportParams {
+  totalIssues: number;
+  totalFiles: number;
+  severityBase: { error: number; warning: number; advice: number };
+  categoriesBase: Record<string, number>;
+  rulesBase: Record<string, RuleMetric>;
+  hotspotsWithStatus: Record<string, FileMetrics>;
 }
 
-function calculateToxicityScore(weight = 1, multiplier = 0.1) {
-  return weight * multiplier;
+/**
+ * Constructs final NormalizedReport from accumulated metrics.
+ * @param params - Aggregated data and totals
+ * @returns Complete normalized report
+ */
+function buildNormalizedReport(params: BuildNormalizedReportParams): NormalizedReport {
+  const sumCappedScore = Object.values(params.hotspotsWithStatus).reduce(
+    (sum, spot) => sum + Math.min(spot.toxicityScore, MAX_FILE_TOXICITY),
+    0,
+  );
+
+  return {
+    summary: {
+      totalIssues: params.totalIssues,
+      totalFiles: params.totalFiles,
+      filesWithIssues: Object.keys(params.hotspotsWithStatus).length,
+    },
+    distribution: {
+      severity: params.severityBase,
+      categories: params.categoriesBase,
+      generalToxicity: calculateGeneralToxicity(sumCappedScore, params.totalFiles),
+    },
+    rules: params.rulesBase,
+    hotspots: params.hotspotsWithStatus,
+  };
 }
