@@ -1,7 +1,8 @@
-import { SeverityLevel } from "@/model/severityConfig";
+import { SeverityConfig, SeverityLevel } from "@/model/severityConfig";
 import { OxlintRawReport } from "../model/input";
 import { FileMetrics, NormalizedReport, RuleMetric } from "../model/output";
 import { inferCategory } from "./inferCategory";
+import { applySeverityOverrides } from "./applySeverityOverrides";
 
 const MAX_FILE_TOXICITY = 100;
 
@@ -43,10 +44,10 @@ const SEVERITY_MULT: Record<SeverityLevel, number> = {
  * @param rawReport - Raw oxlint JSON output
  * @returns Normalized report with summary, distribution, rules, hotspots
  */
-export function normalizer(rawReport: OxlintRawReport): NormalizedReport {
-  const { severityBase, categoriesBase, rulesBase, hotspotsBase } = accumulateMetrics(
-    rawReport.diagnostics,
-  );
+export function normalizer(rawReport: OxlintRawReport, config: SeverityConfig): NormalizedReport {
+  const overridenDiagnostic = applySeverityOverrides(rawReport.diagnostics, config);
+  const { severityBase, categoriesBase, rulesBase, hotspotsBase } =
+    accumulateMetrics(overridenDiagnostic);
 
   const hotspotsWithStatus = addHealthStatus(hotspotsBase);
 

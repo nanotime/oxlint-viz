@@ -1,15 +1,18 @@
 import { OxlintDiagnostic } from "@/model/input";
-import { SeverityConfig } from "@/model/severityConfig";
+import { SeverityConfig, SEVERITY_PRESETS } from "@/model/severityConfig";
 import { inferCategory } from "./inferCategory";
 
 export function applySeverityOverrides(
   diagnostics: OxlintDiagnostic[],
   config: SeverityConfig,
 ): OxlintDiagnostic[] {
+  const presetOverrides = SEVERITY_PRESETS[config.preset].overrides;
+  const effectiveOverrides = { ...presetOverrides, ...config.overrides };
+
   const result = [];
   for (const diag of diagnostics) {
     const category = inferCategory(diag.code);
-    const override = config.overrides[category as keyof typeof config.overrides];
+    const override = effectiveOverrides[category as keyof typeof effectiveOverrides];
 
     if (override === "ignore") continue;
 
