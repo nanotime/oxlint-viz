@@ -1,6 +1,7 @@
 import { createContext, createSignal, ParentComponent, useContext } from "solid-js";
 import { createStore, SetStoreFunction } from "solid-js/store";
 import { NormalizedReport } from "@/model/output";
+import { PresetType, SEVERITY_PRESETS, SeverityConfig } from "@/model/severityConfig";
 
 export const baseStore: NormalizedReport = {
   summary: {
@@ -36,6 +37,8 @@ const WorkerInstance = () => {
 export const worker = WorkerInstance();
 export const [view, setView] = createSignal<ViewState>("input");
 export const [workerDone, setWorkerDone] = createSignal(false);
+export const [selectedPreset, setSelectedPreset] = createSignal<PresetType>("cleanCode");
+export const severityConfig = (): SeverityConfig => SEVERITY_PRESETS[selectedPreset()];
 
 export const AppProvider: ParentComponent = (props) => {
   const [data, setData] = createStore(baseStore);

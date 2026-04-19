@@ -1,18 +1,30 @@
-import { Component, createSignal, JSX } from "solid-js";
-import { setView, worker } from "@/store/AppContext";
+import { Component, createSignal, For, JSX } from "solid-js";
+import {
+  setView,
+  worker,
+  selectedPreset,
+  setSelectedPreset,
+  severityConfig,
+} from "@/store/AppContext";
 import { placeholder } from "./constants";
+import { PRESET_LABELS } from "@/model/severityConfig";
 
 export const InputZone: Component = () => {
   const [text, setText] = createSignal("");
 
   const handleClick = () => {
-    worker.postMessage(text());
+    worker.postMessage({
+      report: text(),
+      severityConfig: severityConfig(),
+    });
     setView("dashboard");
   };
 
   const handleChange: JSX.EventHandler<HTMLTextAreaElement, InputEvent> = (ev) => {
     setText(ev.currentTarget.value);
   };
+
+  // const presetLabels = Object.entries(PRESET_LABELS).map(([value, label]) => ({}));
 
   return (
     <section
@@ -25,6 +37,16 @@ export const InputZone: Component = () => {
           <div class="card-title">
             <h1 class="text-xl color-accent">Welcome, please paste your JSON output here</h1>
           </div>
+
+          <select
+            class="select select-bordered w-full mb-4"
+            value={selectedPreset()}
+            onChange={(e) => setSelectedPreset(e.currentTarget.value as any)}
+          >
+            <For each={Object.entries(PRESET_LABELS)}>
+              {(item) => <option value={item[0]}>{item[1]}</option>}
+            </For>
+          </select>
 
           <div class="w-xl flex flex-col">
             <textarea
