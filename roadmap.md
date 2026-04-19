@@ -92,7 +92,7 @@
 
 ### Phase 5: Category Severity Overrides
 
-- [ ] **5.1 Severity Configuration Model** (`src/model/severityConfig.ts`)
+- [x] **5.1 Severity Configuration Model** (`src/model/severityConfig.ts`)
   - Define `SeverityLevel` type: `error | warning | advice | ignore`
   - Define `CategorySeverityOverride` type: `Record<CategoryType, SeverityLevel>`
   - Define `SeverityConfig` interface with `overrides` and `preset` fields
@@ -102,18 +102,18 @@
     - `performance`: style/pedantic/restriction/suspicious→ignore
     - `reactOptimized`: style/pedantic → ignore
 
-- [ ] **5.2 Override Logic** (`src/logic/applySeverityOverrides.ts`)
+- [x] **5.2 Override Logic** (`src/logic/applySeverityOverrides.ts`)
   - Create pure function to transform diagnostics based on config
   - Filter out diagnostics with "ignore" severity
   - Remap severity based on category overrides
   - Update toxicity calculation to use new severities
 
-- [ ] **5.3 Update Normalizer** (`src/logic/normalizer.ts`)
+- [x] **5.3 Update Normalizer** (`src/logic/normalizer.ts`)
   - Accept optional `SeverityConfig` parameter
   - Apply overrides before normalization
   - Update type signatures
 
-- [ ] **5.4 Landing Page UI** (`src/components/landing/Landing.tsx`)
+- [x] **5.4 Landing Page UI** (`src/components/landing/Landing.tsx`)
   - Add preset selector dropdown
   - Add category override toggle buttons (error/warning/advice/ignore)
   - Show impact preview (issues count before/after)
