@@ -1,0 +1,3895 @@
+{
+  "diagnostics": [
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 956, "length": 22, "line": 29, "column": 13 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1067, "length": 16, "line": 33, "column": 13 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1171, "length": 15, "line": 37, "column": 13 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1430, "length": 4, "line": 46, "column": 12 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1459, "length": 9, "line": 47, "column": 14 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1608, "length": 4, "line": 52, "column": 12 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1636, "length": 9, "line": 53, "column": 14 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1784, "length": 4, "line": 58, "column": 12 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1810, "length": 9, "line": 59, "column": 14 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 1971, "length": 3, "line": 68, "column": 6 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 2005, "length": 7, "line": 69, "column": 8 } }],
+      "related": []
+    },
+    {
+      "message": "`React` must be in scope when using JSX.",
+      "code": "eslint-plugin-react(react-in-jsx-scope)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-in-jsx-scope.html",
+      "help": "When using JSX, `<a />` expands to `React.createElement(\"a\")`. Therefore the `React` variable must be in scope.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [{ "span": { "offset": 2058, "length": 15, "line": 71, "column": 21 } }],
+      "related": []
+    },
+    {
+      "message": "Function `renderApprovedIcon` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `renderApprovedIcon` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 846, "length": 15, "line": 27, "column": 25 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 915, "length": 18, "line": 28, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `renderRejectedIcon` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `renderRejectedIcon` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 846, "length": 15, "line": 27, "column": 25 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 1026, "length": 18, "line": 32, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `renderPendingIcon` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `renderPendingIcon` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/ApprovalStepper.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 846, "length": 15, "line": 27, "column": 25 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 1131, "length": 17, "line": 36, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "function `PaymentDetails` has a complexity of 57. Maximum allowed is 20.",
+      "code": "eslint(complexity)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/complexity.html",
+      "filename": "src/components/viewPaymentDetails/PaymentDetails.tsx",
+      "labels": [{ "span": { "offset": 2045, "length": 11034, "line": 65, "column": 16 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'moment' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/PaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'moment' is imported here",
+          "span": { "offset": 512, "length": 6, "line": 9, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'formatPercentage' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/PaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'formatPercentage' is imported here",
+          "span": { "offset": 794, "length": 16, "line": 14, "column": 53 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'AuditHistorySection' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/PaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'AuditHistorySection' is imported here",
+          "span": { "offset": 972, "length": 19, "line": 17, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'VGSShow' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/PaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'VGSShow' is imported here",
+          "span": { "offset": 1045, "length": 7, "line": 18, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'handeClick' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/viewPaymentDetails/PaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'handeClick' is declared here",
+          "span": { "offset": 1816, "length": 10, "line": 57, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `payAmountCalcs` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `payAmountCalcs` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/viewPaymentDetails/PaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 2054, "length": 14, "line": 65, "column": 25 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 2255, "length": 14, "line": 69, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'tableCellClasses' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/theme/light/create-components.js",
+      "labels": [
+        {
+          "label": "'tableCellClasses' is imported here",
+          "span": { "offset": 115, "length": 16, "line": 7, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'user' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'user' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'user' is declared here",
+          "span": { "offset": 4441, "length": 4, "line": 115, "column": 69 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 4179, "length": 4, "line": 111, "column": 13 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'PaymentSummaryTable' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'PaymentSummaryTable' is imported here",
+          "span": { "offset": 1190, "length": 19, "line": 20, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'TotalAmount' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'TotalAmount' is imported here",
+          "span": { "offset": 1261, "length": 11, "line": 21, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Type alias 'HistoryData' is declared but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'HistoryData' is declared here",
+          "span": { "offset": 2016, "length": 11, "line": 58, "column": 6 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'id' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'id' is declared here",
+          "span": { "offset": 2453, "length": 2, "line": 71, "column": 74 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'setToastProps' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'setToastProps' is declared here",
+          "span": { "offset": 2970, "length": 13, "line": 80, "column": 22 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'generateToastError' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'generateToastError' is declared here",
+          "span": { "offset": 3028, "length": 18, "line": 82, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'error' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'error' is declared here",
+          "span": { "offset": 3942, "length": 5, "line": 106, "column": 21 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'error' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'error' is declared here",
+          "span": { "offset": 5215, "length": 5, "line": 143, "column": 13 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'handleCancelPayment' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "'handleCancelPayment' is declared here",
+          "span": { "offset": 6677, "length": 19, "line": 193, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'searchParams', and 'orderDataGet'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        { "span": { "offset": 6463, "length": 12, "line": 183, "column": 9 } },
+        { "span": { "offset": 6581, "length": 12, "line": 186, "column": 5 } },
+        { "span": { "offset": 6602, "length": 2, "line": 187, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `generateToastError` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `generateToastError` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/common/orderDetailsSLP/OrderDetailsSLP.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 2213, "length": 15, "line": 67, "column": 25 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 3028, "length": 18, "line": 82, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useState' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/theme/base/create-components.js",
+      "labels": [
+        {
+          "label": "'useState' is imported here",
+          "span": { "offset": 16, "length": 8, "line": 1, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useEffect' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/theme/base/create-components.js",
+      "labels": [
+        {
+          "label": "'useEffect' is imported here",
+          "span": { "offset": 26, "length": 9, "line": 1, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'alpha' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/theme/base/create-components.js",
+      "labels": [
+        {
+          "label": "'alpha' is imported here",
+          "span": { "offset": 143, "length": 5, "line": 3, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'isTimerStarted', and 'startTimer'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/reviewOrderCancellation/quote-timer/index.tsx",
+      "labels": [
+        { "span": { "offset": 1769, "length": 14, "line": 51, "column": 10 } },
+        { "span": { "offset": 1846, "length": 10, "line": 53, "column": 7 } },
+        { "span": { "offset": 1885, "length": 16, "line": 55, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `convertSeconds` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `convertSeconds` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/reviewOrderCancellation/quote-timer/index.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 418, "length": 10, "line": 13, "column": 10 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 892, "length": 14, "line": 21, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'ReviewContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reviewOrderCancellation/RefundSummary/index.tsx",
+      "labels": [
+        {
+          "label": "'ReviewContext' is imported here",
+          "span": { "offset": 626, "length": 13, "line": 14, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'CardContent' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [
+        {
+          "label": "'CardContent' is imported here",
+          "span": { "offset": 196, "length": 11, "line": 14, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'expand' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [
+        {
+          "label": "'expand' is declared here",
+          "span": { "offset": 2480, "length": 6, "line": 82, "column": 11 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'response' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [
+        {
+          "label": "'response' is declared here",
+          "span": { "offset": 10040, "length": 8, "line": 333, "column": 14 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'response' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [
+        {
+          "label": "'response' is declared here",
+          "span": { "offset": 10680, "length": 8, "line": 352, "column": 12 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'showToast.type', 'showToast.message', and 'getTableData'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [
+        { "span": { "offset": 5975, "length": 9, "line": 202, "column": 107 } },
+        { "span": { "offset": 5848, "length": 9, "line": 201, "column": 9 } },
+        { "span": { "offset": 5824, "length": 12, "line": 200, "column": 5 } },
+        { "span": { "offset": 6006, "length": 2, "line": 204, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'apiRef.current.setQuickFilterValues', and 'apiRef.current'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [
+        { "span": { "offset": 6040, "length": 14, "line": 207, "column": 9 } },
+        { "span": { "offset": 6085, "length": 14, "line": 208, "column": 7 } },
+        { "span": { "offset": 6150, "length": 15, "line": 210, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has a missing dependency: 'scheduleDetails.status'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [
+        {
+          "label": "useEffect uses `scheduleDetails.status` here",
+          "span": { "offset": 6253, "length": 15, "line": 214, "column": 18 }
+        },
+        { "span": { "offset": 6283, "length": 29, "line": 215, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `generateToastError` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `generateToastError` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 4026, "length": 16, "line": 157, "column": 25 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 5040, "length": 18, "line": 178, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Each then() should return a value or throw",
+      "code": "eslint-plugin-promise(always-return)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/promise/always-return.html",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [{ "span": { "offset": 10039, "length": 208, "line": 333, "column": 13 } }],
+      "related": []
+    },
+    {
+      "message": "Each then() should return a value or throw",
+      "code": "eslint-plugin-promise(always-return)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/promise/always-return.html",
+      "filename": "src/components/reportingHistory/ReportingHistory.tsx",
+      "labels": [{ "span": { "offset": 10679, "length": 198, "line": 352, "column": 11 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useState' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'useState' is imported here",
+          "span": { "offset": 16, "length": 8, "line": 1, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Chip' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'Chip' is imported here",
+          "span": { "offset": 63, "length": 4, "line": 2, "column": 23 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Grid' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'Grid' is imported here",
+          "span": { "offset": 120, "length": 4, "line": 2, "column": 80 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Link' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'Link' is imported here",
+          "span": { "offset": 126, "length": 4, "line": 2, "column": 86 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'TextareaAutosize' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'TextareaAutosize' is imported here",
+          "span": { "offset": 132, "length": 16, "line": 2, "column": 92 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'styled' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'styled' is imported here",
+          "span": { "offset": 194, "length": 6, "line": 3, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useNavigate' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'useNavigate' is imported here",
+          "span": { "offset": 241, "length": 11, "line": 4, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'PlumeText' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'PlumeText' is imported here",
+          "span": { "offset": 302, "length": 9, "line": 5, "column": 23 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'CloseIcon' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'CloseIcon' is imported here",
+          "span": { "offset": 347, "length": 9, "line": 6, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'FormattedMessage' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'FormattedMessage' is imported here",
+          "span": { "offset": 400, "length": 16, "line": 7, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'ReviewOrderKeys' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'ReviewOrderKeys' is imported here",
+          "span": { "offset": 462, "length": 15, "line": 8, "column": 25 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Check' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'Check' is imported here",
+          "span": { "offset": 526, "length": 5, "line": 9, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'CircularProgress' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ErrorModal.tsx",
+      "labels": [
+        {
+          "label": "'CircularProgress' is imported here",
+          "span": { "offset": 569, "length": 16, "line": 10, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'TextareaAutosize' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ConfirmModal.tsx",
+      "labels": [
+        {
+          "label": "'TextareaAutosize' is imported here",
+          "span": { "offset": 126, "length": 16, "line": 2, "column": 86 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'styled' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ConfirmModal.tsx",
+      "labels": [
+        {
+          "label": "'styled' is imported here",
+          "span": { "offset": 188, "length": 6, "line": 3, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'PlumeText' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ConfirmModal.tsx",
+      "labels": [
+        {
+          "label": "'PlumeText' is imported here",
+          "span": { "offset": 296, "length": 9, "line": 5, "column": 23 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'CloseIcon' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ConfirmModal.tsx",
+      "labels": [
+        {
+          "label": "'CloseIcon' is imported here",
+          "span": { "offset": 341, "length": 9, "line": 6, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Check' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ConfirmModal.tsx",
+      "labels": [
+        {
+          "label": "'Check' is imported here",
+          "span": { "offset": 520, "length": 5, "line": 9, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'CircularProgress' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/dialogs/ConfirmModal.tsx",
+      "labels": [
+        {
+          "label": "'CircularProgress' is imported here",
+          "span": { "offset": 563, "length": 16, "line": 10, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'otherSelected' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/dialogs/ConfirmModal.tsx",
+      "labels": [
+        {
+          "label": "'otherSelected' is declared here",
+          "span": { "offset": 1373, "length": 13, "line": 35, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Usage of Array index in keys is not allowed",
+      "code": "eslint-plugin-react(no-array-index-key)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/no-array-index-key.html",
+      "help": "Use a unique data-dependent key to avoid unnecessary rerenders",
+      "filename": "src/components/common/orderDetails/dialogs/ConfirmModal.tsx",
+      "labels": [{ "span": { "offset": 2803, "length": 11, "line": 70, "column": 26 } }],
+      "related": []
+    },
+    {
+      "message": "Duplicate enum value `'Funded'`",
+      "code": "typescript-eslint(no-duplicate-enum-values)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/typescript/no-duplicate-enum-values.html",
+      "help": "Give RELEASE_REQUESTED a unique value",
+      "filename": "src/components/common/payment-swift-status-pill.tsx",
+      "labels": [
+        {
+          "label": "'Funded' is first used as an initializer here",
+          "span": { "offset": 178, "length": 8, "line": 8, "column": 12 }
+        },
+        {
+          "label": "and is re-used here",
+          "span": { "offset": 682, "length": 8, "line": 27, "column": 23 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'paymentIds' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'paymentIds' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "'paymentIds' is declared here",
+          "span": { "offset": 2811, "length": 10, "line": 69, "column": 11 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 2234, "length": 10, "line": 57, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'paymentIds' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'paymentIds' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "'paymentIds' is declared here",
+          "span": { "offset": 3491, "length": 10, "line": 93, "column": 11 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 2234, "length": 10, "line": 57, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'timeToCount' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'timeToCount' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "'timeToCount' is declared here",
+          "span": { "offset": 4597, "length": 11, "line": 119, "column": 13 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 1629, "length": 11, "line": 47, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'paymentIds' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'paymentIds' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "'paymentIds' is declared here",
+          "span": { "offset": 5384, "length": 10, "line": 136, "column": 13 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 3491, "length": 10, "line": 93, "column": 11 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'errData' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'errData' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "'errData' is declared here",
+          "span": { "offset": 5483, "length": 7, "line": 137, "column": 21 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 3956, "length": 7, "line": 107, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Interface 'Order' is declared but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "'Order' is declared here",
+          "span": { "offset": 1392, "length": 5, "line": 37, "column": 11 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'numberFormat' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "'numberFormat' is declared here",
+          "span": { "offset": 2167, "length": 12, "line": 56, "column": 11 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'paymentIds' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "'paymentIds' is declared here",
+          "span": { "offset": 2234, "length": 10, "line": 57, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'searchParams', and 'orderCancellationData'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        { "span": { "offset": 6823, "length": 12, "line": 169, "column": 9 } },
+        { "span": { "offset": 6979, "length": 21, "line": 174, "column": 7 } },
+        { "span": { "offset": 7052, "length": 2, "line": 177, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `generateToastError` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `generateToastError` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 1592, "length": 23, "line": 46, "column": 10 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 2510, "length": 18, "line": 62, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `extractUniquePaymentIds` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `extractUniquePaymentIds` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 1592, "length": 23, "line": 46, "column": 10 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 2727, "length": 23, "line": 68, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Spreading to modify object properties in `map` calls is inefficient",
+      "code": "oxc(no-map-spread)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/oxc/no-map-spread.html",
+      "help": "If in-place mutation is acceptable, use `Object.assign` or direct property assignment instead of spreading",
+      "note": "`Object.assign` mutates the first argument. Disable this rule if copy-on-write behavior is required.",
+      "filename": "src/components/reviewOrderCancellation/index.tsx",
+      "labels": [
+        {
+          "label": "This map call spreads an object",
+          "span": { "offset": 5892, "length": 3, "line": 144, "column": 60 }
+        },
+        {
+          "label": "These spreads allocate new values on each iteration",
+          "span": { "offset": 6150, "length": 24, "line": 149, "column": 11 }
+        },
+        { "span": { "offset": 6614, "length": 10, "line": 156, "column": 11 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "function `ScheduleReports` has a complexity of 63. Maximum allowed is 20.",
+      "code": "eslint(complexity)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/complexity.html",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [{ "span": { "offset": 3902, "length": 31740, "line": 215, "column": 1 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'FormLabel' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'FormLabel' is imported here",
+          "span": { "offset": 90, "length": 9, "line": 4, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Paper' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'Paper' is imported here",
+          "span": { "offset": 201, "length": 5, "line": 13, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'CardHeader' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'CardHeader' is imported here",
+          "span": { "offset": 283, "length": 10, "line": 21, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'FormattedMessage' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'FormattedMessage' is imported here",
+          "span": { "offset": 417, "length": 16, "line": 26, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Moment' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'Moment' is imported here",
+          "span": { "offset": 617, "length": 6, "line": 29, "column": 18 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'axios' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'axios' is imported here",
+          "span": { "offset": 871, "length": 5, "line": 34, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'helpers' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'helpers' is declared here",
+          "span": { "offset": 10273, "length": 7, "line": 340, "column": 30 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'index' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'index' is declared here",
+          "span": { "offset": 10734, "length": 5, "line": 351, "column": 50 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'data' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'data' is declared here",
+          "span": { "offset": 11292, "length": 4, "line": 364, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'response' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'response' is declared here",
+          "span": { "offset": 11566, "length": 8, "line": 369, "column": 22 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'response' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "'response' is declared here",
+          "span": { "offset": 12504, "length": 8, "line": 393, "column": 22 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Unnecessary escape character '.'",
+      "code": "eslint(no-useless-escape)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-useless-escape.html",
+      "help": "Replace `\\.` with `.`.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [{ "span": { "offset": 8048, "length": 2, "line": 294, "column": 29 } }],
+      "related": []
+    },
+    {
+      "message": "Unnecessary escape character '.'",
+      "code": "eslint(no-useless-escape)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-useless-escape.html",
+      "help": "Replace `\\.` with `.`.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [{ "span": { "offset": 8064, "length": 2, "line": 294, "column": 45 } }],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'formik.values.customRepeatOption', and 'toggleWeekDay'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        { "span": { "offset": 13768, "length": 13, "line": 429, "column": 7 } },
+        { "span": { "offset": 13879, "length": 13, "line": 432, "column": 7 } },
+        { "span": { "offset": 13915, "length": 40, "line": 434, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'week', and 'scheduleDetails.week'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        { "span": { "offset": 14037, "length": 4, "line": 438, "column": 27 } },
+        { "span": { "offset": 13987, "length": 15, "line": 437, "column": 9 } },
+        { "span": { "offset": 14237, "length": 2, "line": 447, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `generateToastError` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `generateToastError` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 3911, "length": 15, "line": 215, "column": 10 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 7433, "length": 18, "line": 270, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Each then() should return a value or throw",
+      "code": "eslint-plugin-promise(always-return)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/promise/always-return.html",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [{ "span": { "offset": 11565, "length": 485, "line": 369, "column": 21 } }],
+      "related": []
+    },
+    {
+      "message": "Each then() should return a value or throw",
+      "code": "eslint-plugin-promise(always-return)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/promise/always-return.html",
+      "filename": "src/components/scheduleReports/ScheduleReports.tsx",
+      "labels": [{ "span": { "offset": 12503, "length": 485, "line": 393, "column": 21 } }],
+      "related": []
+    },
+    {
+      "message": "Missing \"key\" prop for element in iterator.",
+      "code": "eslint-plugin-react(jsx-key)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-key.html",
+      "help": "Add a \"key\" prop to the element in the iterator (https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key).",
+      "filename": "src/components/reviewOrderCancellation/refund-summary-table/index.tsx",
+      "labels": [
+        {
+          "label": "Iterator starts here.",
+          "span": { "offset": 2644, "length": 3, "line": 84, "column": 20 }
+        },
+        {
+          "label": "Element generated here.",
+          "span": { "offset": 2674, "length": 8, "line": 85, "column": 12 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'dependencies' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "webpack.config.js",
+      "labels": [
+        {
+          "label": "'dependencies' is declared here",
+          "span": { "offset": 161, "length": 12, "line": 4, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'numeral' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reviewOrderCancellation/OrderReceived/CancelOrderInfo/index.tsx",
+      "labels": [
+        {
+          "label": "'numeral' is imported here",
+          "span": { "offset": 50, "length": 7, "line": 2, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'numberFormat' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/reviewOrderCancellation/OrderReceived/CancelOrderInfo/index.tsx",
+      "labels": [
+        {
+          "label": "'numberFormat' is declared here",
+          "span": { "offset": 830, "length": 12, "line": 30, "column": 11 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [
+        {
+          "label": "'useContext' is imported here",
+          "span": { "offset": 16, "length": 10, "line": 1, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'formatPercentage' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [
+        {
+          "label": "'formatPercentage' is imported here",
+          "span": { "offset": 337, "length": 16, "line": 6, "column": 33 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'specifiedCurrency' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [
+        {
+          "label": "'specifiedCurrency' is declared here",
+          "span": { "offset": 1217, "length": 17, "line": 36, "column": 13 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'formatNumber' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [
+        {
+          "label": "'formatNumber' is declared here",
+          "span": { "offset": 2265, "length": 12, "line": 66, "column": 7 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'numberFormat' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [
+        {
+          "label": "'numberFormat' is declared here",
+          "span": { "offset": 2394, "length": 12, "line": 68, "column": 47 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'quote' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/common/orderDetails/CurrencySummaryTable.tsx",
+      "labels": [
+        {
+          "label": "'quote' is declared here",
+          "span": { "offset": 2427, "length": 5, "line": 68, "column": 80 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'formatPercentage' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/paymentHistory/types.ts",
+      "labels": [
+        {
+          "label": "'formatPercentage' is imported here",
+          "span": { "offset": 300, "length": 16, "line": 5, "column": 58 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Typography' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reviewOrderCancellation/quoteRefreshPopup.tsx",
+      "labels": [
+        {
+          "label": "'Typography' is imported here",
+          "span": { "offset": 100, "length": 10, "line": 2, "column": 74 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'userContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reviewOrderCancellation/OrderReceived/CancelOrderPayment/index.tsx",
+      "labels": [
+        {
+          "label": "'userContext' is imported here",
+          "span": { "offset": 522, "length": 11, "line": 11, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has a missing dependency: 'fetchBankDetails'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/reviewOrderCancellation/OrderReceived/CancelOrderPayment/index.tsx",
+      "labels": [
+        {
+          "label": "useEffect uses `fetchBankDetails` here",
+          "span": { "offset": 1598, "length": 16, "line": 44, "column": 5 }
+        },
+        { "span": { "offset": 1623, "length": 2, "line": 45, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'useContext' is imported here",
+          "span": { "offset": 16, "length": 10, "line": 1, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useEffect' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'useEffect' is imported here",
+          "span": { "offset": 28, "length": 9, "line": 1, "column": 29 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useState' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'useState' is imported here",
+          "span": { "offset": 39, "length": 8, "line": 1, "column": 40 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Typography' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'Typography' is imported here",
+          "span": { "offset": 73, "length": 10, "line": 2, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Box' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'Box' is imported here",
+          "span": { "offset": 85, "length": 3, "line": 2, "column": 22 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Collapse' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'Collapse' is imported here",
+          "span": { "offset": 96, "length": 8, "line": 2, "column": 33 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'moment' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'moment' is imported here",
+          "span": { "offset": 145, "length": 6, "line": 3, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'getUsersByTransactionId' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'getUsersByTransactionId' is imported here",
+          "span": { "offset": 214, "length": 23, "line": 5, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'ApiContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/GeneralInfo.tsx",
+      "labels": [
+        {
+          "label": "'ApiContext' is imported here",
+          "span": { "offset": 268, "length": 10, "line": 6, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Empty export specifier is not allowed",
+      "code": "eslint-plugin-unicorn(require-module-specifiers)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/require-module-specifiers.html",
+      "help": "Remove empty braces",
+      "filename": "src/index.ts",
+      "labels": [{ "span": { "offset": 30, "length": 2, "line": 2, "column": 8 } }],
+      "related": []
+    },
+    {
+      "message": "this expression is assigned to itself",
+      "code": "eslint(no-self-assign)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-self-assign.html",
+      "help": "Remove the self-assignment or assign to a different variable.",
+      "filename": "src/helpers/FormatValues.tsx",
+      "labels": [{ "span": { "offset": 4128, "length": 11, "line": 124, "column": 19 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'FormattedNumber' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/helpers/FormatValues.tsx",
+      "labels": [
+        {
+          "label": "'FormattedNumber' is imported here",
+          "span": { "offset": 226, "length": 15, "line": 5, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Empty object binding pattern",
+      "code": "eslint(no-empty-pattern)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-empty-pattern.html",
+      "help": "Passing `null` or `undefined` will result in runtime error because `null` and `undefined` cannot be destructured.",
+      "filename": "src/components/viewReportDetails/ReportDetails.tsx",
+      "labels": [{ "span": { "offset": 318, "length": 2, "line": 8, "column": 39 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Typography' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Typography' is imported here",
+          "span": { "offset": 35, "length": 10, "line": 2, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Button' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Button' is imported here",
+          "span": { "offset": 52, "length": 6, "line": 2, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Container' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Container' is imported here",
+          "span": { "offset": 60, "length": 9, "line": 2, "column": 35 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Grid' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Grid' is imported here",
+          "span": { "offset": 71, "length": 4, "line": 2, "column": 46 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Link' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Link' is imported here",
+          "span": { "offset": 77, "length": 4, "line": 2, "column": 52 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Card' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Card' is imported here",
+          "span": { "offset": 83, "length": 4, "line": 2, "column": 58 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'VGSShow' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTable.tsx",
+      "labels": [
+        {
+          "label": "'VGSShow' is imported here",
+          "span": { "offset": 383, "length": 7, "line": 7, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'GridRenderCellParams' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTable.tsx",
+      "labels": [
+        {
+          "label": "'GridRenderCellParams' is imported here",
+          "span": { "offset": 419, "length": 20, "line": 8, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'user' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'user' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        {
+          "label": "'user' is declared here",
+          "span": { "offset": 4394, "length": 4, "line": 115, "column": 65 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 4148, "length": 4, "line": 111, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Link' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        {
+          "label": "'Link' is imported here",
+          "span": { "offset": 78, "length": 4, "line": 2, "column": 15 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Type alias 'HistoryData' is declared but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        {
+          "label": "'HistoryData' is declared here",
+          "span": { "offset": 2047, "length": 11, "line": 61, "column": 6 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'id' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        {
+          "label": "'id' is declared here",
+          "span": { "offset": 2481, "length": 2, "line": 74, "column": 74 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'setToastProps' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        {
+          "label": "'setToastProps' is declared here",
+          "span": { "offset": 3097, "length": 13, "line": 84, "column": 22 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'rowsLength' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        {
+          "label": "'rowsLength' is declared here",
+          "span": { "offset": 3897, "length": 10, "line": 104, "column": 13 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'error' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        {
+          "label": "'error' is declared here",
+          "span": { "offset": 3915, "length": 5, "line": 104, "column": 31 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'error' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        {
+          "label": "'error' is declared here",
+          "span": { "offset": 5420, "length": 5, "line": 143, "column": 13 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'orderDataGet', and 'searchParams'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/common/orderDetails/OrderDetails.tsx",
+      "labels": [
+        { "span": { "offset": 6789, "length": 12, "line": 186, "column": 5 } },
+        { "span": { "offset": 6671, "length": 12, "line": 183, "column": 9 } },
+        { "span": { "offset": 6810, "length": 2, "line": 187, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reviewOrderCancellation/ReviewOrderPaymentSummaryTable/index.tsx",
+      "labels": [
+        {
+          "label": "'useContext' is imported here",
+          "span": { "offset": 16, "length": 10, "line": 1, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'userContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reviewOrderCancellation/ReviewOrderPaymentSummaryTable/index.tsx",
+      "labels": [
+        {
+          "label": "'userContext' is imported here",
+          "span": { "offset": 399, "length": 11, "line": 9, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'formatValueReceive' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reviewOrderCancellation/ReviewOrderPaymentSummaryTable/index.tsx",
+      "labels": [
+        {
+          "label": "'formatValueReceive' is imported here",
+          "span": { "offset": 562, "length": 18, "line": 11, "column": 51 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Missing \"key\" prop for element in iterator.",
+      "code": "eslint-plugin-react(jsx-key)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-key.html",
+      "help": "Add a \"key\" prop to the element in the iterator (https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key).",
+      "filename": "src/components/reviewOrderCancellation/ReviewOrderPaymentSummaryTable/index.tsx",
+      "labels": [
+        {
+          "label": "Iterator starts here.",
+          "span": { "offset": 2219, "length": 3, "line": 68, "column": 20 }
+        },
+        {
+          "label": "Element generated here.",
+          "span": { "offset": 2249, "length": 8, "line": 69, "column": 12 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has a missing dependency: 'reveal'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/common/VGSShow/index.tsx",
+      "labels": [
+        {
+          "label": "useEffect uses `reveal` here",
+          "span": { "offset": 4308, "length": 6, "line": 132, "column": 11 }
+        },
+        { "span": { "offset": 4462, "length": 62, "line": 138, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useState' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [
+        {
+          "label": "'useState' is imported here",
+          "span": { "offset": 16, "length": 8, "line": 1, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useEffect' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [
+        {
+          "label": "'useEffect' is imported here",
+          "span": { "offset": 26, "length": 9, "line": 1, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Button' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [
+        {
+          "label": "'Button' is imported here",
+          "span": { "offset": 125, "length": 6, "line": 3, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'isPaymentAllowedToCancel' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [
+        {
+          "label": "'isPaymentAllowedToCancel' is imported here",
+          "span": { "offset": 295, "length": 24, "line": 6, "column": 33 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'VGSShow' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/common/orderDetails/PaymentSummaryTableSLP.tsx",
+      "labels": [
+        {
+          "label": "'VGSShow' is imported here",
+          "span": { "offset": 367, "length": 7, "line": 7, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'type' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/viewReportDetails/RenderIcons.tsx",
+      "labels": [
+        {
+          "label": "'type' is declared here",
+          "span": { "offset": 1749, "length": 4, "line": 66, "column": 46 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Box' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/Header.tsx",
+      "labels": [
+        {
+          "label": "'Box' is imported here",
+          "span": { "offset": 47, "length": 3, "line": 2, "column": 22 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Button' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/Header.tsx",
+      "labels": [
+        {
+          "label": "'Button' is imported here",
+          "span": { "offset": 52, "length": 6, "line": 2, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Container' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/Header.tsx",
+      "labels": [
+        {
+          "label": "'Container' is imported here",
+          "span": { "offset": 60, "length": 9, "line": 2, "column": 35 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Link' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/Header.tsx",
+      "labels": [
+        {
+          "label": "'Link' is imported here",
+          "span": { "offset": 77, "length": 4, "line": 2, "column": 52 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Card' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/Header.tsx",
+      "labels": [
+        {
+          "label": "'Card' is imported here",
+          "span": { "offset": 83, "length": 4, "line": 2, "column": 58 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Paper' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/Header.tsx",
+      "labels": [
+        {
+          "label": "'Paper' is imported here",
+          "span": { "offset": 89, "length": 5, "line": 2, "column": 64 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Divider' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/Header.tsx",
+      "labels": [
+        {
+          "label": "'Divider' is imported here",
+          "span": { "offset": 96, "length": 7, "line": 2, "column": 71 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useDispatch' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/Header.tsx",
+      "labels": [
+        {
+          "label": "'useDispatch' is imported here",
+          "span": { "offset": 150, "length": 11, "line": 3, "column": 23 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Duplicate key 'alignItems'",
+      "code": "eslint(no-dupe-keys)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-dupe-keys.html",
+      "help": "Consider removing the duplicated key",
+      "filename": "src/components/viewReportDetails/AuditHistorySection.tsx",
+      "labels": [
+        {
+          "label": "Key is first defined here",
+          "span": { "offset": 7756, "length": 10, "line": 183, "column": 56 }
+        },
+        {
+          "label": "and duplicated here",
+          "span": { "offset": 7803, "length": 10, "line": 183, "column": 103 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Duplicate key 'alignItems'",
+      "code": "eslint(no-dupe-keys)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-dupe-keys.html",
+      "help": "Consider removing the duplicated key",
+      "filename": "src/components/viewReportDetails/AuditHistorySection.tsx",
+      "labels": [
+        {
+          "label": "Key is first defined here",
+          "span": { "offset": 8347, "length": 10, "line": 193, "column": 56 }
+        },
+        {
+          "label": "and duplicated here",
+          "span": { "offset": 8394, "length": 10, "line": 193, "column": 103 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'expand' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/viewReportDetails/AuditHistorySection.tsx",
+      "labels": [
+        {
+          "label": "'expand' is declared here",
+          "span": { "offset": 2431, "length": 6, "line": 92, "column": 13 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Missing \"key\" prop for element in iterator.",
+      "code": "eslint-plugin-react(jsx-key)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-key.html",
+      "help": "Add a \"key\" prop to the element in the iterator (https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key).",
+      "filename": "src/components/viewReportDetails/AuditHistorySection.tsx",
+      "labels": [
+        {
+          "label": "Iterator starts here.",
+          "span": { "offset": 6351, "length": 3, "line": 162, "column": 26 }
+        },
+        {
+          "label": "Element generated here.",
+          "span": { "offset": 6387, "length": 4, "line": 163, "column": 18 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Missing \"key\" prop for element in iterator.",
+      "code": "eslint-plugin-react(jsx-key)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-key.html",
+      "help": "Add a \"key\" prop to the element in the iterator (https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key).",
+      "filename": "src/components/viewReportDetails/AuditHistorySection.tsx",
+      "labels": [
+        {
+          "label": "Iterator starts here.",
+          "span": { "offset": 8035, "length": 3, "line": 187, "column": 48 }
+        },
+        {
+          "label": "Element generated here.",
+          "span": { "offset": 8087, "length": 12, "line": 188, "column": 30 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Missing \"key\" prop for element in iterator.",
+      "code": "eslint-plugin-react(jsx-key)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-key.html",
+      "help": "Add a \"key\" prop to the element in the iterator (https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key).",
+      "filename": "src/components/viewReportDetails/AuditHistorySection.tsx",
+      "labels": [
+        {
+          "label": "Iterator starts here.",
+          "span": { "offset": 8624, "length": 3, "line": 197, "column": 47 }
+        },
+        {
+          "label": "Element generated here.",
+          "span": { "offset": 8675, "length": 11, "line": 198, "column": 30 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Empty object binding pattern",
+      "code": "eslint(no-empty-pattern)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-empty-pattern.html",
+      "help": "Passing `null` or `undefined` will result in runtime error because `null` and `undefined` cannot be destructured.",
+      "filename": "src/components/viewReportDetails/TopNavigation.tsx",
+      "labels": [{ "span": { "offset": 304, "length": 2, "line": 8, "column": 39 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Button' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/TopNavigation.tsx",
+      "labels": [
+        {
+          "label": "'Button' is imported here",
+          "span": { "offset": 52, "length": 6, "line": 2, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Container' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/TopNavigation.tsx",
+      "labels": [
+        {
+          "label": "'Container' is imported here",
+          "span": { "offset": 60, "length": 9, "line": 2, "column": 35 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Grid' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/TopNavigation.tsx",
+      "labels": [
+        {
+          "label": "'Grid' is imported here",
+          "span": { "offset": 71, "length": 4, "line": 2, "column": 46 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Card' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/TopNavigation.tsx",
+      "labels": [
+        {
+          "label": "'Card' is imported here",
+          "span": { "offset": 83, "length": 4, "line": 2, "column": 58 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Paper' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/TopNavigation.tsx",
+      "labels": [
+        {
+          "label": "'Paper' is imported here",
+          "span": { "offset": 89, "length": 5, "line": 2, "column": 64 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Divider' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/TopNavigation.tsx",
+      "labels": [
+        {
+          "label": "'Divider' is imported here",
+          "span": { "offset": 96, "length": 7, "line": 2, "column": 71 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useLocation' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/TopNavigation.tsx",
+      "labels": [
+        {
+          "label": "'useLocation' is imported here",
+          "span": { "offset": 209, "length": 11, "line": 4, "column": 23 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "function has a complexity of 21. Maximum allowed is 20.",
+      "code": "eslint(complexity)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/complexity.html",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [{ "span": { "offset": 22508, "length": 1130, "line": 684, "column": 27 } }],
+      "related": []
+    },
+    {
+      "message": "'user' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'user' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'user' is declared here",
+          "span": { "offset": 15038, "length": 4, "line": 436, "column": 63 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 7707, "length": 4, "line": 249, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'e' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'e' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'e' is declared here",
+          "span": { "offset": 37354, "length": 1, "line": 1029, "column": 63 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 37284, "length": 1, "line": 1028, "column": 35 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "'e' is already declared in the upper scope.",
+      "code": "eslint(no-shadow)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-shadow.html",
+      "help": "Consider renaming 'e' to avoid shadowing the variable from the outer scope.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'e' is declared here",
+          "span": { "offset": 38911, "length": 1, "line": 1063, "column": 63 }
+        },
+        {
+          "label": "shadowed declaration is here",
+          "span": { "offset": 38841, "length": 1, "line": 1062, "column": 35 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'MenuItem' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'MenuItem' is imported here",
+          "span": { "offset": 733, "length": 8, "line": 35, "column": 3 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'expand' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'expand' is declared here",
+          "span": { "offset": 2734, "length": 6, "line": 88, "column": 11 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'smartSearch' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'smartSearch' is declared here",
+          "span": { "offset": 8100, "length": 11, "line": 258, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'setSmartSearch' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'setSmartSearch' is declared here",
+          "span": { "offset": 8113, "length": 14, "line": 258, "column": 23 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'defaultRowSelectionModel' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'defaultRowSelectionModel' is declared here",
+          "span": { "offset": 8308, "length": 24, "line": 261, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'openDialog' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'openDialog' is declared here",
+          "span": { "offset": 8462, "length": 10, "line": 263, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'setOpenDialog' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'setOpenDialog' is declared here",
+          "span": { "offset": 8474, "length": 13, "line": 263, "column": 22 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Parameter 'theme' is declared but never used. Unused parameters should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this parameter.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "'theme' is declared here",
+          "span": { "offset": 26142, "length": 5, "line": 774, "column": 55 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'getCurrencies', 'tableDataGet', 'getUsers', and 'searchParams'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        { "span": { "offset": 19576, "length": 13, "line": 575, "column": 5 } },
+        { "span": { "offset": 19661, "length": 12, "line": 578, "column": 5 } },
+        { "span": { "offset": 19877, "length": 8, "line": 586, "column": 5 } },
+        { "span": { "offset": 19775, "length": 12, "line": 582, "column": 13 } },
+        { "span": { "offset": 19958, "length": 2, "line": 589, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "No duplicate props allowed. The prop \"id\" is duplicated.",
+      "code": "eslint-plugin-react(jsx-no-duplicate-props)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-no-duplicate-props.html",
+      "help": "Remove one of the props, or rename them so each prop is distinct.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        { "span": { "offset": 45003, "length": 2, "line": 1207, "column": 25 } },
+        { "span": { "offset": 45054, "length": 2, "line": 1207, "column": 76 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `generateToastError` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `generateToastError` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 7690, "length": 14, "line": 249, "column": 10 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 10892, "length": 18, "line": 322, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `handleKeyDownEvent` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `handleKeyDownEvent` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 7690, "length": 14, "line": 249, "column": 10 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 25909, "length": 18, "line": 768, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Each then() should return a value or throw",
+      "code": "eslint-plugin-promise(always-return)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/promise/always-return.html",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [{ "span": { "offset": 19604, "length": 8, "line": 576, "column": 13 } }],
+      "related": []
+    },
+    {
+      "message": "Each then() should return a value or throw",
+      "code": "eslint-plugin-promise(always-return)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/promise/always-return.html",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [{ "span": { "offset": 19688, "length": 8, "line": 579, "column": 13 } }],
+      "related": []
+    },
+    {
+      "message": "Each then() should return a value or throw",
+      "code": "eslint-plugin-promise(always-return)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/promise/always-return.html",
+      "filename": "src/components/paymentHistory/PaymentHistory.tsx",
+      "labels": [{ "span": { "offset": 19900, "length": 8, "line": 587, "column": 13 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'userContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/reviewOrderCancellation/OrderReceived/CancelOrderSummary/index.tsx",
+      "labels": [
+        {
+          "label": "'userContext' is imported here",
+          "span": { "offset": 766, "length": 11, "line": 16, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'acceptData' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/reviewOrderCancellation/OrderReceived/CancelOrderSummary/index.tsx",
+      "labels": [
+        {
+          "label": "'acceptData' is declared here",
+          "span": { "offset": 927, "length": 10, "line": 23, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'navigate', and 'acceptData'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/reviewOrderCancellation/OrderReceived/CancelOrderSummary/index.tsx",
+      "labels": [
+        { "span": { "offset": 2833, "length": 8, "line": 73, "column": 7 } },
+        { "span": { "offset": 2813, "length": 10, "line": 72, "column": 10 } },
+        { "span": { "offset": 2868, "length": 2, "line": 75, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Missing \"key\" prop for element in iterator.",
+      "code": "eslint-plugin-react(jsx-key)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-key.html",
+      "help": "Add a \"key\" prop to the element in the iterator (https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key).",
+      "filename": "src/components/reviewOrderCancellation/OrderReceived/CancelOrderSummary/index.tsx",
+      "labels": [
+        {
+          "label": "Iterator starts here.",
+          "span": { "offset": 3987, "length": 3, "line": 101, "column": 30 }
+        },
+        {
+          "label": "Element generated here.",
+          "span": { "offset": 4017, "length": 4, "line": 102, "column": 14 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'onlyOneColumn' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/paymentHistory/ColumnsHideShow.tsx",
+      "labels": [
+        {
+          "label": "'onlyOneColumn' is declared here",
+          "span": { "offset": 8867, "length": 13, "line": 249, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has a missing dependency: 'hideShowColumns'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/paymentHistory/ColumnsHideShow.tsx",
+      "labels": [
+        {
+          "label": "useEffect uses `hideShowColumns` here",
+          "span": { "offset": 4131, "length": 15, "line": 129, "column": 24 }
+        },
+        { "span": { "offset": 4154, "length": 2, "line": 130, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Missing \"key\" prop for element in iterator.",
+      "code": "eslint-plugin-react(jsx-key)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-key.html",
+      "help": "Add a \"key\" prop to the element in the iterator (https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key).",
+      "filename": "src/components/paymentHistory/ColumnsHideShow.tsx",
+      "labels": [
+        {
+          "label": "Iterator starts here.",
+          "span": { "offset": 11008, "length": 3, "line": 313, "column": 27 }
+        },
+        {
+          "label": "Element generated here.",
+          "span": { "offset": 11106, "length": 16, "line": 316, "column": 20 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Prefer `addEventListener()` over their `on`-function counterparts.",
+      "code": "eslint-plugin-unicorn(prefer-add-event-listener)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/prefer-add-event-listener.html",
+      "filename": "src/components/common/VGSShow/useVGSShow.tsx",
+      "labels": [{ "span": { "offset": 507, "length": 6, "line": 20, "column": 12 } }],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'fetchApprovalData', and 'fetchData'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/OrderAuditHistory.tsx",
+      "labels": [
+        { "span": { "offset": 2911, "length": 17, "line": 90, "column": 10 } },
+        { "span": { "offset": 2849, "length": 9, "line": 88, "column": 10 } },
+        { "span": { "offset": 2937, "length": 2, "line": 91, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `renderIcon` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `renderIcon` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/OrderAuditHistory.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 1244, "length": 19, "line": 40, "column": 10 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 2951, "length": 10, "line": 93, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Use `Array#toReversed()` instead of `Array#reverse()`.",
+      "code": "eslint-plugin-unicorn(no-array-reverse)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/no-array-reverse.html",
+      "help": "`Array#reverse()` mutates the original array. Use `Array#toReversed()` to return a new reversed array without modifying the original.",
+      "filename": "src/components/common/orderDetails/orderAuditHistory/OrderAuditHistory.tsx",
+      "labels": [{ "span": { "offset": 7849, "length": 7, "line": 220, "column": 16 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useState' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'useState' is imported here",
+          "span": { "offset": 16, "length": 8, "line": 1, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useEffect' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'useEffect' is imported here",
+          "span": { "offset": 26, "length": 9, "line": 1, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useContext' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'useContext' is imported here",
+          "span": { "offset": 37, "length": 10, "line": 1, "column": 38 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Typography' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Typography' is imported here",
+          "span": { "offset": 73, "length": 10, "line": 2, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Button' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Button' is imported here",
+          "span": { "offset": 90, "length": 6, "line": 2, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Grid' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Grid' is imported here",
+          "span": { "offset": 109, "length": 4, "line": 2, "column": 46 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Link' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Link' is imported here",
+          "span": { "offset": 115, "length": 4, "line": 2, "column": 52 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Card' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Card' is imported here",
+          "span": { "offset": 121, "length": 4, "line": 2, "column": 58 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Paper' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Paper' is imported here",
+          "span": { "offset": 127, "length": 5, "line": 2, "column": 64 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Divider' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'Divider' is imported here",
+          "span": { "offset": 134, "length": 7, "line": 2, "column": 71 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'ArrowBackIcon' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'ArrowBackIcon' is imported here",
+          "span": { "offset": 173, "length": 13, "line": 3, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'User' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/ViewReportDetails.tsx",
+      "labels": [
+        {
+          "label": "'User' is imported here",
+          "span": { "offset": 235, "length": 4, "line": 5, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Empty object binding pattern",
+      "code": "eslint(no-empty-pattern)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-empty-pattern.html",
+      "help": "Passing `null` or `undefined` will result in runtime error because `null` and `undefined` cannot be destructured.",
+      "filename": "src/components/viewReportDetails/DetailsSection.tsx",
+      "labels": [{ "span": { "offset": 749, "length": 2, "line": 29, "column": 40 } }],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useState' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/DetailsSection.tsx",
+      "labels": [
+        {
+          "label": "'useState' is imported here",
+          "span": { "offset": 16, "length": 8, "line": 1, "column": 17 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'Moment' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/DetailsSection.tsx",
+      "labels": [
+        {
+          "label": "'Moment' is imported here",
+          "span": { "offset": 96, "length": 6, "line": 3, "column": 18 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'useDispatch' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewReportDetails/DetailsSection.tsx",
+      "labels": [
+        {
+          "label": "'useDispatch' is imported here",
+          "span": { "offset": 281, "length": 11, "line": 6, "column": 23 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'weekDays' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/viewReportDetails/DetailsSection.tsx",
+      "labels": [
+        {
+          "label": "'weekDays' is declared here",
+          "span": { "offset": 991, "length": 8, "line": 40, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `handleFrecuency` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `handleFrecuency` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/viewReportDetails/DetailsSection.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 734, "length": 14, "line": 29, "column": 25 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 1200, "length": 15, "line": 50, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'styled' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'styled' is imported here",
+          "span": { "offset": 352, "length": 6, "line": 7, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'getPurposeOfPayment' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'getPurposeOfPayment' is imported here",
+          "span": { "offset": 702, "length": 19, "line": 12, "column": 39 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'getCustomerOrderId' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'getCustomerOrderId' is imported here",
+          "span": { "offset": 723, "length": 18, "line": 12, "column": 60 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'purposeOfPayment' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'purposeOfPayment' is imported here",
+          "span": { "offset": 865, "length": 16, "line": 15, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Identifier 'LiveHelpOutlinedIcon' is imported but never used.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this import.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'LiveHelpOutlinedIcon' is imported here",
+          "span": { "offset": 1035, "length": 20, "line": 18, "column": 8 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'customerOrderId' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'customerOrderId' is declared here",
+          "span": { "offset": 1624, "length": 15, "line": 37, "column": 10 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'setCustomerOrderId' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'setCustomerOrderId' is declared here",
+          "span": { "offset": 1641, "length": 18, "line": 37, "column": 27 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'location' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'location' is declared here",
+          "span": { "offset": 1916, "length": 8, "line": 42, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'dispatch' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'dispatch' is declared here",
+          "span": { "offset": 1994, "length": 8, "line": 44, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "Variable 'purposeOfPayments' is declared but never used. Unused variables should start with a '_'.",
+      "code": "eslint(no-unused-vars)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-unused-vars.html",
+      "help": "Consider removing this declaration.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "'purposeOfPayments' is declared here",
+          "span": { "offset": 2071, "length": 17, "line": 46, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "React Hook useEffect has missing dependencies: 'paymentDataGet', and 'searchParams'",
+      "code": "eslint-plugin-react-hooks(exhaustive-deps)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/exhaustive-deps.html",
+      "help": "Either include it or remove the dependency array.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        { "span": { "offset": 5473, "length": 14, "line": 136, "column": 5 } },
+        { "span": { "offset": 5351, "length": 12, "line": 133, "column": 9 } },
+        { "span": { "offset": 5496, "length": 2, "line": 137, "column": 6 } }
+      ],
+      "related": []
+    },
+    {
+      "message": "Function `generateToastError` does not capture any variables from its parent scope",
+      "code": "eslint-plugin-unicorn(consistent-function-scoping)",
+      "severity": "error",
+      "causes": [],
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping.html",
+      "help": "Move `generateToastError` to the outer scope to avoid recreating it on every call.",
+      "filename": "src/components/viewPaymentDetails/ViewPaymentDetails.tsx",
+      "labels": [
+        {
+          "label": "Outer scope where this function is defined",
+          "span": { "offset": 1365, "length": 18, "line": 32, "column": 25 }
+        },
+        {
+          "label": "This function does not use any variables from the parent function",
+          "span": { "offset": 2165, "length": 18, "line": 48, "column": 9 }
+        }
+      ],
+      "related": []
+    },
+    {
+      "message": "A required parameter cannot follow an optional parameter.",
+      "code": "TS(1016)",
+      "severity": "error",
+      "causes": [],
+      "filename": "src/api/index.ts",
+      "labels": [{ "span": { "offset": 6044, "length": 28, "line": 191, "column": 3 } }],
+      "related": []
+    },
+    {
+      "message": "A required parameter cannot follow an optional parameter.",
+      "code": "TS(1016)",
+      "severity": "error",
+      "causes": [],
+      "filename": "src/api/index.ts",
+      "labels": [{ "span": { "offset": 6076, "length": 12, "line": 192, "column": 3 } }],
+      "related": []
+    },
+    {
+      "message": "A required parameter cannot follow an optional parameter.",
+      "code": "TS(1016)",
+      "severity": "error",
+      "causes": [],
+      "filename": "src/api/index.ts",
+      "labels": [{ "span": { "offset": 6092, "length": 10, "line": 193, "column": 3 } }],
+      "related": []
+    },
+    {
+      "message": "A required parameter cannot follow an optional parameter.",
+      "code": "TS(1016)",
+      "severity": "error",
+      "causes": [],
+      "filename": "src/api/index.ts",
+      "labels": [{ "span": { "offset": 6106, "length": 16, "line": 194, "column": 3 } }],
+      "related": []
+    },
+    {
+      "message": "A required parameter cannot follow an optional parameter.",
+      "code": "TS(1016)",
+      "severity": "error",
+      "causes": [],
+      "filename": "src/api/index.ts",
+      "labels": [{ "span": { "offset": 6126, "length": 13, "line": 195, "column": 3 } }],
+      "related": []
+    },
+    {
+      "message": "A required parameter cannot follow an optional parameter.",
+      "code": "TS(1016)",
+      "severity": "error",
+      "causes": [],
+      "filename": "src/api/index.ts",
+      "labels": [{ "span": { "offset": 6143, "length": 16, "line": 196, "column": 3 } }],
+      "related": []
+    },
+    {
+      "message": "A required parameter cannot follow an optional parameter.",
+      "code": "TS(1016)",
+      "severity": "error",
+      "causes": [],
+      "filename": "src/api/index.ts",
+      "labels": [{ "span": { "offset": 6163, "length": 13, "line": 197, "column": 3 } }],
+      "related": []
+    }
+  ],
+  "number_of_files": 135,
+  "number_of_rules": 159,
+  "threads_count": 12,
+  "start_time": 0.2410188
+}
