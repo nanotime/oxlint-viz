@@ -1,6 +1,6 @@
 # Oxlint Visualizer
 
-**Oxlint Visualizer** is a high-performance, privacy-first web tool designed to transform raw `oxlint` JSON output into a comprehensive, human-readable analytics report. Our goal is to provide developers with a clear "Refacto-o-meter" to identify code hotspots and prioritize technical debt reduction without ever letting data leave the local environment.
+**Oxlint Visualizer** is a high-performance, privacy-first web tool designed to transform raw `oxlint` JSON output into a comprehensive, human-readable analytics report. Our goal is to provide developers with a clear understanding of their codebase's lint health without ever letting data leave the local environment.
 
 ## 🚀 Getting Started
 
@@ -29,42 +29,9 @@ vp test
 vp build
 ```
 
-### 🔧 Generating Oxlint Reports
+### Generating Oxlint Reports
 
-To analyze your project with Oxlint Visualizer, generate a JSON report. Oxlint is extremely fast, so running a full scan takes only milliseconds.
-
-#### Quick Commands
-
-````bash
-# Recommended: Standard audit (Best balance of noise/value)
-oxlint -f json . > oxlint-report.json
-
-# Comprehensive audit (All categories except nursery/experimental)
-oxlint -f json -D correctness -D perf -D suspicious -D pedantic -D style . > oxlint-report.json
-
-# Maximum coverage for Modern React Apps
-oxlint -f json -D all \
-  --react-plugin \
-  --jsx-a11y-plugin \
-  --import-plugin \
-  --vitest-plugin \
-  . > oxlint-report.json
-
-# Backend/Node.js Optimized
-oxlint -f json -D all \
-  --promise-plugin \
-  --node-plugin \
-  . > oxlint-report.json
-
-### Quick Test
-
-Clone and test on a real project:
-
-```bash
-git clone https://github.com/solidjs/solid-site --depth 1
-cd solid-site
-oxlint -f json -D all --react-plugin . > oxlint-report.json
-````
+*Coming soon — more examples and documentation for generating oxlint JSON reports.*
 
 ## 🛠 Tech Stack
 
@@ -74,103 +41,82 @@ oxlint -f json -D all --react-plugin . > oxlint-report.json
 - **Visualization:** [Apache ECharts](https://echarts.apache.org/) for highly interactive data representation.
 - **Language:** TypeScript for end-to-end type safety.
 
-## 🔬 Technical Explanations
+## 📊 Dashboard Overview
 
-### The Normalizer
+The dashboard presents linting data through a series of progressively detailed visualizations, each designed to answer specific questions about your codebase.
 
-The `normalizer` is a pure function that takes a `OxlintRawReport` and produces a `NormalizedReport`. It performs the following operations:
+### Stats Bar
 
-1. **Category Inference:** Rules are mapped to domains like `correctness`, `style`, `perf`, `pedantic`, and `suspicious`.
-2. **Aggregated Metrics:** Calculates total issues, affected files, and severity distribution.
-3. **Hotspot Analysis:** Identifies which files require immediate attention.
+The header section displays high-level summary metrics:
 
-### Category Inference
+- **Total Issues** — The aggregate count of all lint violations detected
+- **Files with Issues** — How many files contain at least one violation
+- **Severity Breakdown** — Count of errors, warnings, and advice-level issues
 
-The normalizer determines what _kind_ of issue each lint error represents:
+This gives you an immediate sense of the overall scope of lint issues without requiring any deeper analysis.
 
-```
-"eslint(no-unused-vars)"
-        ↓
-    Extract: "no-unused-vars"
-        ↓
-    Look up in Categories: { category: "correctness" }
-        ↓
-    Result: "correctness"
-```
+### Insights Cards
 
-**Priority order:**
+Two contextual insight cards that synthesize the data into actionable observations:
 
-1. **RULE_OVERRIDES** — User-defined exceptions take highest priority
-2. **Categories lookup** — The oxlint source-of-truth mapping (flat `Record<string, Category>`)
-3. **Fallback** — Defaults to `"correctness"` if rule not found
+- **Priority** — Identifies the dominant category of issues in your codebase (correctness, suspicious, restriction, perf, or style). This helps you understand the *kind* of problems you're dealing with — are they actual bugs, risky patterns, or stylistic preferences?
 
-This enables O(1) lookup for rule categorization, critical for processing large codebases efficiently.
+- **Impact** — Analyzes how concentrated the issues are across rules. If the top 5 rules account for 70%+ of all violations, you have "concentrated fix potential" — addressing a few rules will dramatically reduce the issue count. If distribution is spread across many rules, the issues are more "widespread" and may require broader refactoring.
 
-### Metrics & Calculation
+### Distribution Section
 
-#### Aggregation
+Two charts working together to show *what* is wrong:
 
-| Metric                    | How it's calculated                                           |
-| ------------------------- | ------------------------------------------------------------- |
-| **Total Issues**          | Count all diagnostics                                         |
-| **Files Affected**        | Unique filenames with issues                                  |
-| **Severity Breakdown**    | Count `{ error, warning, advice }`                            |
-| **Category Distribution** | Count by `{ correctness, style, pedantic, suspicious, perf }` |
+- **Severity Donut** — Shows the proportion of issues by severity level (error/warning/advice). Errors are problems that will fail at runtime; warnings are suspicious patterns that may cause issues; advice is suggestions for improvement.
 
-#### Toxicity Score (Per-File)
+- **Categories Rose Chart** — Groups issues by oxlint category: correctness, style, pedantic, suspicious, perf, restriction, and nursery. This reveals the *type* of issues — for example, a codebase heavy on "style" issues is likely maintainable but inconsistent, while one heavy on "correctness" issues may have actual bugs.
 
-Each file receives a **toxicity score** — a weighted sum of its issues:
+### Specifics Section
 
-$$Toxicity = \sum (CategoryWeight \times SeverityMultiplier)$$
+- **Top 15 Rules Bar Chart** — Ranks the most frequently triggered linter rules. Each bar represents a rule, with length indicating violation count. This helps identify *which* specific rules are causing the most noise. Clicking a bar filters the view to focus on that rule.
 
-| Category    | Weight | Rationale                           |
-| ----------- | ------ | ----------------------------------- |
-| correctness | 10     | Bugs, type errors — fix immediately |
-| suspicious  | 7      | Code smells — risky patterns        |
-| perf        | 5      | Performance issues                  |
-| pedantic    | 3      | Style preferences                   |
-| style       | 1      | Cosmetic, non-critical              |
+This is particularly useful when the "Impact" insight shows concentrated issues — you can see exactly which rules to address first.
 
-| Severity | Multiplier |
-| -------- | ---------- |
-| error    | 1.0        |
-| warning  | 0.5        |
-| advice   | 0.1        |
+### Granular Section
 
-**Example:**
+- **Files by Errors Treemap** — A treemap visualization where each tile represents a file. Tile size reflects the number of issues in that file, and color indicates error density (darker = more errors relative to total issues).
 
-```
-File: src/api/payments.ts
-Issues:
-  - 20 correctness errors × 10 × 1.0 = 200
-  - 5 style warnings × 1 × 0.5 = 2.5
-Toxicity Score = 202.5 → capped at 100
-```
+This answers: *Which files are causing the most problems?* Large, red blocks are your hotspots — the files that deserve immediate attention.
 
-#### General Toxicity (Project-Wide)
+### Deep Dive Section
 
-$$GeneralToxicity = \frac{\sum \min(FileScore, 100)}{TotalFiles}$$
+- **Heatmap: Files vs Categories** — A matrix crossing the top 20 most problematic files against all category types. Each cell's color intensity shows how many violations of that category exist in that file.
 
-Each file's score is capped at 100, then averaged across all files. This prevents one terrible file from skewing the entire project's score.
+This answers: *Why is this file problematic?* If a file shows up red in the "correctness" row but green in "style," you know it has real bugs rather than cosmetic issues. This helps prioritize which files to tackle first and what kind of issues you'll find when you open them.
 
-### Health Status
+## 🎛 Presets
 
-Based on the Toxicity Score, files are classified into:
+Presets are severity configurations that bias how oxlint categories are interpreted. They override the raw severity levels from oxlint to match different team workflows.
 
-- 🟢 **Healthy (< 10):** Low impact issues or clean.
-- 🟡 **Warning (10 - 49):** Requires review; accumulation of minor issues.
-- 🟠 **Toxic (50 - 149):** Significant technical debt; high risk of bugs.
-- 🔴 **Critical (>= 150):** "Radioactive" files that should be refactored immediately.
+| Preset | Behavior | Best For |
+|--------|----------|----------|
+| **Clean Code** *(Recommended)* | Restrictions are errors; style is advice; correctness/suspicious are warnings | Daily development — strict on rules that matter, silent on cosmetics |
+| **Balanced** | Style/pedantic are advice/ignored; restrictions are warnings; correctness remains error | Legacy codebases or quick audits — reduces noise while keeping focus |
+| **Strict** | Raw oxlint severities with no overrides | Teams wanting unfiltered oxlint output |
+| **Performance** | Ignores style/pedantic; perf issues are errors; restrictions/suspicious are warnings | Performance optimization sprints |
 
-### Visualization Strategy
+**Note:** Correctness issues are always treated as errors regardless of preset — they represent actual bugs or high-risk regressions.
 
-Our dashboard uses a hierarchical approach to data visualization:
+## 🔧 How It Works
 
-- **Donut Chart (Severity):** Displays the distribution of error/warning/advice. The center shows the total issue count for immediate context.
-- **Horizontal Bar Chart (Categories):** Shows which domains (Correctness, Style, etc.) are most affected. Horizontal layout ensures long category names remain readable.
-- **Top 15 Rules (Horizontal Bar):** Pinpoints the specific linter rules being triggered most often across the project.
-- **General Toxicity Gauge:** A normalized 0-100% "Health Check" of the entire codebase.
-- **Treemap (Files by Toxicity):** Visualizes the "weight" of each file based on its toxicity score. Larger blocks indicate higher priority for refactoring.
-- **Heatmap (Top 20 Files vs Categories):** A deep-dive matrix crossing the most toxic files with Oxlint categories to reveal _why_ a file is problematic (e.g., is it a performance issue or a style violation?).
+### Category Mapping
 
-Our goal is to represent the **density of risk** rather than just a flat count of errors, allowing teams to focus on the files that truly hinder maintainability.
+Each lint rule is mapped to an oxlint category using a comprehensive lookup table (`src/model/categories.ts`). The mapping is performed by extracting the rule identifier from the diagnostic code (e.g., `eslint(no-unused-vars)` → `no-unused-vars`) and looking it up in the categories registry.
+
+Some rules have custom overrides defined in `src/logic/inferCategory.ts` that take precedence over the default mapping. This allows fine-tuning the categorization for rules where the default may not match your team's standards.
+
+When a rule is not found in the categories registry, it defaults to `correctness` — a conservative choice that ensures unknown issues are treated as potentially problematic.
+
+### Data Flow
+
+1. **Input** — Paste oxlint JSON output into the input zone
+2. **Normalize** — The raw report is processed into structured metrics (severity counts, category counts, rule frequencies, file-level diagnostics)
+3. **Analyze** — Insights are computed to determine priority categories and rule concentration
+4. **Visualize** — All charts are rendered from the normalized data
+
+All processing happens client-side in your browser. No data is ever transmitted anywhere.
