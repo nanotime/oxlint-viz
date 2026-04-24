@@ -2,7 +2,6 @@ import { Component } from "solid-js";
 import { ChartBase } from "./ChartBase";
 import { ChartOption } from "@/logic/chartWrapper";
 import { useAppContext } from "@/store/AppContext";
-// import { palette } from "@/utils/palette";
 
 export const FilesHeatmap: Component = () => {
   const context = useAppContext();
@@ -11,12 +10,12 @@ export const FilesHeatmap: Component = () => {
     const hotSpotsData = Object.entries(hotspots)
       .map(([key, data]) => ({
         name: data.filename.split("/").pop() || key,
-        toxicity: data.toxicityScore,
+        issueCount: data.issueCount,
         categories: data.categories,
       }))
-      .sort((a, b) => b.toxicity - a.toxicity);
+      .sort((a, b) => b.issueCount - a.issueCount);
 
-    const xAxisData = ["correctness", "pedantic", "perf", "style", "suspicious"];
+    const xAxisData = ["correctness", "pedantic", "perf", "style", "suspicious", "restriction"];
     const yAxisData = hotSpotsData.map((spot) => spot.name);
     const heatMapData: [number, number, number][] = [];
 
