@@ -70,12 +70,6 @@ describe("Normalizer", () => {
       expect(normalized.distribution.categories.correctness).toBe(5);
       expect(normalized.distribution.categories.style).toBe(36);
     });
-
-    it("should calculate generalToxicity correctly", () => {
-      const report = data as OxlintRawReport;
-      const normalized = normalizer(report, SEVERITY_PRESETS.strict);
-      expect(normalized.distribution.generalToxicity).toBeCloseTo(0.7884615384615384, 8);
-    });
   });
 
   describe("Normalize rules", () => {
@@ -102,27 +96,21 @@ describe("Normalizer", () => {
       const report = data as OxlintRawReport;
       const normalized = normalizer(report, SEVERITY_PRESETS.strict);
 
-      // File with 3 style issues (capitalized-comments, sort-imports, sort-keys)
       const styles = normalized.hotspots["src/components/paymentHistory/styles.ts"];
       expect(styles.issueCount).toBe(3);
       expect(styles.errorCount).toBe(3);
-      expect(styles.toxicityScore).toBe(3); // 3 issues * 1 weight (style)
-      expect(styles.status).toBe("healthy");
+      expect(styles.warningCount).toBe(0);
 
-      // File with mixed categories
       const dialog =
         normalized.hotspots["src/components/paymentHistory/dialogs/ExportDialog.test.tsx"];
-      // 2 no-unused-vars (correctness) + 1 sort-imports (style) + 1 unicorn/filename-case (style)
       expect(dialog.issueCount).toBe(4);
       expect(dialog.errorCount).toBe(4);
-      expect(dialog.toxicityScore).toBe(22); // 2*10 (correctness) + 2*1 (style)
-      expect(dialog.status).toBe("warning");
+      expect(dialog.warningCount).toBe(0);
 
-      // File with single issue style
       const blurs = normalized.hotspots["src/theme/light/create-blurs.js"];
       expect(blurs.issueCount).toBe(1);
-      expect(blurs.toxicityScore).toBe(1);
-      expect(blurs.status).toBe("healthy");
+      expect(blurs.errorCount).toBe(1);
+      expect(blurs.warningCount).toBe(0);
     });
   });
 });

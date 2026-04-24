@@ -7,7 +7,6 @@ const createMockReport = (overrides: Partial<NormalizedReport> = {}): Normalized
   distribution: {
     severity: { error: 30, warning: 40, advice: 30 },
     categories: { correctness: 50, style: 30 },
-    generalToxicity: 0.5,
     ...overrides.distribution,
   },
   rules: {
@@ -23,92 +22,12 @@ const createMockReport = (overrides: Partial<NormalizedReport> = {}): Normalized
 });
 
 describe("analyzeInsights", () => {
-  describe("Health Assessment", () => {
-    it("should return healthy for low toxicity (0.10)", () => {
-      const report = createMockReport({
-        distribution: {
-          generalToxicity: 0.1,
-          categories: {},
-          severity: { error: 0, warning: 0, advice: 0 },
-        },
-      });
-      expect(analyzeInsights(report).health).toBe("Codebase is healthy");
-    });
-
-    it("should return healthy at boundary (0.33)", () => {
-      const report = createMockReport({
-        distribution: {
-          generalToxicity: 0.33,
-          categories: {},
-          severity: { error: 0, warning: 0, advice: 0 },
-        },
-      });
-      expect(analyzeInsights(report).health).toBe("Codebase is healthy");
-    });
-
-    it("should return moderate technical debt (0.40)", () => {
-      const report = createMockReport({
-        distribution: {
-          generalToxicity: 0.4,
-          categories: {},
-          severity: { error: 0, warning: 0, advice: 0 },
-        },
-      });
-      expect(analyzeInsights(report).health).toBe("Moderate technical debt");
-    });
-
-    it("should return moderate technical debt at boundary (0.50)", () => {
-      const report = createMockReport({
-        distribution: {
-          generalToxicity: 0.5,
-          categories: {},
-          severity: { error: 0, warning: 0, advice: 0 },
-        },
-      });
-      expect(analyzeInsights(report).health).toBe("Moderate technical debt");
-    });
-
-    it("should return significant issues (0.60)", () => {
-      const report = createMockReport({
-        distribution: {
-          generalToxicity: 0.6,
-          categories: {},
-          severity: { error: 0, warning: 0, advice: 0 },
-        },
-      });
-      expect(analyzeInsights(report).health).toBe("Significant issues");
-    });
-
-    it("should return significant issues at boundary (0.70)", () => {
-      const report = createMockReport({
-        distribution: {
-          generalToxicity: 0.7,
-          categories: {},
-          severity: { error: 0, warning: 0, advice: 0 },
-        },
-      });
-      expect(analyzeInsights(report).health).toBe("Significant issues");
-    });
-
-    it("should return critical state (0.85)", () => {
-      const report = createMockReport({
-        distribution: {
-          generalToxicity: 0.85,
-          categories: {},
-          severity: { error: 0, warning: 0, advice: 0 },
-        },
-      });
-      expect(analyzeInsights(report).health).toBe("Critical state - immediate refactoring needed");
-    });
-  });
-
   describe("Priority Detection", () => {
     it("should detect correctness as dominant", () => {
       const report = createMockReport({
         distribution: {
           categories: { correctness: 100, style: 50 },
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("Codebase has mostly correctness issues");
@@ -119,7 +38,6 @@ describe("analyzeInsights", () => {
         distribution: {
           categories: { style: 200, correctness: 10 },
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("Codebase has mostly style issues");
@@ -130,7 +48,6 @@ describe("analyzeInsights", () => {
         distribution: {
           categories: { suspicious: 50, restriction: 30 },
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("Codebase has mostly suspicious patterns");
@@ -141,7 +58,6 @@ describe("analyzeInsights", () => {
         distribution: {
           categories: { restriction: 80, perf: 20 },
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("Codebase has mostly restriction violations");
@@ -152,7 +68,6 @@ describe("analyzeInsights", () => {
         distribution: {
           categories: { perf: 100, style: 50 },
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("Codebase has mostly performance issues");
@@ -163,7 +78,6 @@ describe("analyzeInsights", () => {
         distribution: {
           categories: { pedantic: 1000, style: 1 },
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("Codebase has mostly style issues");
@@ -174,7 +88,6 @@ describe("analyzeInsights", () => {
         distribution: {
           categories: { nursery: 1000, correctness: 1 },
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("Codebase has mostly correctness issues");
@@ -185,7 +98,6 @@ describe("analyzeInsights", () => {
         distribution: {
           categories: {},
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("No actionable categories found");
@@ -196,7 +108,6 @@ describe("analyzeInsights", () => {
         distribution: {
           categories: { pedantic: 100, nursery: 50 },
           severity: { error: 0, warning: 0, advice: 0 },
-          generalToxicity: 0.5,
         },
       });
       expect(analyzeInsights(report).priority).toBe("No actionable categories found");
@@ -326,10 +237,9 @@ describe("analyzeInsights", () => {
   });
 
   describe("Integration", () => {
-    it("should return correct insights for healthy codebase with low impact", () => {
+    it("should return correct insights for codebase with low impact", () => {
       const report = createMockReport({
         distribution: {
-          generalToxicity: 0.2,
           categories: { style: 100, correctness: 10 },
           severity: { error: 0, warning: 10, advice: 100 },
         },
@@ -343,17 +253,15 @@ describe("analyzeInsights", () => {
         },
       });
       const insights = analyzeInsights(report);
-      expect(insights.health).toBe("Codebase is healthy");
       expect(insights.priority).toBe("Codebase has mostly style issues");
       expect(insights.impact).toBe(
         "Top 5 rules account for 20% of issues - widespread distribution",
       );
     });
 
-    it("should return correct insights for critical codebase with high impact", () => {
+    it("should return correct insights for codebase with high impact", () => {
       const report = createMockReport({
         distribution: {
-          generalToxicity: 0.85,
           categories: { correctness: 100, suspicious: 20 },
           severity: { error: 100, warning: 20, advice: 0 },
         },
@@ -367,7 +275,6 @@ describe("analyzeInsights", () => {
         },
       });
       const insights = analyzeInsights(report);
-      expect(insights.health).toBe("Critical state - immediate refactoring needed");
       expect(insights.priority).toBe("Codebase has mostly correctness issues");
       expect(insights.impact).toBe(
         "Top 5 rules account for 99% of issues - concentrated fix potential",
