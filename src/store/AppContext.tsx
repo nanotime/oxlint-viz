@@ -16,7 +16,6 @@ export const baseStore: NormalizedReport = {
       advice: 0,
     },
     categories: {},
-    generalToxicity: 0,
   },
   rules: {},
   hotspots: {},
