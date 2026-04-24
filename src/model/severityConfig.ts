@@ -22,7 +22,7 @@ export const SEVERITY_PRESETS: PresetConfig = {
     overrides: {
       style: "advice",
       pedantic: "ignore",
-      restriction: "error",
+      restriction: "warning",
     },
   },
   strict: {
@@ -34,16 +34,18 @@ export const SEVERITY_PRESETS: PresetConfig = {
     overrides: {
       style: "ignore",
       pedantic: "ignore",
-      restriction: "ignore",
-      suspicious: "ignore",
+      restriction: "warning",
+      suspicious: "warning",
+      perf: "error",
     },
   },
   cleanCode: {
     preset: "cleanCode",
     overrides: {
       pedantic: "ignore",
-      style: "warning",
+      style: "advice",
       suspicious: "warning",
+      restriction: "error",
     },
   },
 };
