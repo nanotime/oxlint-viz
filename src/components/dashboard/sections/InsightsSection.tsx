@@ -2,16 +2,14 @@ import { Component } from "solid-js";
 import { useAppContext } from "@/store/AppContext";
 import { analyzeInsights } from "@/logic/analyzeInsights";
 import { Card } from "@/components/shared/Card";
-import { Heart, Flag, Zap } from "lucide-solid";
+import { Flag, Zap } from "lucide-solid";
 
 const iconMap = {
-  health: <Heart class="size-5" />,
   priority: <Flag class="size-5" />,
   impact: <Zap class="size-5" />,
 } as const;
 
 const titleMap = {
-  health: "Health",
   priority: "Priority",
   impact: "Impact",
 } as const;
@@ -21,14 +19,13 @@ export const InsightsSection: Component = () => {
   const insights = analyzeInsights(context.data);
 
   const insightEntries = [
-    { key: "health" as const, value: insights.health },
     { key: "priority" as const, value: insights.priority },
     { key: "impact" as const, value: insights.impact },
   ];
 
   return (
     <section id="insights">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {insightEntries.map(({ key, value }) => (
           <Card>
             <Card.Body class="flex flex-row items-center gap-4">
