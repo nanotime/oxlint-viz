@@ -5,11 +5,13 @@ import {
   TreemapChart,
   GaugeChart,
   HeatmapChart,
+  ScatterChart,
   BarSeriesOption,
   PieSeriesOption,
   TreemapSeriesOption,
   GaugeSeriesOption,
   HeatmapSeriesOption,
+  ScatterSeriesOption,
 } from "echarts/charts";
 import {
   TitleComponent,
@@ -35,6 +37,7 @@ echarts.use([
   TreemapChart,
   GaugeChart,
   HeatmapChart,
+  ScatterChart,
   TitleComponent,
   TooltipComponent,
   GridComponent,
@@ -50,6 +53,7 @@ export type ChartOption = ComposeOption<
   | TreemapSeriesOption
   | GaugeSeriesOption
   | HeatmapSeriesOption
+  | ScatterSeriesOption
   | TitleComponentOption
   | TooltipComponentOption
   | GridComponentOption

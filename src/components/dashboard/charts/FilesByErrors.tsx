@@ -24,6 +24,8 @@ export const FilesByErrors: Component = () => {
       issueCount: data.issueCount,
       errorCount: data.errorCount,
       warningCount: data.warningCount,
+      // TODO: BUG
+      complexityCount: Object.keys(data.complexity ?? {}).length,
       itemStyle: {
         color: getErrorColor(data.errorCount),
       },
@@ -40,23 +42,27 @@ export const FilesByErrors: Component = () => {
           color: "#333",
         },
         formatter: (info: any) => {
-          const { fullPath, value, issueCount, warningCount } = info.data;
+          const { fullPath, value, issueCount, warningCount, complexityCount } = info.data;
           return `
             <div style="font-family: inherit; min-width: 200px; line-height: 1.5;">
               <div style="font-weight: bold; border-bottom: 1px solid #eee; margin-bottom: 8px; padding-bottom: 4px; color: #000; word-break: break-all;">
                 ${fullPath}
               </div>
               <div style="display: flex; justify-content: space-between;">
-                <span>Error Count:</span>
-                <span style="font-weight: bold; margin-left: 20px;">${value}</span>
-              </div>
-              <div style="display: flex; justify-content: space-between;">
                 <span>Total Issues:</span>
                 <span style="font-weight: bold; margin-left: 20px;">${issueCount}</span>
               </div>
               <div style="display: flex; justify-content: space-between;">
+                <span>Error Count:</span>
+                <span style="font-weight: bold; margin-left: 20px;">${value}</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
                 <span>Warnings:</span>
                 <span style="font-weight: bold; margin-left: 20px;">${warningCount}</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Complexity findings:</span>
+                <span style="font-weight: bold; margin-left: 20px;">${complexityCount}</span>
               </div>
             </div>
           `;
