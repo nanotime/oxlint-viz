@@ -155,7 +155,88 @@ The application operates in two distinct states, maximizing screen real estate f
   - Workflow: trunk based development, everything lives in main, testing, rules, formatting are enforced via hooks.
   - Commiting: always use conventional commit standard, you can't push or use any risky command, you should always present a commit strategy in a list and show the messages of each commit. You can execute the commit if the human in charge approve it.
 
-## 7. Specific Instructions for AI Collaboration
+## 7. GitHub Issues Structure
+
+All GitHub issues must follow the standardized template below to ensure clarity, traceability, and actionable implementation.
+
+### Required Sections
+
+1. **## Description** - What is being done and why
+2. **## Current Behavior/State** - Current state (if applicable)
+3. **## New Behavior/Proposed Structure** - Expected behavior (if applicable)
+4. **## User Story** - For user-facing features (format: "As a user, I want... so I can...")
+5. **## Requirements** - Numbered requirements with subtitles
+6. **## Acceptance Criteria** - Verifiable checklist of checkboxes
+7. **## Dependencies** - Blocked by / Blocks / Parent Issue
+8. **## Priority** - High / Medium / Low
+
+### Optional Sections (by type)
+
+- **## Why** - Technical or business justification
+- **## Technical Implementation** - Implementation details
+- **## Files to Create/Modify** - List of affected files
+- **## UI/UX Considerations** - For visual changes
+- **## Error Handling** - For data/API logic
+- **## Route** - For routing features
+- **## Navigation Flow** - For flow changes
+
+### Formatting Rules
+
+- Use ASCII diagrams for UI layouts
+- Include code snippets for interfaces and types
+- Acceptance Criteria must be verifiable (checkboxes)
+- Dependencies must include issue number (#X)
+- Parent Issue is mandatory if part of an epic
+
+### Labels
+
+- `enhancement` - New features or improvements
+- `bug` - Bug fixes
+- `research` - Investigation tasks
+- `Epic` - Epic-level issues (capitalized)
+- `deployment` - Infrastructure/deployment tasks
+
+### Example Template
+
+```markdown
+## Description
+[What and why]
+
+## Current Behavior
+[Current state if applicable]
+
+## New Behavior
+[Expected behavior if applicable]
+
+## User Story
+**As a user**, I want [action] so I can [benefit].
+
+## Requirements
+
+### 1. [Requirement Title]
+[Details, code snippets, ASCII diagrams]
+
+### 2. [Requirement Title]
+[Details]
+
+## Acceptance Criteria
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion N
+
+## Dependencies
+- Blocked by: #X
+- Blocks: #Y
+- Part of epic: #Z
+
+## Priority
+High / Medium / Low
+
+## Parent Issue
+#X - Epic title
+```
+
+## 8. Specific Instructions for AI Collaboration
 
 - **Contribution Guidelines:**
   - Feature branches should target `main` (for v0.1.0).
