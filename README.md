@@ -31,7 +31,7 @@ vp build
 
 ### Generating Oxlint Reports
 
-*Coming soon — more examples and documentation for generating oxlint JSON reports.*
+_Coming soon — more examples and documentation for generating oxlint JSON reports._
 
 ## 🛠 Tech Stack
 
@@ -59,21 +59,21 @@ This gives you an immediate sense of the overall scope of lint issues without re
 
 Two contextual insight cards that synthesize the data into actionable observations:
 
-- **Priority** — Identifies the dominant category of issues in your codebase (correctness, suspicious, restriction, perf, or style). This helps you understand the *kind* of problems you're dealing with — are they actual bugs, risky patterns, or stylistic preferences?
+- **Priority** — Identifies the dominant category of issues in your codebase (correctness, suspicious, restriction, perf, or style). This helps you understand the _kind_ of problems you're dealing with — are they actual bugs, risky patterns, or stylistic preferences?
 
 - **Impact** — Analyzes how concentrated the issues are across rules. If the top 5 rules account for 70%+ of all violations, you have "concentrated fix potential" — addressing a few rules will dramatically reduce the issue count. If distribution is spread across many rules, the issues are more "widespread" and may require broader refactoring.
 
 ### Distribution Section
 
-Two charts working together to show *what* is wrong:
+Two charts working together to show _what_ is wrong:
 
 - **Severity Donut** — Shows the proportion of issues by severity level (error/warning/advice). Errors are problems that will fail at runtime; warnings are suspicious patterns that may cause issues; advice is suggestions for improvement.
 
-- **Categories Rose Chart** — Groups issues by oxlint category: correctness, style, pedantic, suspicious, perf, restriction, and nursery. This reveals the *type* of issues — for example, a codebase heavy on "style" issues is likely maintainable but inconsistent, while one heavy on "correctness" issues may have actual bugs.
+- **Categories Rose Chart** — Groups issues by oxlint category: correctness, style, pedantic, suspicious, perf, restriction, and nursery. This reveals the _type_ of issues — for example, a codebase heavy on "style" issues is likely maintainable but inconsistent, while one heavy on "correctness" issues may have actual bugs.
 
 ### Specifics Section
 
-- **Top 15 Rules Bar Chart** — Ranks the most frequently triggered linter rules. Each bar represents a rule, with length indicating violation count. This helps identify *which* specific rules are causing the most noise. Clicking a bar filters the view to focus on that rule.
+- **Top 15 Rules Bar Chart** — Ranks the most frequently triggered linter rules. Each bar represents a rule, with length indicating violation count. This helps identify _which_ specific rules are causing the most noise. Clicking a bar filters the view to focus on that rule.
 
 This is particularly useful when the "Impact" insight shows concentrated issues — you can see exactly which rules to address first.
 
@@ -81,24 +81,24 @@ This is particularly useful when the "Impact" insight shows concentrated issues 
 
 - **Files by Errors Treemap** — A treemap visualization where each tile represents a file. Tile size reflects the number of issues in that file, and color indicates error density (darker = more errors relative to total issues).
 
-This answers: *Which files are causing the most problems?* Large, red blocks are your hotspots — the files that deserve immediate attention.
+This answers: _Which files are causing the most problems?_ Large, red blocks are your hotspots — the files that deserve immediate attention.
 
 ### Deep Dive Section
 
 - **Heatmap: Files vs Categories** — A matrix crossing the top 20 most problematic files against all category types. Each cell's color intensity shows how many violations of that category exist in that file.
 
-This answers: *Why is this file problematic?* If a file shows up red in the "correctness" row but green in "style," you know it has real bugs rather than cosmetic issues. This helps prioritize which files to tackle first and what kind of issues you'll find when you open them.
+This answers: _Why is this file problematic?_ If a file shows up red in the "correctness" row but green in "style," you know it has real bugs rather than cosmetic issues. This helps prioritize which files to tackle first and what kind of issues you'll find when you open them.
 
 ## 🎛 Presets
 
 Presets are severity configurations that bias how oxlint categories are interpreted. They override the raw severity levels from oxlint to match different team workflows.
 
-| Preset | Behavior | Best For |
-|--------|----------|----------|
-| **Clean Code** *(Recommended)* | Restrictions are errors; style is advice; correctness/suspicious are warnings | Daily development — strict on rules that matter, silent on cosmetics |
-| **Balanced** | Style/pedantic are advice/ignored; restrictions are warnings; correctness remains error | Legacy codebases or quick audits — reduces noise while keeping focus |
-| **Strict** | Raw oxlint severities with no overrides | Teams wanting unfiltered oxlint output |
-| **Performance** | Ignores style/pedantic; perf issues are errors; restrictions/suspicious are warnings | Performance optimization sprints |
+| Preset                         | Behavior                                                                                | Best For                                                             |
+| ------------------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Clean Code** _(Recommended)_ | Restrictions are errors; style is advice; correctness/suspicious are warnings           | Daily development — strict on rules that matter, silent on cosmetics |
+| **Balanced**                   | Style/pedantic are advice/ignored; restrictions are warnings; correctness remains error | Legacy codebases or quick audits — reduces noise while keeping focus |
+| **Strict**                     | Raw oxlint severities with no overrides                                                 | Teams wanting unfiltered oxlint output                               |
+| **Performance**                | Ignores style/pedantic; perf issues are errors; restrictions/suspicious are warnings    | Performance optimization sprints                                     |
 
 **Note:** Correctness issues are always treated as errors regardless of preset — they represent actual bugs or high-risk regressions.
 
