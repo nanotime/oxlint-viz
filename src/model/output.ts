@@ -1,9 +1,16 @@
+export interface FileComplexity {
+  functionName: string;
+  maxComplexity: number;
+  currentComplexity: number;
+}
+
 export interface FileMetrics {
   filename: string;
   issueCount: number;
   errorCount: number;
   warningCount: number;
   categories: Record<string, number>;
+  complexity?: FileComplexity;
 }
 
 export interface RuleMetric {
