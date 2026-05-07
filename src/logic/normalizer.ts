@@ -48,6 +48,7 @@ function accumulateMetrics(diagnostics: OxlintRawReport["diagnostics"]) {
   for (const diag of diagnostics) {
     const ruleName = diag.code;
     const category = inferCategory(diag.code);
+    const hasComplexity = diag.code.match("complexity")?.length;
     const severity = diag.severity;
     const filename = diag.filename;
 
@@ -75,6 +76,17 @@ function accumulateMetrics(diagnostics: OxlintRawReport["diagnostics"]) {
 
     hotspotsBase[filename].categories[category] += 1;
     hotspotsBase[filename].issueCount += 1;
+
+    if (category === "restriction" && hasComplexity) {
+      const complexity = extractComplexity(diag.message);
+      console.log(complexity);
+      if (!complexity) continue;
+      hotspotsBase[filename].complexity = {
+        functionName: complexity.functionName,
+        maxComplexity: complexity.complexity,
+        currentComplexity: complexity.maxAllowed,
+      };
+    }
 
     if (severity === "error") {
       hotspotsBase[filename].errorCount += 1;
@@ -114,4 +126,22 @@ function buildNormalizedReport(params: BuildNormalizedReportParams): NormalizedR
     rules: params.rulesBase,
     hotspots: params.hotspotsBase,
   };
+}
+
+function extractComplexity(message: string) {
+  try {
+    const regex = /function `([^`]+)` has a complexity of (\d+)\. Maximum allowed is (\d+)\./;
+    const match = message.match(regex);
+
+    if (!match) return null;
+
+    return {
+      functionName: match[1],
+      complexity: parseInt(match[2], 10),
+      maxAllowed: parseInt(match[3], 10),
+    };
+  } catch (error) {
+    console.log(error);
+    throw new Error("Error trying to match complexity on parsing");
+  }
 }
