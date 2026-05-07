@@ -24,8 +24,6 @@ export const InputZone: Component = () => {
     setText(ev.currentTarget.value);
   };
 
-  // const presetLabels = Object.entries(PRESET_LABELS).map(([value, label]) => ({}));
-
   return (
     <section
       class="flex flex-col flex-1 items-center justify-center"
