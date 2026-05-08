@@ -1,9 +1,12 @@
+import { Show } from "solid-js";
 import { Card } from "@/components/shared/Card";
 import { Section } from "./SectionFactory";
 import { TopRulesBar } from "../charts/TopRulesBar";
 import { ComplexityScatter } from "../charts/ComplexityScatter";
+import { useFeatureFlag } from "@/hooks/useFeatureFlag";
 
 const halfClass = "col-span-6 p-2 rounded-xl min-h-[400px]";
+const fullClass = "col-span-12 p-2 rounded-xl min-h-[400px]";
 const mostViolatedTooltip =
   "Rules ranked by violation count. Darker bars equals more occurrences. Click a rule to filter by it.";
 
@@ -45,15 +48,19 @@ const ComplexityScatterCard = () => {
 };
 
 export const SpecificsSection = () => {
+  const showComplexity = useFeatureFlag("complexity");
+
   return (
     <Section id="section-specific">
-      <Section.Left class={halfClass}>
+      <Section.Left class={showComplexity() ? halfClass : fullClass}>
         <Top15RulesCard />
       </Section.Left>
 
-      <Section.Right class={halfClass}>
-        <ComplexityScatterCard />
-      </Section.Right>
+      <Show when={showComplexity()}>
+        <Section.Right class={halfClass}>
+          <ComplexityScatterCard />
+        </Section.Right>
+      </Show>
     </Section>
   );
 };
