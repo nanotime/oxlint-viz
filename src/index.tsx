@@ -1,11 +1,21 @@
 /* @refresh reload */
 import "./index.css";
 import { render } from "solid-js/web";
-import "solid-devtools";
+// import "solid-devtools";
+import { RouterProvider, createRouter } from "@tanstack/solid-router";
+import { routeTree } from "./routeTree.gen";
 
-import App from "./App";
+// import App from "./App";
 
-const root = document.getElementById("root");
+const router = createRouter({ routeTree });
+
+declare module "@tanstack/solid-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
+
+const root = document.getElementById("root")!;
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   throw new Error(
@@ -13,4 +23,5 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(() => <App />, root!);
+// render(() => <App />, root!);
+render(() => <RouterProvider router={router} />, root);

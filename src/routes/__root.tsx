@@ -1,8 +1,7 @@
-import type { Component } from "solid-js";
-import { ErrorBoundary, Show, Suspense } from "solid-js";
-import { AppProvider, view } from "@/store/AppContext";
-import { InputZone } from "./components/landing/InputZone";
-import { Dashboard } from "./components/dashboard/Dashboard";
+import { createRootRoute, Outlet } from "@tanstack/solid-router";
+import { TanStackRouterDevtools } from "@tanstack/solid-router-devtools";
+import { Component, ErrorBoundary } from "solid-js";
+import { AppProvider } from "@/store/AppContext";
 
 const ErrorCard: Component<{ error: any; reset: () => void }> = (props) => {
   return (
@@ -21,26 +20,19 @@ const ErrorCard: Component<{ error: any; reset: () => void }> = (props) => {
   );
 };
 
-const App: Component = () => {
-  return (
+const RootLayout = () => (
+  <>
     <AppProvider>
       <div class="min-h-screen flex flex-col w-full" id="app" data-testid="app">
         <div class="w-[85%] flex flex-col flex-1 max-w-7xl h-full mx-auto">
           <ErrorBoundary fallback={(error, reset) => <ErrorCard error={error} reset={reset} />}>
-            <Show when={view() === "input"}>
-              <InputZone />
-            </Show>
-
-            <Show when={view() === "dashboard"}>
-              <Suspense fallback="Loading...">
-                <Dashboard />
-              </Suspense>
-            </Show>
+            <Outlet />
           </ErrorBoundary>
         </div>
       </div>
     </AppProvider>
-  );
-};
+    <TanStackRouterDevtools />
+  </>
+);
 
-export default App;
+export const Route = createRootRoute({ component: RootLayout });

@@ -2,6 +2,7 @@ import { createContext, createSignal, ParentComponent, useContext } from "solid-
 import { createStore, SetStoreFunction } from "solid-js/store";
 import { NormalizedReport } from "@/model/output";
 import { PresetType, SEVERITY_PRESETS, SeverityConfig } from "@/model/severityConfig";
+import { WorkerMessage } from "@/logic/worker";
 
 export const baseStore: NormalizedReport = {
   summary: {
@@ -21,34 +22,60 @@ export const baseStore: NormalizedReport = {
   hotspots: {},
 };
 
-type ViewState = "input" | "dashboard";
-
-export const AppContext = createContext<{
+type AppContextType = {
   data: NormalizedReport;
   setData: SetStoreFunction<NormalizedReport>;
-}>();
-
-const WorkerInstance = () => {
-  const worker = new Worker(new URL("../logic/worker", import.meta.url), { type: "module" });
-  return worker;
+  worker: Worker;
+  workerDone: () => boolean;
+  setWorkerDone: (v: boolean) => void;
+  selectedPreset: () => PresetType;
+  setSelectedPreset: (v: PresetType) => void;
+  severityConfig: () => SeverityConfig;
 };
 
-export const worker = WorkerInstance();
-export const [view, setView] = createSignal<ViewState>("input");
-export const [workerDone, setWorkerDone] = createSignal(false);
-export const [selectedPreset, setSelectedPreset] = createSignal<PresetType>("cleanCode");
-export const severityConfig = (): SeverityConfig => SEVERITY_PRESETS[selectedPreset()];
+export const AppContext = createContext<AppContextType>();
+
+const createWorker = () => {
+  return new Worker(new URL("../logic/worker", import.meta.url), { type: "module" });
+};
 
 export const AppProvider: ParentComponent = (props) => {
-  const [data, setData] = createStore(baseStore);
-  return <AppContext.Provider value={{ data, setData }}>{props.children}</AppContext.Provider>;
+  const [data, setData] = createStore<NormalizedReport>(baseStore);
+  const [workerDone, setWorkerDone] = createSignal(false);
+  const [selectedPreset, setSelectedPreset] = createSignal<PresetType>("cleanCode");
+
+  const severityConfig = (): SeverityConfig => SEVERITY_PRESETS[selectedPreset()];
+
+  const worker = createWorker();
+
+  worker.onmessage = (e: MessageEvent<WorkerMessage>) => {
+    if (!e.data.success) {
+      throw e.data.error;
+    }
+
+    setData(e.data.data);
+    setWorkerDone(true);
+  };
+
+  const value: AppContextType = {
+    data,
+    setData,
+    worker,
+    workerDone,
+    setWorkerDone,
+    selectedPreset,
+    setSelectedPreset,
+    severityConfig,
+  };
+
+  return <AppContext.Provider value={value}>{props.children}</AppContext.Provider>;
 };
 
 export const useAppContext = () => {
   const ctx = useContext(AppContext);
 
   if (!ctx) {
-    throw new Error("No context found");
+    throw new Error("useAppContext must be used within AppProvider");
   }
 
   return ctx;

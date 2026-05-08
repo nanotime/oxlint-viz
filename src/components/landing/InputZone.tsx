@@ -1,23 +1,22 @@
 import { Component, createSignal, For, JSX } from "solid-js";
-import {
-  setView,
-  worker,
-  selectedPreset,
-  setSelectedPreset,
-  severityConfig,
-} from "@/store/AppContext";
+import { useAppContext } from "@/store/AppContext";
 import { placeholder } from "./constants";
 import { PRESET_LABELS } from "@/model/severityConfig";
+import { useNavigate } from "@tanstack/solid-router";
 
 export const InputZone: Component = () => {
+  const context = useAppContext();
+  const navigate = useNavigate({ from: "/" });
+
   const [text, setText] = createSignal("");
 
-  const handleClick = () => {
-    worker.postMessage({
+  const handleClick = async () => {
+    context.setWorkerDone(false);
+    context.worker.postMessage({
       report: text(),
-      severityConfig: severityConfig(),
+      severityConfig: context.severityConfig(),
     });
-    setView("dashboard");
+    await navigate({ to: "/analysis" });
   };
 
   const handleChange: JSX.EventHandler<HTMLTextAreaElement, InputEvent> = (ev) => {
@@ -38,8 +37,8 @@ export const InputZone: Component = () => {
 
           <select
             class="select select-bordered w-full mb-4"
-            value={selectedPreset()}
-            onChange={(e) => setSelectedPreset(e.currentTarget.value as any)}
+            value={context.selectedPreset()}
+            onChange={(e) => context.setSelectedPreset(e.currentTarget.value as any)}
           >
             <For each={Object.entries(PRESET_LABELS)}>
               {(item) => <option value={item[0]}>{item[1]}</option>}
