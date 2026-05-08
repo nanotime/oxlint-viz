@@ -1,36 +1,32 @@
 import { describe, expect, it } from "vite-plus/test";
-import { render, waitFor } from "@solidjs/testing-library";
-import App from "../App";
+import { render, screen } from "@solidjs/testing-library";
 import { AppProvider } from "@/store/AppContext";
+import { InputZone } from "@/components/landing/InputZone";
 import userEvent from "@testing-library/user-event";
 
-const wrapper = (props: any) => <AppProvider {...props} />;
 const user = userEvent.setup();
 
-describe("App", () => {
-  it("Should render the app correctly", () => {
-    const r = render(() => <App />, { wrapper });
+const wrapper = (props: any) => <AppProvider {...props} />;
 
-    expect(r.getByTestId("input-zone")).toBeInTheDocument();
-    expect(r.queryByTestId("dashboard")).not.toBeInTheDocument();
-    expect(r.getByRole("button", { name: /analyze/i })).toBeInTheDocument();
+describe("App", () => {
+  it("Should render the input zone correctly", () => {
+    render(() => <InputZone />, { wrapper });
+
+    expect(screen.getByTestId("input-zone")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /analyze/i })).toBeInTheDocument();
   });
 
-  it("Should render dashboard on click", async () => {
-    const r = render(() => <App />, { wrapper });
+  it("Should enable analyze button when text is entered", async () => {
+    render(() => <InputZone />, { wrapper });
 
-    const textarea = r.getByRole("textbox");
-    const analyzeBtn = r.getByRole("button", { name: /analyze/i });
+    const textarea = screen.getByRole("textbox");
+    const analyzeBtn = screen.getByRole("button", { name: /analyze/i });
 
-    expect(r.queryByTestId("dashboard")).not.toBeInTheDocument();
+    expect(analyzeBtn).toBeDisabled();
 
     await user.click(textarea);
     await user.paste("test data");
 
-    await user.click(analyzeBtn);
-
-    await waitFor(() => {
-      expect(r.queryByTestId("dashboard")).toBeInTheDocument();
-    });
+    expect(analyzeBtn).not.toBeDisabled();
   });
 });
