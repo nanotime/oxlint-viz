@@ -200,39 +200,49 @@ All GitHub issues must follow the standardized template below to ensure clarity,
 
 ```markdown
 ## Description
+
 [What and why]
 
 ## Current Behavior
+
 [Current state if applicable]
 
 ## New Behavior
+
 [Expected behavior if applicable]
 
 ## User Story
+
 **As a user**, I want [action] so I can [benefit].
 
 ## Requirements
 
 ### 1. [Requirement Title]
+
 [Details, code snippets, ASCII diagrams]
 
 ### 2. [Requirement Title]
+
 [Details]
 
 ## Acceptance Criteria
+
 - [ ] Criterion 1
 - [ ] Criterion 2
 - [ ] Criterion N
 
 ## Dependencies
+
 - Blocked by: #X
 - Blocks: #Y
 - Part of epic: #Z
 
 ## Priority
+
 High / Medium / Low
 
 ## Parent Issue
+
 #X - Epic title
 ```
 
