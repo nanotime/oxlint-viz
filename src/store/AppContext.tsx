@@ -1,4 +1,11 @@
-import { createContext, createSignal, ParentComponent, useContext } from "solid-js";
+import {
+  Accessor,
+  createContext,
+  createSignal,
+  ParentComponent,
+  Setter,
+  useContext,
+} from "solid-js";
 import { createStore, SetStoreFunction } from "solid-js/store";
 import { NormalizedReport } from "@/model/output";
 import { PresetType, SEVERITY_PRESETS, SeverityConfig } from "@/model/severityConfig";
@@ -28,6 +35,8 @@ type AppContextType = {
   worker: Worker;
   workerDone: () => boolean;
   setWorkerDone: (v: boolean) => void;
+  workerError: Accessor<string | null>;
+  setWorkerError: Setter<string | null>;
   selectedPreset: () => PresetType;
   setSelectedPreset: (v: PresetType) => void;
   severityConfig: () => SeverityConfig;
@@ -43,14 +52,18 @@ export const AppProvider: ParentComponent = (props) => {
   const [data, setData] = createStore<NormalizedReport>(baseStore);
   const [workerDone, setWorkerDone] = createSignal(false);
   const [selectedPreset, setSelectedPreset] = createSignal<PresetType>("cleanCode");
+  const [workerError, setWorkerError] = createSignal<string | null>(null);
 
   const severityConfig = (): SeverityConfig => SEVERITY_PRESETS[selectedPreset()];
 
   const worker = createWorker();
 
   worker.onmessage = (e: MessageEvent<WorkerMessage>) => {
+    console.log("message", e);
     if (!e.data.success) {
-      throw e.data.error;
+      setWorkerError(e.data.error.message);
+      setWorkerDone(false);
+      return;
     }
 
     setData(e.data.data);
@@ -63,6 +76,8 @@ export const AppProvider: ParentComponent = (props) => {
     worker,
     workerDone,
     setWorkerDone,
+    workerError,
+    setWorkerError,
     selectedPreset,
     setSelectedPreset,
     severityConfig,

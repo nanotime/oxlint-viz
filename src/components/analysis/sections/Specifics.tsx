@@ -4,6 +4,7 @@ import { Section } from "./SectionFactory";
 import { TopRulesBar } from "../charts/TopRulesBar";
 import { ComplexityScatter } from "../charts/ComplexityScatter";
 import { useFeatureFlag } from "@/hooks/useFeatureFlag";
+import { useAppContext } from "@/store/AppContext";
 
 const halfClass = "col-span-6 p-2 rounded-xl min-h-[400px]";
 const fullClass = "col-span-12 p-2 rounded-xl min-h-[400px]";
@@ -48,15 +49,21 @@ const ComplexityScatterCard = () => {
 };
 
 export const SpecificsSection = () => {
+  const context = useAppContext();
+  const complexityDataExists = () => {
+    const dataset = Object.values(context.data.hotspots);
+    // just try to extract some keys from complexity
+    return dataset.some((value) => Object.keys(value.complexity ?? {}).length);
+  };
   const showComplexity = useFeatureFlag("complexity");
 
   return (
     <Section id="section-specific">
-      <Section.Left class={showComplexity() ? halfClass : fullClass}>
+      <Section.Left class={showComplexity() && complexityDataExists() ? halfClass : fullClass}>
         <Top15RulesCard />
       </Section.Left>
 
-      <Show when={showComplexity()}>
+      <Show when={showComplexity() && complexityDataExists()}>
         <Section.Right class={halfClass}>
           <ComplexityScatterCard />
         </Section.Right>
