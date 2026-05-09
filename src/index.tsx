@@ -5,8 +5,6 @@ import { render } from "solid-js/web";
 import { RouterProvider, createRouter } from "@tanstack/solid-router";
 import { routeTree } from "./routeTree.gen";
 
-// import App from "./App";
-
 const router = createRouter({ routeTree });
 
 declare module "@tanstack/solid-router" {
@@ -23,5 +21,4 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-// render(() => <App />, root!);
 render(() => <RouterProvider router={router} />, root);

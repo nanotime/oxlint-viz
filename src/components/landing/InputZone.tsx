@@ -1,27 +1,37 @@
-import { Component, createSignal, For, JSX } from "solid-js";
-import { useAppContext } from "@/store/AppContext";
+import { Component, createSignal, For, JSX, Show } from "solid-js";
+import { effect } from "solid-js/web";
+import { ErrorCard } from "../shared/ErrorCard";
 import { placeholder } from "./constants";
 import { PRESET_LABELS } from "@/model/severityConfig";
+import { useAppContext } from "@/store/AppContext";
 import { useNavigate } from "@tanstack/solid-router";
 
 export const InputZone: Component = () => {
   const context = useAppContext();
   const navigate = useNavigate({ from: "/" });
-
   const [text, setText] = createSignal("");
+  const [hasNavigated, setHasNavigated] = createSignal(false);
 
-  const handleClick = async () => {
+  const handleResetError = () => context.setWorkerError(null);
+
+  const handleClick = () => {
     context.setWorkerDone(false);
     context.worker.postMessage({
       report: text(),
       severityConfig: context.severityConfig(),
     });
-    await navigate({ to: "/analysis" });
   };
 
   const handleChange: JSX.EventHandler<HTMLTextAreaElement, InputEvent> = (ev) => {
     setText(ev.currentTarget.value);
   };
+
+  effect(async () => {
+    if (context.workerDone() && context.workerError() === null && !hasNavigated()) {
+      setHasNavigated(true);
+      await navigate({ to: "/analysis" });
+    }
+  });
 
   return (
     <section
@@ -36,6 +46,7 @@ export const InputZone: Component = () => {
           </div>
 
           <select
+            name="preset"
             class="select select-bordered w-full mb-4"
             value={context.selectedPreset()}
             onChange={(e) => context.setSelectedPreset(e.currentTarget.value as any)}
@@ -44,6 +55,10 @@ export const InputZone: Component = () => {
               {(item) => <option value={item[0]}>{item[1]}</option>}
             </For>
           </select>
+
+          <Show when={context.workerError()}>
+            <ErrorCard error={context.workerError()} reset={handleResetError} />
+          </Show>
 
           <div class="w-xl flex flex-col">
             <textarea
