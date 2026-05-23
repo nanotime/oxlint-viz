@@ -63,6 +63,7 @@ export const AppProvider: ParentComponent = (props) => {
   const worker = createWorker();
 
   worker.onmessage = (e: MessageEvent<WorkerMessage>) => {
+    console.log("message", e);
     if (!e.data.success) {
       setWorkerState({ error: e.data.error.message, done: false });
       return;
