@@ -45,16 +45,24 @@ export const InputZone: Component = () => {
             <h1 class="text-xl color-accent">Welcome, please paste your JSON output here</h1>
           </div>
 
-          <select
-            name="preset"
-            class="select select-bordered w-full mb-4"
-            value={context.presetState.selected}
-            onChange={(e) => context.setPresetState({ selected: e.currentTarget.value as any })}
-          >
-            <For each={Object.entries(PRESET_LABELS)}>
-              {(item) => <option value={item[0]}>{item[1]}</option>}
-            </For>
-          </select>
+          <fieldset class="fieldset">
+            <legend class="fieldset-legend">Analysis name</legend>
+            <input type="text" class="input w-full" placeholder="Analysis name" />
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend class="fieldset-legend">Preset</legend>
+            <select
+              name="preset"
+              class="select select-bordered w-full"
+              value={context.presetState.selected}
+              onChange={(e) => context.setPresetState({ selected: e.currentTarget.value as any })}
+            >
+              <For each={Object.entries(PRESET_LABELS)}>
+                {(item) => <option value={item[0]}>{item[1]}</option>}
+              </For>
+            </select>
+          </fieldset>
 
           <Show when={context.workerState.error}>
             <ErrorCard error={context.workerState.error} reset={handleResetError} />
