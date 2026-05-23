@@ -12,7 +12,7 @@ export const Analysis: Component = () => {
 
   return (
     <div class="flex flex-col gap-6 py-8" data-testid="dashboard">
-      <Show when={context.workerDone()} fallback={<>loading...</>}>
+      <Show when={context.workerState.done} fallback={<>loading...</>}>
         <StatsSection />
 
         <InsightsSection />

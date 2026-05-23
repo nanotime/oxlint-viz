@@ -12,10 +12,10 @@ export const InputZone: Component = () => {
   const [text, setText] = createSignal("");
   const [hasNavigated, setHasNavigated] = createSignal(false);
 
-  const handleResetError = () => context.setWorkerError(null);
+  const handleResetError = () => context.setWorkerState({ error: null, done: false });
 
   const handleClick = () => {
-    context.setWorkerDone(false);
+    context.setWorkerState({ done: false });
     context.worker.postMessage({
       report: text(),
       severityConfig: context.severityConfig(),
@@ -27,7 +27,7 @@ export const InputZone: Component = () => {
   };
 
   effect(async () => {
-    if (context.workerDone() && context.workerError() === null && !hasNavigated()) {
+    if (context.workerState.done && context.workerState.error === null && !hasNavigated()) {
       setHasNavigated(true);
       await navigate({ to: "/analysis" });
     }
@@ -48,16 +48,16 @@ export const InputZone: Component = () => {
           <select
             name="preset"
             class="select select-bordered w-full mb-4"
-            value={context.selectedPreset()}
-            onChange={(e) => context.setSelectedPreset(e.currentTarget.value as any)}
+            value={context.presetState.selected}
+            onChange={(e) => context.setPresetState({ selected: e.currentTarget.value as any })}
           >
             <For each={Object.entries(PRESET_LABELS)}>
               {(item) => <option value={item[0]}>{item[1]}</option>}
             </For>
           </select>
 
-          <Show when={context.workerError()}>
-            <ErrorCard error={context.workerError()} reset={handleResetError} />
+          <Show when={context.workerState.error}>
+            <ErrorCard error={context.workerState.error} reset={handleResetError} />
           </Show>
 
           <div class="w-xl flex flex-col">
