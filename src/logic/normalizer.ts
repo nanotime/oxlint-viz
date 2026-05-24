@@ -79,7 +79,6 @@ function accumulateMetrics(diagnostics: OxlintRawReport["diagnostics"]) {
 
     if (category === "restriction" && hasComplexity) {
       const complexity = extractComplexity(diag.message);
-      console.log(complexity);
       if (!complexity) continue;
       hotspotsBase[filename].complexity = {
         functionName: complexity.functionName,

@@ -16,10 +16,10 @@ describe("App", () => {
     expect(screen.getByRole("button", { name: /analyze/i })).toBeInTheDocument();
   });
 
-  it("Should enable analyze button when text is entered", async () => {
+  it("Should disable analyze button when only textarea has content", async () => {
     render(() => <InputZone />, { wrapper });
 
-    const textarea = screen.getByRole("textbox");
+    const textarea = screen.getByTestId("oxlint-analysis-input");
     const analyzeBtn = screen.getByRole("button", { name: /analyze/i });
 
     expect(analyzeBtn).toBeDisabled();
@@ -27,6 +27,34 @@ describe("App", () => {
     await user.click(textarea);
     await user.paste("test data");
 
+    expect(analyzeBtn).toBeDisabled();
+  });
+
+  it("Should enable analyze button when both name and text are entered", async () => {
+    render(() => <InputZone />, { wrapper });
+
+    const nameInput = screen.getByRole("textbox", { name: /analysis name/i });
+    const textarea = screen.getByTestId("oxlint-analysis-input");
+    const analyzeBtn = screen.getByRole("button", { name: /analyze/i });
+
+    expect(analyzeBtn).toBeDisabled();
+
+    await user.click(nameInput);
+    await user.paste("My Analysis");
+    await user.click(textarea);
+    await user.paste("test data");
+
     expect(analyzeBtn).not.toBeDisabled();
+  });
+
+  it("Should render the analysis name input with correct attributes", () => {
+    render(() => <InputZone />, { wrapper });
+
+    const nameInput = screen.getByRole("textbox", { name: /analysis name/i });
+    expect(nameInput).toBeInTheDocument();
+    expect(nameInput).toHaveAttribute("placeholder", "e.g., Project Alpha - April 2024");
+    expect(nameInput).toHaveAttribute("maxlength", "100");
+    expect(nameInput).toHaveAttribute("required");
+    expect(nameInput).toHaveAttribute("aria-required", "true");
   });
 });

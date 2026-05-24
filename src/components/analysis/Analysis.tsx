@@ -1,5 +1,4 @@
-import { Component, Show } from "solid-js";
-import { useAppContext } from "@/store/AppContext";
+import { Component } from "solid-js";
 import { DistributionSection } from "./sections/DistributionSection";
 import { StatsSection } from "./sections/StatsSection";
 import { SpecificsSection } from "./sections/Specifics";
@@ -8,23 +7,19 @@ import { DeepDiveSection } from "./sections/DeepDiveSection";
 import { InsightsSection } from "./sections/InsightsSection";
 
 export const Analysis: Component = () => {
-  const context = useAppContext();
-
   return (
     <div class="flex flex-col gap-6 py-8" data-testid="dashboard">
-      <Show when={context.workerState.done} fallback={<>loading...</>}>
-        <StatsSection />
+      <StatsSection />
 
-        <InsightsSection />
+      <InsightsSection />
 
-        <DistributionSection />
+      <DistributionSection />
 
-        <SpecificsSection />
+      <SpecificsSection />
 
-        <GranularSection />
+      <GranularSection />
 
-        <DeepDiveSection />
-      </Show>
+      <DeepDiveSection />
     </div>
   );
 };
