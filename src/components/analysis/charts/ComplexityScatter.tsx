@@ -1,31 +1,32 @@
-import { Component, createMemo } from "solid-js";
+import { Component } from "solid-js";
 import { useAppContext } from "@/store/AppContext";
 import { ChartBase } from "./ChartBase";
 import { ChartOption } from "@/logic/chartWrapper";
+import { NormalizedReport } from "@/model/output";
 
-interface DataShape {
+export interface ComplexityDataShape {
   value: [number, number, number];
   functionName: string;
   fileName: string;
 }
 
-export const ComplexityScatter: Component = () => {
-  const context = useAppContext();
+export const buildComplexityScatterData = (data: NormalizedReport): ComplexityDataShape[] => {
+  return Object.values(data.hotspots)
+    .filter((item) => Object.keys(item.complexity ?? {}).length)
+    .map((item) => ({
+      value: [item.complexity!.maxComplexity, item.errorCount, item.issueCount],
+      functionName: item.complexity!.functionName,
+      fileName: item.filename,
+    }));
+};
 
-  const chartData = createMemo<DataShape[]>(() => {
-    return Object.values(context.data.hotspots)
-      .filter((item) => Object.keys(item.complexity ?? {}).length)
-      .map((item) => ({
-        value: [item.complexity!.maxComplexity, item.errorCount, item.issueCount],
-        functionName: item.complexity!.functionName,
-        fileName: item.filename,
-      }));
-  });
+export const buildComplexityScatterOptions = (data: NormalizedReport): ChartOption => {
+  const chartData = buildComplexityScatterData(data);
 
-  const options = createMemo<ChartOption>(() => ({
+  return {
     tooltip: {
       formatter: (params: unknown) => {
-        const p = params as { data: DataShape };
+        const p = params as { data: ComplexityDataShape };
         const d = p.data;
         return `
           <strong>${d.functionName}()</strong>
@@ -48,16 +49,20 @@ export const ComplexityScatter: Component = () => {
     series: [
       {
         type: "scatter",
-        data: chartData(),
-        symbolSize: (data: [number, number, number]) => {
-          return Math.max(Math.sqrt(data[2]) * 4, 8);
+        data: chartData,
+        symbolSize: (chartData: [number, number, number]) => {
+          return Math.max(Math.sqrt(chartData[2]) * 4, 8);
         },
         itemStyle: {
           color: "rgba(255, 99, 132, 0.7)",
         },
       },
     ],
-  }));
+  };
+};
 
-  return <ChartBase options={options()} class="min-h-[400px]" />;
+export const ComplexityScatter: Component = () => {
+  const context = useAppContext();
+
+  return <ChartBase options={buildComplexityScatterOptions(context.data)} class="min-h-[400px]" />;
 };
