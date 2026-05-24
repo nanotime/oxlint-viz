@@ -7,7 +7,9 @@ export type WorkerMessage =
   | { data: NormalizedReport; success: true }
   | { error: Error; success: false };
 
-self.onmessage = (e: MessageEvent<{ report: string; severityConfig: SeverityConfig }>) => {
+self.onmessage = (
+  e: MessageEvent<{ report: string; severityConfig: SeverityConfig; name: string }>,
+) => {
   try {
     const parsed = parser(e.data.report);
     const data = normalizer(parsed, e.data.severityConfig);
