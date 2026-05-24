@@ -8,5 +8,13 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "emmet.syntaxProfiles": {
+    "jsx": {
+      "self_closing_tag": true,
+      "markup.attributes": {
+        "class": "class"
+      }
+    }
   }
 }
