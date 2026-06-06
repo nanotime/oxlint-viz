@@ -20,6 +20,7 @@
     "@tanstack/solid-router-devtools": "^1.166.13",
     "@types/node": "^25.5.0",
     "daisyui": "^5.5.19",
+    "dexie": "^4.4.3",
     "echarts": "^6.0.0",
     "es-toolkit": "^1.45.1",
     "lucide-solid": "^1.8.0",
