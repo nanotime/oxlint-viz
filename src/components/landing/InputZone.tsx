@@ -3,6 +3,7 @@ import { DataForm, AnalyzeData } from "./DataForm";
 import { SEVERITY_PRESETS } from "@/model/severityConfig";
 import { useAppContext } from "@/store/AppContext";
 import { useNavigate } from "@tanstack/solid-router";
+import { saveAnalysis } from "@/db/operations";
 
 export const InputZone: Component = () => {
   const context = useAppContext();
@@ -12,11 +13,21 @@ export const InputZone: Component = () => {
   const handleAnalyze = async (data: AnalyzeData) => {
     setAnalyzing(true);
     try {
-      await context.analyze({
+      const result = await context.analyze({
         report: data.report,
         severityConfig: SEVERITY_PRESETS[data.preset],
         name: data.name,
       });
+      try {
+        await saveAnalysis({
+          name: data.name || `Analysis - ${new Date().toISOString()}`,
+          rawReport: data.report,
+          normalizedData: result,
+          preset: data.preset,
+        });
+      } catch (storageError) {
+        console.error("Failed to save analysis:", storageError);
+      }
       await navigate({ to: "/analysis" });
     } catch (error) {
       context.setWorkerState({
